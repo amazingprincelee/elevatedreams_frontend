@@ -5,6 +5,10 @@
     "useIgnoreFile": true,
     "defaultBranch": "master"
   },
+  "files": {
+    "include": ["src/**/*.js", "src/**/*.ts", "src/**/*.tsx", "test/**/*.js"],
+    "ignore": ["**/*.min.js"]
+  },
   "formatter": {
     "enabled": true,
     "formatWithErrors": false,
