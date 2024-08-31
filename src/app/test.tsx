@@ -1,8 +1,12 @@
-import React from "react";
+import React from 'react'
 
 const Test = () => {
-  const girl;
-  return <div>Test</div>;
-};
+  const test = ['is', 'blocking', 'you']
 
-export default Test;
+  test.map((el) => {
+    console.log('testing' + el)
+  })
+  return <div>Test</div>
+}
+
+export default Test
