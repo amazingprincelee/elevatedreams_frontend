@@ -8,23 +8,23 @@ import { buttonVariants } from '../button/button'
 type Props = {}
 const BlogCard: FC<Props> = ({}) => {
   return (
-    <div className="border shadow-sm grid md:max-w-md rounded-xl p-4 gap-3">
-      <div className="relative">
+    <div className="border shadow-sm grid max-w-[400px] max-h-[530px] rounded-xl p-4 gap-3">
+      <div className="relative h-full">
         <Image
           src={'/images/oil.jpg'}
           alt={'blog'}
           width={1200}
           height={900}
-          className="h-full w-full object-cover rounded-xl"
+          className="h-full object-cover rounded-xl"
         />
         <div className={'absolute top-3 left-3 right-0' + buttonVariants()}>
           Data Science
         </div>
       </div>
-      <h2 className="font-500 text-lg">
+      <h2 className="font-medium text-lg">
         Getting started with Python Programming Language
       </h2>
-      <span className="text-sm font-light text-slate-600 leading-relaxed">
+      <span className="text-sm font-normal text-slate-600 leading-relaxed">
         {truncateString(`Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur
         eligendi aut, corporis dolorum saepe earum id nobis voluptate rem neque
         nemo distinctio odit eveniet corrupti, qui, tempore tempora ab ea?`)}
@@ -38,8 +38,8 @@ const BlogCard: FC<Props> = ({}) => {
           className="h-10 w-10 object-cover rounded-full"
         />
         <div>
-          <h3 className="font-700 text-sm">Omotola Iwawumi</h3>
-          <span className="text-sm font-light text-slate-600">20 Jan 2022</span>
+          <h3 className="font-medium text-xs">Omotola Iwawumi</h3>
+          <span className="text-xs font-normal text-gray-500">20 Jan 2022</span>
         </div>
       </div>
     </div>
