@@ -23,6 +23,9 @@ const CourseCard: FC<Props> = ({}) => {
         eligendi aut, corporis dolorum saepe earum id nobis voluptate rem neque
         nemo distinctio odit eveniet corrupti, qui, tempore tempora ab ea?`)}
         </span>
+        <div className="flex justify-between items-center">
+          <div></div>
+        </div>
       </div>
     </div>
   )
