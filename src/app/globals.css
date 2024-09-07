@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.flex-center {
+  @apply flex items-center;
+}
 
 @layer utilities {
   .max-container {
