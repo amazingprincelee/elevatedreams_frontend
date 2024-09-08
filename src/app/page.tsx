@@ -1,12 +1,16 @@
+'use client'
+
 import BlogCard from '@/components/shared/blog/blog-card'
 import LinkButton from '@/components/shared/button/link-button'
 import CourseCard from '@/components/shared/course/course-card'
+import CourseFilter from '@/components/shared/course/course-filter/course-filter'
 import HomeHero from '@/components/shared/hero/home/home'
 
 export default function Home() {
   return (
     <div>
       <HomeHero />
+      <CourseFilter />
       <section className="flex flex-col items-center justify-center gap-8 m-auto min-h-screen bg-base">
         <h1 className="text-5xl font-bold">
           Welcome to Appnovia Starter Template
