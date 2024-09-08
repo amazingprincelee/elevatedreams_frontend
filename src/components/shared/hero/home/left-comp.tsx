@@ -10,8 +10,8 @@ const LeftComp: FC<Props> = ({}) => {
   return (
     <div className="absolute top-0 left-0 h-full bg-gradient-to-r md:from-50% lg:from-30% from-slate-950 lg:w-[70%]">
       <div className="mt-20 px-4 md:px-10 lg:px-[200px] grid gap-5">
-        <p className=" text-white font-bold lg:text-6xl text-4xl md:w-[50%]">
-          <p className="flex-center gap-1 w-full">
+        <div className=" text-white font-bold lg:text-6xl text-4xl md:w-[50%]">
+          <div className="flex-center gap-1 w-full">
             Learn
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -28,7 +28,7 @@ const LeftComp: FC<Props> = ({}) => {
               <div className="absolute top-1 bg-primary -right-1 w-2 h-[1px]"></div>
               <div className="absolute bottom-1 bg-primary -right-1 w-2 h-[1px]"></div>
             </motion.div>
-          </p>
+          </div>
           <motion.span
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -37,7 +37,7 @@ const LeftComp: FC<Props> = ({}) => {
           >
             Now and Shape Your Future
           </motion.span>
-        </p>
+        </div>
         <div className="lg:w-[40%] md:w-[50%]">
           <motion.span
             initial={{ opacity: 0, x: 50 }}

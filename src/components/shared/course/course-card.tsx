@@ -9,7 +9,7 @@ import { Button } from '../button/button'
 type Props = {}
 const CourseCard: FC<Props> = ({}) => {
   return (
-    <div className="shadow-sm grid max-w-[400px] h-[580px] rounded-xl gap-3 pb-5 bg-white">
+    <div className="shadow-sm grid  h-[580px] rounded-xl gap-3 pb-5 bg-white">
       <Image
         src={'/images/oil.jpg'}
         alt={'blog'}
@@ -25,21 +25,21 @@ const CourseCard: FC<Props> = ({}) => {
         eligendi aut, corporis dolorum saepe earum id nobis voluptate rem neque
         nemo distinctio odit eveniet corrupti, qui, tempore tempora ab ea?`)}
         </span>
-        <div className="flex-center justify-between gap-4 mt-10">
-          <div className="flex-center flex-1 gap-1 bg-base rounded-lg p-3">
+        <div className="flex-center justify-between gap-2 mt-10">
+          <div className="flex-center gap-1 bg-base rounded-lg px-4 py-3 w-full justify-center ">
             <Image
               src={'/icons/timer.svg'}
               alt="timer"
               width={48}
               height={48}
-              className="w-5 h-5"
+              className="w-4 h-4"
             />
-            <span className="font-light leading-tight">2weeks</span>
+            <span className="font-light text-xs leading-tight">2weeks</span>
           </div>
-          <span className="font-semibold text-center flex-1 text-xs bg-base rounded-lg p-3 leading-tight">
+          <span className="font-semibold text-center text-xs px-4 py-3 w-full justify-center bg-base rounded-lg p-2 leading-tight">
             #300,000
           </span>
-          <Button className="flex-center gap-2 flex-1 font-normal">
+          <Button className="flex-center gap-1 font-normal w-fit">
             Add to Cart
             <ShoppingCartIcon className="h-4 w-4" />
           </Button>
