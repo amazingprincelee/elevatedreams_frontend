@@ -10,7 +10,10 @@ const LinkButton: FC<Props> = ({ url, label, isIcon }) => {
     <Link
       href={url}
       className={cn(
-        buttonVariants({ className: 'flex items-center gap-3', size: 'lg' }),
+        buttonVariants({
+          className: 'flex items-center gap-3 w-fit',
+          size: 'lg',
+        }),
       )}
     >
       <span>{label}</span>
