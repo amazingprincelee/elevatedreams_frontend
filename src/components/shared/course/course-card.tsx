@@ -37,7 +37,7 @@ const CourseCard: FC<Props> = ({}) => {
             <span className="font-light text-xs leading-tight">2weeks</span>
           </div>
           <span className="font-semibold text-center text-xs px-4 py-3 w-full justify-center bg-base rounded-lg p-2 leading-tight">
-            #300,000
+            ₦300,000
           </span>
           <Button className="flex-center gap-1 font-normal w-fit">
             Add to Cart
