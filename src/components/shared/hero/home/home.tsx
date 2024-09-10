@@ -37,7 +37,7 @@ const HomeHero: FC<Props> = ({}) => {
       ))}
       <LeftComp />
       <div className="absolute h-fit w-fit md:mt-20 pt-14 top-0 md:right-0 ">
-        <div className="md:mx-8 lg:mx-[200px] flex md:flex-col gap-3 items-center pl-4 md:pl-0">
+        <div className="md:mx-8 lg:mx-[100px] 2xl:mx-[200px] flex md:flex-col gap-3 items-center pl-4 md:pl-0">
           {list.map((_, i) =>
             currentIndex === i ? (
               <div

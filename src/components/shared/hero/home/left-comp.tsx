@@ -9,9 +9,9 @@ type Props = {}
 const LeftComp: FC<Props> = ({}) => {
   return (
     <div className="absolute top-0 left-0 h-full bg-gradient-to-r md:from-50% lg:from-30% from-slate-950 lg:w-[70%]">
-      <div className="mt-20 px-4 md:px-10 lg:px-[200px] grid gap-5">
+      <div className="mt-20 def-contain grid gap-5">
         <p className=" text-white font-bold lg:text-6xl text-4xl md:w-[50%] lg:w-[80%]">
-          <p className="flex-center gap-1 w-full">
+          <div className="flex-center gap-1 w-full">
             Learn
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -28,7 +28,7 @@ const LeftComp: FC<Props> = ({}) => {
               <div className="absolute top-1 bg-primary -right-1 w-2 h-[1px]"></div>
               <div className="absolute bottom-1 bg-primary -right-1 w-2 h-[1px]"></div>
             </motion.div>
-          </p>
+          </div>
           <motion.span
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -38,7 +38,7 @@ const LeftComp: FC<Props> = ({}) => {
             Now and Shape Your Future
           </motion.span>
         </p>
-        <div className=" md:w-[50%] w-full">
+        <div className=" md:w-[50%] lg:w-[60%] w-full">
           <motion.span
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -64,7 +64,7 @@ const LeftComp: FC<Props> = ({}) => {
           className="flex-center "
         >
           <ImageList />
-          <div className="lg:w-[20%] md:w-[30%] w-[60%] text-white ">
+          <div className="2xl:w-[20%] md:w-[30%] lg:w-[40%] w-[60%] text-white ">
             <p className="text-xs font-normal ">
               Become one of our 2000+ students from around the world
             </p>
