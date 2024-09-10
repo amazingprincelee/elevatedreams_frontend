@@ -1,6 +1,6 @@
 import BlogCard from '@/components/shared/blog/blog-card'
 import LinkButton from '@/components/shared/button/link-button'
-import OurOffering from '@/components/shared/cards/OurOffering'
+import OfferingCourseCard from '@/components/shared/cards/OfferingCourseCard'
 import CourseCard from '@/components/shared/course/course-card'
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
       </h1>
       <LinkButton url={'#'} label={'Get Started'} />
       <CourseCard />
-      <OurOffering />
+      <OfferingCourseCard />
     </section>
   )
 }

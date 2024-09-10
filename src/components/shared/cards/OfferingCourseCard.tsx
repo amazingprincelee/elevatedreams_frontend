@@ -6,7 +6,7 @@ interface OfferingCard {
   text: string
 }
 
-const OurOffering = () => {
+const OfferingCourseCard = () => {
   const cardDetails: OfferingCard[] = [
     {
       imageSrc: '/images/oil.jpg',
@@ -27,7 +27,7 @@ const OurOffering = () => {
           {cardDetails.map((card, index) => (
             <div
               key={index}
-              className=" bg-slate-100 rounded-lg shadow-md overflow-hidden"
+              className=" bg-white rounded-lg shadow-md overflow-hidden"
             >
               <div className="p-8 object-cover mx-auto">
                 <img
@@ -48,4 +48,4 @@ const OurOffering = () => {
   )
 }
 
-export default OurOffering
+export default OfferingCourseCard
