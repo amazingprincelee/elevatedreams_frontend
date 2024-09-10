@@ -1,16 +1,17 @@
 import BlogCard from '@/components/shared/blog/blog-card'
 import LinkButton from '@/components/shared/button/link-button'
-import Ouroffering from '@/components/shared/cards/Ouroffering'
+import OurOffering from '@/components/shared/cards/OurOffering'
+import CourseCard from '@/components/shared/course/course-card'
 
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center gap-8 m-auto min-h-screen">
+    <section className="flex flex-col items-center justify-center gap-8 m-auto min-h-screen bg-base">
       <h1 className="text-5xl font-bold">
         Welcome to Appnovia Starter Template
       </h1>
       <LinkButton url={'#'} label={'Get Started'} />
-      <BlogCard />
-      <Ouroffering />
+      <CourseCard />
+      <OurOffering />
     </section>
   )
 }

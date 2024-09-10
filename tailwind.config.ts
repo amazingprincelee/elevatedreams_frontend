@@ -11,7 +11,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#D82A2A",
+        primary: "#DA2721",
+        base: "#EDEDEF",
+      },
+      fontFamily: {
+        jakarta: ['"Plus Jakarta Sans"', 'sans-serif'], // Prince added this
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
