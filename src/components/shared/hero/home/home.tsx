@@ -25,16 +25,14 @@ const HomeHero: FC<Props> = ({}) => {
 
   return (
     <div className="w-full h-[565px] flex lg:h-[750px] relative">
-      {list.map((el, index) => (
-        <Image
+      {list.map((image, index) => (
+        <img
           key={index}
-          src={el}
-          alt={'blog'}
-          width={1200}
-          height={900}
-          className={` ${
-            index === currentIndex ? 'block' : 'hidden'
-          } h-full w-full object-cover`}
+          src={image}
+          alt={`Slide ${index}`}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-2000 ease-in-out ${
+            index === currentIndex ? 'opacity-100' : 'opacity-0'
+          }`}
         />
       ))}
       <LeftComp />
