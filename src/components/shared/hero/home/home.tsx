@@ -25,21 +25,19 @@ const HomeHero: FC<Props> = ({}) => {
 
   return (
     <div className="w-full h-[565px] flex lg:h-[750px] relative">
-      {list.map((el, index) => (
-        <Image
+      {list.map((image, index) => (
+        <img
           key={index}
-          src={el}
-          alt={'blog'}
-          width={1200}
-          height={900}
-          className={` ${
-            index === currentIndex ? 'block' : 'hidden'
-          } h-full w-full object-cover`}
+          src={image}
+          alt={`Slide ${index}`}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[2000ms] ease-in-out ${
+            index === currentIndex ? 'opacity-100' : 'opacity-0'
+          }`}
         />
       ))}
       <LeftComp />
       <div className="absolute h-fit w-fit md:mt-20 pt-14 top-0 md:right-0 ">
-        <div className="md:mx-8 lg:mx-[200px] flex md:flex-col gap-3 items-center pl-4 md:pl-0">
+        <div className="md:mx-8 lg:mx-[100px] 2xl:mx-[200px] flex md:flex-col gap-3 items-center pl-4 md:pl-0">
           {list.map((_, i) =>
             currentIndex === i ? (
               <div

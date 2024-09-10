@@ -38,13 +38,13 @@ const CourseFilter: FC<Props> = ({}) => {
   ]
 
   return (
-    <div className="w-full px-4 bg-base pt-10">
+    <div className="w-full  bg-base pt-10 ">
       <Tabs
         onValueChange={(value: string) => setSelected(value)}
         defaultValue="featured"
         className="w-full grid gap-5"
       >
-        <TabsList className="w-full gap-5 overflow-scroll">
+        <TabsList className="w-full gap-5 overflow-scroll def-contain">
           {filters.map((el: string, index: number) => (
             <TabsTrigger
               key={index}
@@ -56,7 +56,7 @@ const CourseFilter: FC<Props> = ({}) => {
           ))}
         </TabsList>
         <TabsContent value="featured">
-          <CoursesList courses={['test', 'test', 'test', 'test']} />
+          <CoursesList courses={courses} row={2} />
         </TabsContent>
       </Tabs>
     </div>
