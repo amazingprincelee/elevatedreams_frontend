@@ -1,6 +1,5 @@
 import BlogCard from '@/components/shared/blog/blog-card'
 import LinkButton from '@/components/shared/button/link-button'
-import CourseCard from '@/components/shared/course/course-card'
 import HomeHero from '@/components/shared/hero/home/home'
 
 export default function Home() {
