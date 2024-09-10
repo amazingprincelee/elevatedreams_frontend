@@ -4,13 +4,21 @@ import Link from 'next/link'
 import { FC } from 'react'
 import { buttonVariants } from './button'
 
-type Props = { url: string; label: string; isIcon?: boolean }
-const LinkButton: FC<Props> = ({ url, label, isIcon }) => {
+type Props = {
+  url: string
+  label: string
+  isIcon?: boolean
+  className?: string
+}
+const LinkButton: FC<Props> = ({ url, label, isIcon, className }) => {
   return (
     <Link
       href={url}
       className={cn(
-        buttonVariants({ className: 'flex items-center gap-3', size: 'lg' }),
+        buttonVariants({
+          className: `flex items-center gap-3 w-fit ${className}`,
+          size: 'lg',
+        }),
       )}
     >
       <span>{label}</span>
