@@ -56,7 +56,7 @@ const CourseFilter: FC<Props> = ({}) => {
           ))}
         </TabsList>
         <TabsContent value="featured">
-          <CoursesList courses={[]} row={2} />
+          <CoursesList courses={courses} row={2} />
         </TabsContent>
       </Tabs>
     </div>
