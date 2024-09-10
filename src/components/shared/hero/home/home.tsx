@@ -30,7 +30,7 @@ const HomeHero: FC<Props> = ({}) => {
           key={index}
           src={image}
           alt={`Slide ${index}`}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-2000 ease-in-out ${
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[2000ms] ease-in-out ${
             index === currentIndex ? 'opacity-100' : 'opacity-0'
           }`}
         />
