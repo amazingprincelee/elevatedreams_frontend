@@ -72,7 +72,7 @@ const Footer = () => {
       <div className="flex flex-col items-center mt-16">
         <SocialLinks links={socialLinks} />
         <p className="text-center">
-          © 2024 Crafelo Studios. All rights reserved.
+          © 2024 Built by Appnovia team. All rights reserved.
         </p>
       </div>
     </div>
