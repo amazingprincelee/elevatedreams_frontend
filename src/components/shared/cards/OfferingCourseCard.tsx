@@ -32,23 +32,32 @@ const OfferingCourseCard = () => {
               className="bg-[#F1F2F4] rounded-[24px] shadow-md overflow-hidden"
             >
               <div className="p-8 object-cover mx-auto">
-                <img
-                  src={card.imageSrc}
-                  alt={card.title}
-                  className="w-full h-auto rounded-[24px]"
-                />
-                <div className="pt-4 font-jakarta">
-                  <h3 className="text-xl font-semibold mb-3">{card.title}</h3>
-                  <p className="text-gray-600">{card.text}</p>
+                <div className="h-[430px]">
+                  <img
+                    src={card.imageSrc}
+                    alt={card.title}
+                    className="w-full h-auto rounded-[24px]"
+                  />
+                  <div className="pt-4 font-jakarta">
+                    <h3 className="text-xl font-semibold mb-3">{card.title}</h3>
+                    <p className="text-gray-600">{card.text}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-end mt-8">
-                <LinkButton
-                  url={'#'}
-                  label={'EXPLORE OUR COURSES'}
-                  isIcon={true}
-                  className={`${index === 1 ? 'bg-[#12005F]' : 'bg-[#DA2721]'}  `}
-                />
+
+                <div className="flex mt-8">
+                  <div className="w-1/2">
+                    <LinkButton
+                      url={'#'}
+                      label={'EXPLORE OUR COURSES'}
+                      isIcon={true}
+                      className={`${
+                        index === 1
+                          ? 'bg-[#12005F] hover:bg-[#43288e]'
+                          : 'bg-[#DA2721] '
+                      }`}
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           ))}
