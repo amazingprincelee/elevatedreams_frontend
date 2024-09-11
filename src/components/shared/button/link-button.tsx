@@ -1,4 +1,4 @@
-import { cn } from '@/lib/util'
+import { cn } from '@/lib/utils'
 import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { FC } from 'react'
@@ -16,7 +16,7 @@ const LinkButton: FC<Props> = ({ url, label, isIcon, className }) => {
       href={url}
       className={cn(
         buttonVariants({
-          className: `flex items-center gap-3 ${className}`,
+          className: `flex items-center gap-3 w-fit ${className}`,
           size: 'lg',
         }),
       )}

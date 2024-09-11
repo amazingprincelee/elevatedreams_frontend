@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { FC } from 'react'
-import { truncateString } from '../../../lib/util'
+import { truncateString } from '../../../lib/utils'
 import { buttonVariants } from '../button/button'
 
 type Props = {}
