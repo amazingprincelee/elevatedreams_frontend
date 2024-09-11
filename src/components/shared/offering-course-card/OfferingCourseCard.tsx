@@ -34,7 +34,7 @@ const OfferingCourseCard = () => {
               className="bg-[#F1F2F4] rounded-[24px] shadow-md overflow-hidden"
             >
               <div className="p-8 object-cover mx-auto">
-                <div className="h-[430px] md:h-[300px] lg:h-[400px]">
+                <div className="h-[430px] md:h-[300px] lg:h-[410px]">
                   <img
                     src={card.imageSrc}
                     alt={card.title}
