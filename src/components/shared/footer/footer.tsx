@@ -9,8 +9,28 @@ import {
   FaXTwitter,
   FaYoutube,
 } from 'react-icons/fa6'
+import FooterLinks from './footer-links'
+import SocialLinks from './footer-social-links'
 
 const Footer = () => {
+  const footerLinks = [
+    { label: 'About Us', href: '/about' },
+    { label: 'Courses', href: '/courses' },
+    { label: 'Our Team', href: '/team' },
+    { label: 'Blogs', href: '/blogs' },
+    { label: 'Contact Us', href: '/contact' },
+  ]
+
+  const socialLinks = [
+    { icon: <FaXTwitter className="text-lg" />, href: 'https://twitter.com' },
+    {
+      icon: <FaInstagram className="text-lg" />,
+      href: 'https://instagram.com',
+    },
+    { icon: <FaLinkedin className="text-lg" />, href: 'https://linkedin.com/' },
+    { icon: <FaYoutube className="text-lg" />, href: 'https://youtube.com/' },
+  ]
+
   return (
     <div className="bg-violet-300 rounded-[40px] p-8 sm:p-12 lg:p-24 mb-8">
       <div className="flex flex-col sm:flex-row lg:flex-row gap-12 lg:gap-24">
@@ -22,15 +42,9 @@ const Footer = () => {
             station, Port Harcourt, Rivers State
           </p>
         </div>
-        <div className="lg:w-96 flex flex-col ">
+        <div className="lg:w-96 flex flex-col">
           <h2 className="font-bold ml-0 mb-6 text-xl">Pages</h2>
-          <ul>
-            <li className="mb-4">About Us</li>
-            <li className="mb-4">Courses</li>
-            <li className="mb-4">Our Team</li>
-            <li className="mb-4">Blogs</li>
-            <li className="mb-4">Contact Us</li>
-          </ul>
+          <FooterLinks links={footerLinks} />
         </div>
         <div className="p-2 lg:w-96">
           <h2 className="font-bold mb-6 text-xl">Contact Us</h2>
@@ -56,12 +70,7 @@ const Footer = () => {
       </div>
 
       <div className="flex flex-col items-center mt-16">
-        <div className="flex gap-6 mb-8">
-          <FaXTwitter className="text-lg" />
-          <FaInstagram className="text-lg" />
-          <FaLinkedin className="text-lg" />
-          <FaYoutube className="text-lg" />
-        </div>
+        <SocialLinks links={socialLinks} />
         <p className="text-center">
           © 2024 Crafelo Studios. All rights reserved.
         </p>
