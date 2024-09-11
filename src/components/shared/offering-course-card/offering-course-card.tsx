@@ -12,7 +12,8 @@ const OfferingCourseCard = () => {
     {
       imageSrc: '/images/oil.jpg',
       title: 'Classroom Learning',
-      text: 'Immerse yourself in our expert-led, interactive classes for a hands-on learning experience that goes beyond traditional methods.',
+      tchecext:
+        'Immerse yourself in our expert-led, interactive classes for a hands-on learning experience that goes beyond traditional methods.',
     },
     {
       imageSrc: '/images/oil.jpg',
