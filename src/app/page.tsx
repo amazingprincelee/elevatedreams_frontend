@@ -9,7 +9,7 @@ import HomeHero from '@/components/shared/hero/home/home'
 export default function Home() {
   return (
     <div>
-      {/* <HomeHero /> */}
+      <HomeHero />
       <CourseFilter />
       <section className="flex flex-col items-center justify-center gap-8 m-auto min-h-screen bg-base">
         <h1 className="text-5xl font-bold">

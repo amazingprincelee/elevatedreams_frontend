@@ -1,9 +1,6 @@
 'use client'
 
-import Image from 'next/image'
 import { FC, useEffect, useState } from 'react'
-import LinkButton from '../../button/link-button'
-import ImageList from './image-list'
 import LeftComp from './left-comp'
 
 type Props = {}
