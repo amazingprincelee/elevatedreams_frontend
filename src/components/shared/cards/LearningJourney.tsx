@@ -4,7 +4,7 @@ import LinkButton from '../button/link-button'
 
 const LearningJourney = () => {
   return (
-    <div className="mb-8 relative bg-[#1a0b61] text-white min-h-[500px] min-w-[1240px] rounded-3xl overflow-hidden flex flex-col items-center justify-center">
+    <div className="container mb-8 relative bg-[#1a0b61] text-white min-h-[500px] rounded-3xl overflow-hidden flex flex-col items-center justify-center">
       <svg
         className="absolute inset-0 w-full h-full"
         xmlns="http://www.w3.org/2000/svg"
@@ -51,15 +51,21 @@ const LearningJourney = () => {
           </p>
         </div>
 
-        <h1 className="text-3xl md:text-5xl font-bold mb-4 mt-4">
+        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 mt-4 text-center">
           Start your learning journey for Free!
         </h1>
-        <p className="mb-12 mt-3 text-lg">
+
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl mb-12 mt-3 text-center">
           Get certified in our industry standard course and smash all your tech
           goals.
         </p>
 
-        <LinkButton url={'#'} label={'Get Started'} isIcon={true} />
+        <LinkButton
+          url={'#'}
+          label={'Get Started'}
+          isIcon={true}
+          className="w-[#177px]"
+        />
       </div>
     </div>
   )
