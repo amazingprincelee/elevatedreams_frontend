@@ -13,6 +13,11 @@ const config: Config = {
       colors: {
         primary: "#DA2721",
         base: "#EDEDEF",
+        darkIndigo: '#1a0b61'
+
+      },
+      fontFamily: {
+        jakarta: ['"Plus Jakarta Sans"', 'sans-serif'], // Prince added this
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
