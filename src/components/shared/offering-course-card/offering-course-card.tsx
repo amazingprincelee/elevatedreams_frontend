@@ -27,11 +27,11 @@ const OfferingCourseCard = () => {
         <p className="p-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
           Our Offerings
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1  md:grid-cols-2  gap-6">
           {cardDetails.map((card, index) => (
             <div
               key={index}
-              className="bg-[#F1F2F4] rounded-[24px] shadow-md overflow-hidden"
+              className="bg-base rounded-[24px] shadow-md overflow-hidden"
             >
               <div className="p-8 object-cover mx-auto">
                 <div className="h-[430px] md:h-[300px] lg:h-[410px]">
@@ -45,7 +45,7 @@ const OfferingCourseCard = () => {
                     <p className="text-gray-600">{card.text}</p>
                   </div>
                 </div>
-                <div className="flex mt-6 md:mt-10 lg:mt-14">
+                <div className="flex mt-6 md:mt-16 lg:mt-14">
                   <div className="w-full md:w-1/2 lg:w-1/2">
                     <LinkButton
                       url={'#'}
@@ -53,8 +53,8 @@ const OfferingCourseCard = () => {
                       isIcon={true}
                       className={`${
                         index === 1
-                          ? 'bg-[#12005F] hover:bg-[#43288e]'
-                          : 'bg-[#DA2721]'
+                          ? 'bg-darkIndigo hover:bg-blue-600'
+                          : 'bg-primary'
                       }`}
                     />
                   </div>
