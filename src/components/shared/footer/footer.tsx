@@ -32,21 +32,25 @@ const Footer = () => {
   ]
 
   return (
-    <div className="bg-violet-300 rounded-[40px] p-8 sm:p-12 lg:p-24 mb-8">
-      <div className="flex flex-col sm:flex-row lg:flex-row gap-12 lg:gap-24">
-        <div className="lg:w-[450px]">
+    <div className="container bg-violet-300 rounded-[40px] p-8 sm:p-12 lg:p-24 mb-8 w-full">
+      <div className="flex flex-col sm:flex-row lg:flex-row flex-wrap gap-8 md:gap-12 lg:gap-16">
+        {/* Logo and address */}
+        <div className="flex-grow w-full sm:w-1/2 lg:w-auto">
           <Image src="/images/logo.png" width={116} height={52} alt="logo" />
-
           <p className="mt-8 max-w-xs lg:max-w-none w-96">
             No 4a Etim Okpoyo close, off Aba Express road by total filling
             station, Port Harcourt, Rivers State
           </p>
         </div>
-        <div className="lg:w-96 flex flex-col">
+
+        {/* Pages */}
+        <div className="flex flex-col flex-grow w-full sm:w-1/2 lg:w-auto">
           <h2 className="font-bold ml-0 mb-6 text-xl">Pages</h2>
           <FooterLinks links={footerLinks} />
         </div>
-        <div className="p-2 lg:w-96">
+
+        {/* Contact Us */}
+        <div className="flex-grow w-full sm:w-1/2 lg:w-auto p-2">
           <h2 className="font-bold mb-6 text-xl">Contact Us</h2>
           <div className="flex gap-2 mb-6">
             <div className="bg-pink-300 p-2 rounded-full">
@@ -69,9 +73,10 @@ const Footer = () => {
         </div>
       </div>
 
+      {/* Footer Bottom: Social Links and Copyright */}
       <div className="flex flex-col items-center mt-16">
         <SocialLinks links={socialLinks} />
-        <p className="text-center">
+        <p className="text-center mt-4">
           © 2024 Built by Appnovia team. All rights reserved.
         </p>
       </div>
