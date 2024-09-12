@@ -10,7 +10,7 @@ type Props = { isOpen: boolean; setIsOpen: (val: boolean) => void }
 const MobileNavbar: FC<Props> = ({ isOpen, setIsOpen }) => {
   return (
     <div
-      className={`bg-white z-30 fixed transition-transform duration-300 delay-100 ease-in-out over trans-props h-full ${
+      className={`bg-white z-30 fixed transition-transform duration-300 delay-100 ease-in-out trans-props h-full ${
         isOpen ? ' translate-x-0' : '-translate-x-full'
       } w-[75%] px-6 block lg:hidden pt-8 md:w-1/2`}
     >
