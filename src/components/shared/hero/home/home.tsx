@@ -21,7 +21,7 @@ const HomeHero: FC<Props> = ({}) => {
   }, [currentIndex, interval])
 
   return (
-    <div className="w-full h-[565px] flex lg:h-[750px] relative">
+    <div className="w-full h-[665px] flex lg:h-[850px] pt-32 relative">
       {list.map((image, index) => (
         <img
           key={index}
