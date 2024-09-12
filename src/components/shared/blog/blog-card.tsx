@@ -21,15 +21,15 @@ const BlogCard: FC<Props> = ({}) => {
           Data Science
         </div>
       </div>
-      <h2 className="font-medium text-lg">
+      <h2 className="font-semibold text-lg">
         Getting started with Python Programming Language
       </h2>
-      <span className="text-sm font-normal text-slate-600 leading-relaxed">
+      <span className="text-xs font-light text-justify text-slate-600 leading-relaxed">
         {truncateString(`Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur
         eligendi aut, corporis dolorum saepe earum id nobis voluptate rem neque
         nemo distinctio odit eveniet corrupti, qui, tempore tempora ab ea?`)}
       </span>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 mt-2">
         <Image
           src={'/images/oil.jpg'}
           alt={'blog'}
