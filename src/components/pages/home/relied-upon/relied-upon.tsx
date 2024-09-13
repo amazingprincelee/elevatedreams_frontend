@@ -8,7 +8,7 @@ import { dataInfo } from './data'
 type Props = {}
 const ReliedUpon: FC<Props> = ({}) => {
   return (
-    <div className="hidden md:flex min-h-screen pt-10">
+    <div className="hidden md:flex margining">
       <div className="flex flex-col justify-center items-center def-contain gap-10">
         <h1 className="md:text-4xl text-2xl font-black">
           Relied upon by many students
@@ -45,9 +45,12 @@ const ReliedUpon: FC<Props> = ({}) => {
               <p className="absolute mt-10 top-0 2xl:ml-10 mx-3 text-xs left-0 lg:text-sm 2xl:text-lg font-bold lg:w-[70%] w-full">
                 {el.text}
               </p>
-              <p className="absolute bottom-0 right-0 left-0 lg:text-7xl text-2xl lg:my-10 my-5 font-black w-full text-center ">
-                {el.count}
-              </p>
+              <div className="flex justify-center absolute bottom-0 right-0 left-0">
+                <p className=" flex gap-3 w-fit left-0 lg:text-7xl text-2xl lg:my-10 my-5 font-black text-center ">
+                  {el.count}
+                  {el.rate && <p className="text-lg font-thin">{el.rate}</p>}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>

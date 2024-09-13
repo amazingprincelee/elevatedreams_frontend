@@ -2,8 +2,8 @@
 
 import Image from 'next/image'
 import { FC } from 'react'
-import { truncateString } from '../../../lib/utils'
-import { buttonVariants } from '../button/button'
+import { truncateString } from '../../../../lib/utils'
+import { buttonVariants } from '../../../shared/button/button'
 
 type Props = {}
 const BlogCard: FC<Props> = ({}) => {

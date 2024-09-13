@@ -27,7 +27,7 @@ const Blog: FC<Props> = ({ row = 1, showPagination }) => {
   const blogList = blogs.slice(0, totalRow)
 
   return (
-    <div className="def-contain flex flex-col gap-5 md:gap-10 mt-10 mb-20 ">
+    <div className="def-contain flex flex-col gap-5 md:gap-10 margining">
       <h1 className="md:font-black text-3xl md:text-4xl text-center">
         Latest from our Blogs
       </h1>

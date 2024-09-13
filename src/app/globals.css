@@ -7,6 +7,14 @@
   @apply flex items-center;
 }
 
+.margining {
+  @apply mt-10 lg:mt-20 lg:mb-20 mb-10;
+}
+
+.padding {
+  @apply pt-10 lg:pt-20 lg:pb-20 pb-10;
+}
+
 .responsive-grid {
   @apply grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 2xl:gap-5 gap-10 md:gap-5;
 }

@@ -39,13 +39,13 @@ const Navbar = () => {
               height={900}
               className="h-6 w-6 object-cover"
             />
-            <Image
+            {/* <Image
               src={'/icons/cart.svg'}
               alt={'blog'}
               width={1200}
               height={900}
               className="h-6 w-6 object-cover"
-            />
+            /> */}
             <div className="flex-center gap-3">
               <LinkButton
                 url={''}
