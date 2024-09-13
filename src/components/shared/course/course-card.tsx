@@ -11,7 +11,7 @@ const CourseCard: FC<Props> = ({}) => {
   return (
     <div className="shadow-sm flex flex-col  h-[580px] w-fit rounded-xl gap-3 pb-5 bg-white">
       <Image
-        src={'/images/oil.jpg'}
+        src={'/images/courses/python.png'}
         alt={'blog'}
         width={1200}
         height={900}

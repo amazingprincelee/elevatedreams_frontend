@@ -40,7 +40,7 @@ const OfferingCourseCard = () => {
                   className="w-full h-auto rounded-[24px]"
                 />
                 <div className="pt-4 font-jakarta">
-                  <h3 className="text-xl font-semibold mb-3">{card.title}</h3>
+                  <h3 className="text-2xl font-semibold mb-3">{card.title}</h3>
                   <p className="text-gray-600">{card.text}</p>
                 </div>
               </div>

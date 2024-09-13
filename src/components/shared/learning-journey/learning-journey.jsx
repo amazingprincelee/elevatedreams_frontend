@@ -3,6 +3,8 @@ import { BsStars } from 'react-icons/bs'
 import LinkButton from '../button/link-button'
 import SvgEffect from './svg-background-effect'
 
+
+
 const LearningJourney = () => {
   return (
     <div className="container mb-8 relative bg-[#1a0b61] text-white min-h-[500px] rounded-3xl overflow-hidden flex flex-col items-center justify-center">
