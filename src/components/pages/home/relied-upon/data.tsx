@@ -11,13 +11,13 @@ export const dataInfo = [
     img: '/images/relied/img4.png',
     count: '4.8',
     text: "Student's satisfaction",
-    rate: '',
+    rate: '⭐️',
   },
   {
     img: '/images/relied/img5.png',
-    count: '100%',
+    count: '100',
     text: 'Live classes and remote online learning.',
-    rate: '',
+    rate: '%',
   },
   { img: '/images/relied/img6.png' },
   {

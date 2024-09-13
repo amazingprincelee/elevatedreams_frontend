@@ -23,7 +23,7 @@ const OfferingCourseCard = () => {
   ]
 
   return (
-    <div className="padding def-contain">
+    <div className="margining def-contain">
       <div className=" flex flex-col ">
         <p className="pb-4 text-3xl lg:text-4xl font-bold">Our Offerings</p>
         <div className="grid grid-cols-1  md:grid-cols-2 h-fit gap-6">
@@ -43,7 +43,7 @@ const OfferingCourseCard = () => {
                 </div>
 
                 {/* action buttons */}
-                <div className="flex ">
+                <div className="flex mt-5 lg:mt-0">
                   <div className="">
                     <LinkButton
                       url={'#'}

@@ -7,8 +7,12 @@
   @apply flex items-center;
 }
 
-.padding {
+.margining {
   @apply mt-10 lg:mt-20 lg:mb-20 mb-10;
+}
+
+.padding {
+  @apply pt-10 lg:pt-20 lg:pb-20 pb-10;
 }
 
 .responsive-grid {

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { FC } from 'react'
-import LinkButton from '../../shared/button/link-button'
+import LinkButton from '../../../shared/button/link-button'
 import ImageList from './image-list'
 
 type Props = {}
