@@ -38,7 +38,7 @@ const CourseFilter: FC<Props> = ({}) => {
   ]
 
   return (
-    <div className="w-full  bg-base pt-10 ">
+    <div className="w-full bg-base pt-10 pb-20">
       <Tabs
         onValueChange={(value: string) => setSelected(value)}
         defaultValue="featured"

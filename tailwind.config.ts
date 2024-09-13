@@ -12,12 +12,13 @@ const config: Config = {
     extend: {
       colors: {
         primary: "#DA2721",
-        base: "#EDEDEF",
-        darkIndigo: '#1a0b61'
-
+        base: "#F1F2F4",
+        footer: "#F0F2F5",
+        footerText: "#64748B",
+        darkIndigo: "#1a0b61",
       },
       fontFamily: {
-        jakarta: ['"Plus Jakarta Sans"', 'sans-serif'], // Prince added this
+        jakarta: ['"Plus Jakarta Sans"', "sans-serif"], // Prince added this
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
