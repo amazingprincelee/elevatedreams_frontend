@@ -43,8 +43,8 @@ const TestimonialSlider: React.FC = () => {
   }
 
   return (
-    <div className="container mx-auto m-8">
-      <div className="md:flex md:flex-col lg:flex-row relative  bg-black text-white rounded-xl shadow-lg items-center space-x-0 md:space-x-8 md:px-10 md:py-20 lg:px-80 lg:py-32 rounded-br-[100px]">
+    <div className="container  bg-black mx-auto m-8">
+      <div className="md:flex md:flex-col lg:flex-row relative  text-white rounded-xl shadow-lg items-center space-x-0 md:space-x-8 md:px-10 md:py-20 lg:px-80 lg:py-32 md:rounded-br-[100px]">
         {/* Image container */}
         <div className="lg:w-1/3 md:w-full w-full p-12 flex justify-center">
           <Image
@@ -58,11 +58,11 @@ const TestimonialSlider: React.FC = () => {
 
         {/* Text area */}
         <div className="md:w-[550px] md:h-[300px] py-10">
-          <p className="md:text-2xl font-thin font-jakarta">
+          <p className="md:text-2xl p-3 font-thin font-jakarta">
             {testimonials[currentIndex].text}
           </p>
 
-          <div className="mt-16 font-jakarta">
+          <div className="mt-10 font-jakarta p-3">
             <h3 className="mt-6 text-2xl font-semibold">
               {testimonials[currentIndex].name}
             </h3>
@@ -73,7 +73,7 @@ const TestimonialSlider: React.FC = () => {
         </div>
 
         {/* Navigation buttons */}
-        <div className="flex gap-2 px-10 md:bg-white p-3 md:w-60 md:absolute md:bottom-0 md:right-0 rounded-tl-lg">
+        <div className="flex gap-2 px-10 justify-center md:justify-end md:bg-white p-3 md:w-60 md:absolute md:bottom-0 md:right-0 rounded-tl-lg ">
           <button
             onClick={handlePrev}
             className="hover:border-red-700 text-red-500 p-3 rounded-full border-2 border-red-500"
