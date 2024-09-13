@@ -21,6 +21,6 @@
 			"@/*": ["./src/*"]
 		}
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/shared/learning-journey/svg-background-effect.tsx", "src/components/shared/learning-journey/learning-journey.jsx"],
 	"exclude": ["node_modules"]
 }

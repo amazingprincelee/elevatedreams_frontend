@@ -17,7 +17,7 @@ const Faq: FC<Props> = ({}) => {
   const item = { hidden: { x: -10, opacity: 0 } }
   return (
     <div className=" pt-10 pb-20 bg-base">
-      <div className="flex flex-col def-contain lg:items-center gap-10 lg:w-">
+      <div className="flex flex-col def-contain lg:items-center gap-10">
         <h1 className="md:text-4xl text-2xl text-center font-black">
           Frequently Asked Questions
         </h1>
