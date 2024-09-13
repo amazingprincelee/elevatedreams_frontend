@@ -12,7 +12,7 @@ const config: Config = {
     extend: {
       colors: {
         primary: "#DA2721",
-        base: "#EDEDEF",
+        base: "#F1F2F4",
         footer: "#F0F2F5",
         footerText: "#64748B",
         darkIndigo: "#1a0b61",

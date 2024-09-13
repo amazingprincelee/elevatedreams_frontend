@@ -31,7 +31,11 @@ const LinkButton: FC<Props> = ({
       <span>{label}</span>
       {isIcon && (
         <div className="p-[3px] bg-white rounded-full">
-          <ArrowRight className={`h-4 w-4 text-primary ${iconClassName}`} />
+          <ArrowRight
+            className={`h-4 w-4  ${
+              iconClassName ? iconClassName : 'text-primary'
+            }  `}
+          />
         </div>
       )}
     </Link>

@@ -5,7 +5,7 @@ import SvgEffect from "./svg-background-effect";
 
 const LearningJourney = () => {
   return (
-    <div className="def-contain mt-10 lg:mt-20 lg:mb-20 mb-10">
+    <div className="def-contain padding">
       <div className="container mb-8 relative bg-[#1a0b61] text-white min-h-[500px] rounded-3xl overflow-hidden flex flex-col items-center justify-center">
         <SvgEffect />
 
