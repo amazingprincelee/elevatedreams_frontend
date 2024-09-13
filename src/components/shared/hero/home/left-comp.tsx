@@ -9,7 +9,7 @@ type Props = {}
 const LeftComp: FC<Props> = ({}) => {
   return (
     <div className="absolute top-0 left-0 h-full bg-gradient-to-r md:from-50% lg:from-30% from-slate-950 lg:w-[70%]">
-      <div className="mt-20 def-contain grid gap-5">
+      <div className="md:mt-40 mt-32 def-contain grid gap-5">
         <p className=" text-white font-bold lg:text-6xl text-4xl md:w-[50%] lg:w-[80%]">
           <div className="flex-center gap-1 w-full">
             Learn

@@ -8,7 +8,7 @@ import { buttonVariants } from '../button/button'
 type Props = {}
 const BlogCard: FC<Props> = ({}) => {
   return (
-    <div className="border shadow-sm grid max-w-[400px] max-h-[530px] rounded-xl p-4 gap-3">
+    <div className="border shadow-sm grid min-w-full max-h-[530px] rounded-xl p-4 gap-3">
       <div className="relative h-full">
         <Image
           src={'/images/oil.jpg'}

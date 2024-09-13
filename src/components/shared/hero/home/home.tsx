@@ -5,7 +5,11 @@ import LeftComp from './left-comp'
 
 type Props = {}
 const HomeHero: FC<Props> = ({}) => {
-  const list = ['/images/oil.jpg', '/images/power.jpg', '/images/refinery.jpg']
+  const list = [
+    '/images/hero/img1.png',
+    '/images/hero/img2.png',
+    'images/hero/img3.png',
+  ]
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const nextSlide = () => {
@@ -21,13 +25,13 @@ const HomeHero: FC<Props> = ({}) => {
   }, [currentIndex, interval])
 
   return (
-    <div className="w-full h-[565px] flex lg:h-[750px] relative">
+    <div className="w-full h-[665px] flex lg:h-[850px] pt-32 relative">
       {list.map((image, index) => (
         <img
           key={index}
           src={image}
           alt={`Slide ${index}`}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[2000ms] ease-in-out ${
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[2000ms] object-top ease-in-out ${
             index === currentIndex ? 'opacity-100' : 'opacity-0'
           }`}
         />
