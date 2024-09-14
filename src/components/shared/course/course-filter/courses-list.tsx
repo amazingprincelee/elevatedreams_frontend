@@ -3,7 +3,7 @@ import { FC } from 'react'
 import CourseCard from '../course-card'
 import CardLoader from './loader'
 
-type Props = { courses: any[]; row?: number; showPagination?: boolean }
+type Props = { courses: CourseProps[]; row?: number; showPagination?: boolean }
 const CoursesList: FC<Props> = ({ courses, row = 2, showPagination }) => {
   const {
     windowSize: { width },
@@ -19,8 +19,8 @@ const CoursesList: FC<Props> = ({ courses, row = 2, showPagination }) => {
       <div className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 2xl:gap-5 gap-10 md:gap-5  ">
         {courseList.length < 1
           ? Array.from({ length: totalRow }, (_, i) => <CardLoader key={i} />)
-          : courseList.map((el: any, index: number) => (
-              <CourseCard key={index} />
+          : courseList.map((course: any, index: number) => (
+              <CourseCard key={index} course={course} />
             ))}
       </div>
     </div>

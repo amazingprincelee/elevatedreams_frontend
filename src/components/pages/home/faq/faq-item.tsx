@@ -24,7 +24,7 @@ const FaqItem: FC<FaqItemProps> = ({ isOpen, answer }) => {
       }}
       style={{ overflow: 'hidden' }}
     >
-      <div ref={contentRef} className="px-4 pt-2 pb-4 text-xs text-gray-600">
+      <div ref={contentRef} className="px-4 pt-2 pb-4 text-sm text-gray-600">
         <p>{answer}</p>
       </div>
     </motion.div>
