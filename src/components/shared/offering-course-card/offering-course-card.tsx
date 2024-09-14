@@ -1,6 +1,8 @@
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import React from 'react'
 import LinkButton from '../button/link-button'
+import { Header } from '../header'
 
 interface OfferingCard {
   imageSrc: string
@@ -23,10 +25,17 @@ const OfferingCourseCard = () => {
   ]
 
   return (
-    <div className="margining def-contain">
+    <motion.div
+      initial={{ opacity: 0, translateY: 100 }}
+      whileInView={{ opacity: [0, 1], translateY: [100, 0] }}
+      animate={{ opacity: [0, 1], translateY: [100, 0] }}
+      transition={{ delay: 0.4, duration: 1, ease: 'easeInOut' }}
+      viewport={{ once: true }}
+      className="margining def-contain"
+    >
       <div className=" flex flex-col ">
-        <p className="pb-4 text-3xl lg:text-4xl font-bold">Our Offerings</p>
-        <div className="grid grid-cols-1  md:grid-cols-2 h-fit gap-6">
+        <Header text="Our Offerings" />
+        <div className="grid grid-cols-1  md:grid-cols-2 h-fit mt-5 gap-6">
           {cardDetails.map((card, index) => (
             <div key={index} className="bg-base rounded-[24px] overflow-hidden">
               <div className="p-4 2xl:p-6">
@@ -51,12 +60,12 @@ const OfferingCourseCard = () => {
                       isIcon={true}
                       className={`${
                         index === 1
-                          ? 'bg-darkIndigo hover:bg-blue-600'
+                          ? 'bg-darkIndigo hover:bg-darkIndigo/90'
                           : 'bg-primary'
                       }`}
                       iconClassName={`${
                         index === 1
-                          ? 'text-darkIndigo hover:bg-blue-600'
+                          ? 'text-darkIndigo hover:bg-darkIndigo/90'
                           : 'text-primary'
                       }`}
                     />
@@ -67,7 +76,7 @@ const OfferingCourseCard = () => {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

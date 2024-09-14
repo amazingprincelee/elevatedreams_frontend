@@ -23,14 +23,14 @@ const LinkButton: FC<Props> = ({
       href={url}
       className={cn(
         buttonVariants({
-          className: `flex items-center gap-3 w-fit ${className}`,
+          className: `flex group items-center gap-3 w-fit ${className}`,
           size: 'lg',
         }),
       )}
     >
       <span>{label}</span>
       {isIcon && (
-        <div className="p-[3px] bg-white rounded-full">
+        <div className="p-[3px] bg-white rounded-full group-hover:translate-x-1">
           <ArrowRight
             className={`h-4 w-4  ${
               iconClassName ? iconClassName : 'text-primary'

@@ -1,4 +1,5 @@
 import { useWindowSize } from '@/lib/hooks/useResize'
+import { motion } from 'framer-motion'
 import { FC } from 'react'
 import CourseCard from '../course-card'
 import CardLoader from './loader'
@@ -20,7 +21,25 @@ const CoursesList: FC<Props> = ({ courses, row = 2, showPagination }) => {
         {courseList.length < 1
           ? Array.from({ length: totalRow }, (_, i) => <CardLoader key={i} />)
           : courseList.map((course: any, index: number) => (
-              <CourseCard key={index} course={course} />
+              <motion.div
+                key={index}
+                initial={{ scale: 0.9 }}
+                transition={{
+                  ease: 'easeInOut',
+                  duration: 0.4,
+                  delay: 0.2 + 0.2 * index,
+                }}
+                viewport={{ once: true }}
+                exit="exit"
+                animate={{
+                  scale: [0.9, 1],
+                }}
+                whileInView={{
+                  scale: [0.9, 1],
+                }}
+              >
+                <CourseCard course={course} />
+              </motion.div>
             ))}
       </div>
     </div>
