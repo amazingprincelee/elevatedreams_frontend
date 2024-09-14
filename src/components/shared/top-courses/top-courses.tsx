@@ -3,8 +3,8 @@ import LinkButton from '../button/link-button'
 import CourseCard from '../course/course-card'
 import { Header, SubHeader } from '../header'
 
-type Props = {}
-const TopCourses: FC<Props> = ({}) => {
+type Props = { courses: CourseProps[] }
+const TopCourses: FC<Props> = ({ courses }) => {
   return (
     <div className="bg-base padding">
       <div className="def-contain">
@@ -19,8 +19,8 @@ const TopCourses: FC<Props> = ({}) => {
             <LinkButton url={'#'} label={'VIEW ALL COURSES'} isIcon={true} />
           </div>
           <div className="md:flex-row flex flex-col gap-2 col-span-2 2xl:col-span-1">
-            {Array.from({ length: 2 }, (_, i) => (
-              <CourseCard key={i} />
+            {courses.slice(0, 2).map((course, i) => (
+              <CourseCard key={i} course={course} />
             ))}
           </div>
         </div>

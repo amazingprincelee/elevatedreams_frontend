@@ -1,5 +1,6 @@
 'use client'
 
+import { Header } from '@/components/shared/header'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { FC } from 'react'
@@ -10,9 +11,7 @@ const ReliedUpon: FC<Props> = ({}) => {
   return (
     <div className="hidden md:flex margining">
       <div className="flex flex-col justify-center items-center def-contain gap-10">
-        <h1 className="md:text-4xl text-2xl font-black">
-          Relied upon by many students
-        </h1>
+        <Header text={'Relied upon by many students'} />
         <div className="grid md:grid-cols-4 gap-5 ">
           {dataInfo.map((el, index) => (
             <motion.div

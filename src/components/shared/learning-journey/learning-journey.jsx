@@ -5,11 +5,11 @@ import SvgEffect from "./svg-background-effect";
 
 const LearningJourney = () => {
   return (
-    <div className="def-contain margining">
-      <div className="container mb-8 relative bg-[#1a0b61] text-white min-h-[500px] rounded-3xl overflow-hidden flex flex-col items-center justify-center">
+    <div className="def-contain margining w-full">
+      <div className=" mb-8 relative bg-[#1a0b61] w-full text-white min-h-[500px] rounded-3xl overflow-hidden flex flex-col items-center justify-center">
         <SvgEffect />
 
-        <div className="relative z-10 flex flex-col items-center justify-center font-jakarta  h-full">
+        <div className="relative z-10 flex w-full flex-col items-center justify-center font-jakarta  h-full">
           <div className="flex flex-row p-2">
             <BsStars size={24} />
             <p className="mb-4 text-sm ml-2 font-light">
