@@ -1,3 +1,6 @@
+'use client'
+
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import React from 'react'
 import {
@@ -33,7 +36,14 @@ const Footer = () => {
 
   return (
     <div className="def-contain">
-      <div className=" bg-footer rounded-[40px]  p-8 lg:p-12 2xl:p-24 mb-8 w-full">
+      <motion.div
+        initial={{ opacity: 0, translateY: 100 }}
+        whileInView={{ opacity: [0, 1], translateY: [100, 0] }}
+        animate={{ opacity: [0, 1], translateY: [100, 0] }}
+        transition={{ delay: 0.4, duration: 1, ease: 'easeInOut' }}
+        viewport={{ once: true }}
+        className=" bg-footer rounded-[40px]  p-8 lg:p-12 2xl:p-24 mb-8 w-full"
+      >
         <div className="grid lg:grid-cols-5 gap-5">
           {/* Logo and address */}
           <div className=" w-full  col-span-2">
@@ -91,7 +101,7 @@ const Footer = () => {
             © 2024 Built by Appnovia team. All rights reserved.
           </p>
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }
