@@ -6,25 +6,33 @@ import Image from 'next/image'
 import { FC } from 'react'
 import { Button } from '../button/button'
 
-type Props = {}
-const CourseCard: FC<Props> = ({}) => {
+type Props = { course: CourseProps }
+const CourseCard: FC<Props> = ({ course }) => {
+  const { imgUrl, metaTitle, metaDescription, duration, amount, category } =
+    course
   return (
-    <div className="shadow-sm flex flex-col  h-[580px] w-fit rounded-xl gap-3 pb-5 bg-white">
+    <div className="shadow-sm flex flex-col h-[560px] w-fit rounded-xl gap-3 pb-5 bg-white">
       <Image
-        src={'/images/courses/python.png'}
+        src={imgUrl}
         alt={'blog'}
         width={1200}
         height={900}
-        className="h-full w-full object-cover rounded-t-xl"
+        className="h-[40%] object-cover rounded-t-xl"
       />
-      <div className="grid px-4">
-        <h2 className="font-bold text-lg">Data Science and Python</h2>
-        <span className="text-xs font-medium text-primary">Data Science</span>
-        <span className="text-xs font-light text-slate-600 leading-relaxed mt-5">
-          {truncateString(`Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur
-        eligendi aut, corporis dolorum saepe earum id nobis voluptate rem neque
-        nemo distinctio odit eveniet corrupti, qui, tempore tempora ab ea?`)}
-        </span>
+      <div className="flex flex-col justify-between mt-2 px-4 h-full">
+        <div className="flex flex-col h-full">
+          <div className="h-[70px]">
+            <h2 className="font-medium text-lg">
+              {truncateString(metaTitle, 60)}
+            </h2>
+            <span className="text-xs font-medium text-primary mt-1">
+              {category}
+            </span>
+          </div>
+          <span className="text-sm font-light text-slate-500 leading-relaxed mt-5">
+            {truncateString(metaDescription, 200)}
+          </span>
+        </div>
         <div className="flex-center gap-3 mt-10 ">
           <div className="flex-center gap-1 bg-base rounded-lg px-4 py-2 w-full  justify-center ">
             <Image
@@ -34,13 +42,15 @@ const CourseCard: FC<Props> = ({}) => {
               height={48}
               className="w-4 h-4"
             />
-            <span className="font-light text-xs leading-tight">2weeks</span>
+            <span className="font-light text-xs leading-tight">
+              {duration}weeks
+            </span>
           </div>
-          <span className="font-semibold text-center text-xs px-4 w-full py-2  bg-base rounded-lg p-2 leading-tight">
-            ₦300,000
+          <span className="font-semibold text-center text-xs px-4 w-full py-2 bg-base rounded-lg p-2 leading-tight">
+            ₦{Number(amount).toLocaleString()}
           </span>
           <Button size={'sm'} className="flex-center gap-1 font-xs w-full ">
-            Add to Cart
+            Buy Now
             <ShoppingCartIcon className="h-4 w-4" />
           </Button>
         </div>

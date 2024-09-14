@@ -5,26 +5,9 @@ import { FC, useEffect, useState } from 'react'
 import { get } from '../../../../../backend_services/api_services'
 import CoursesList from './courses-list'
 
-type Props = {}
-const CourseFilter: FC<Props> = ({}) => {
-  const [courses, setCourses] = useState<any[]>([])
+type Props = { courses: CourseProps[] }
+const CourseFilter: FC<Props> = ({ courses }) => {
   const [selected, setSelected] = useState<string>('featured')
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    async function fetchApiData() {
-      try {
-        const apiData: any = await get('/course')
-        if (apiData && apiData.data) setCourses(apiData.data)
-      } catch (error) {
-        //    toast.error("Please check your internet connectivity");
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    fetchApiData()
-  }, [])
 
   const filters = [
     'Featured',

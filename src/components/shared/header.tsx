@@ -2,7 +2,7 @@ import { FC } from 'react'
 
 type Props = { text: string }
 export const Header: FC<Props> = ({ text }) => {
-  return <h1 className="text-2xl font-bold md:text-4xl ">{text}</h1>
+  return <h1 className="text-3xl lg:text-4xl font-bold">{text}</h1>
 }
 
 export const SubHeader: FC<Props> = ({ text }) => {
