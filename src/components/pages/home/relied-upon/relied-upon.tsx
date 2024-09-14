@@ -9,7 +9,14 @@ import { dataInfo } from './data'
 type Props = {}
 const ReliedUpon: FC<Props> = ({}) => {
   return (
-    <div className="hidden md:flex margining">
+    <motion.div
+      initial={{ opacity: 0, translateY: 100 }}
+      whileInView={{ opacity: [0, 1], translateY: [100, 0] }}
+      animate={{ opacity: [0, 1], translateY: [100, 0] }}
+      transition={{ delay: 0.4, duration: 1, ease: 'easeInOut' }}
+      viewport={{ once: true }}
+      className="hidden md:flex margining"
+    >
       <div className="flex flex-col justify-center items-center def-contain gap-10">
         <Header text={'Relied upon by many students'} />
         <div className="grid md:grid-cols-4 gap-5 ">
@@ -54,7 +61,7 @@ const ReliedUpon: FC<Props> = ({}) => {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 export default ReliedUpon
