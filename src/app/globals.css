@@ -27,3 +27,17 @@
     @apply px-4 md:px-10 lg:px-[100px] 2xl:px-[200px];
   }
 }
+
+@layer base {
+  ::-webkit-scrollbar {
+    @apply w-1 h-1 rounded-2xl;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-200 rounded-2xl;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/10 rounded-2xl;
+  }
+}
