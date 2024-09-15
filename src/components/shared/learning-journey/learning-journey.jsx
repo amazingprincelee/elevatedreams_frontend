@@ -1,7 +1,7 @@
 import React from "react";
 import { BsStars } from "react-icons/bs";
 import LinkButton from "../button/link-button";
-import SvgEffect from "./svg-background-effect";
+import SvgEffect from "./hero-svg-background-effect";
 import { motion } from "framer-motion";
 
 const LearningJourney = () => {

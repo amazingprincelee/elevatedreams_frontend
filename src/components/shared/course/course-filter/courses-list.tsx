@@ -1,26 +1,43 @@
 import { useWindowSize } from '@/lib/hooks/useResize'
 import { motion } from 'framer-motion'
-import { FC } from 'react'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { FC, useState } from 'react'
 import CourseCard from '../course-card'
-import CardLoader from './loader'
+import CardLoader from '../loader'
+import Pagination from './pagination'
 
-type Props = { courses: CourseProps[]; row?: number; showPagination?: boolean }
-const CoursesList: FC<Props> = ({ courses, row = 2, showPagination }) => {
+type Props = {
+  courses: CourseProps[]
+  rowsPerPage?: number
+  showPagination?: boolean
+}
+
+const CoursesList: FC<Props> = ({
+  courses,
+  rowsPerPage = 2,
+  showPagination,
+}) => {
+  const [startIndex, setStartIndex] = useState(0)
   const {
     windowSize: { width },
   } = useWindowSize()
 
-  const count = width !== undefined && width > 1024 && width < 1660 ? 3 : 4
-  const totalRow = row * count
+  // Determine the number of courses to show per row based on the window width
+  const coursesPerRow = width && width > 1024 && width < 1660 ? 3 : 4
+  const coursesPerPage = rowsPerPage * coursesPerRow
+  const endIndex = startIndex + coursesPerPage
 
-  const courseList = courses.slice(0, totalRow)
+  // Get the list of courses to display on the current page
+  const displayedCourses = courses.slice(startIndex, endIndex)
 
   return (
-    <div className="flex col items-center justify-center def-contain">
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 2xl:gap-5 gap-10 md:gap-5  ">
-        {courseList.length < 1
-          ? Array.from({ length: totalRow }, (_, i) => <CardLoader key={i} />)
-          : courseList.map((course: any, index: number) => (
+    <div className="flex flex-col items-center justify-center">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 2xl:gap-5 gap-10 md:gap-5">
+        {displayedCourses.length === 0
+          ? Array.from({ length: coursesPerPage }, (_, i) => (
+              <CardLoader key={i} />
+            ))
+          : displayedCourses.map((course, index) => (
               <motion.div
                 key={index}
                 initial={{ scale: 0.9 }}
@@ -31,18 +48,25 @@ const CoursesList: FC<Props> = ({ courses, row = 2, showPagination }) => {
                 }}
                 viewport={{ once: true }}
                 exit="exit"
-                animate={{
-                  scale: [0.9, 1],
-                }}
-                whileInView={{
-                  scale: [0.9, 1],
-                }}
+                animate={{ scale: [0.9, 1] }}
+                whileInView={{ scale: [0.9, 1] }}
               >
                 <CourseCard course={course} />
               </motion.div>
             ))}
       </div>
+
+      {showPagination && (
+        <Pagination
+          startIndex={startIndex}
+          setStartIndex={setStartIndex}
+          displayedCourses={displayedCourses}
+          courses={courses}
+          coursesPerPage={coursesPerPage}
+        />
+      )}
     </div>
   )
 }
+
 export default CoursesList

@@ -2,10 +2,12 @@ import { motion } from 'framer-motion'
 import { FC } from 'react'
 import LinkButton from '../button/link-button'
 import CourseCard from '../course/course-card'
+import CardLoader from '../course/loader'
 import { Header, SubHeader } from '../header'
 
-type Props = { courses: CourseProps[] }
-const TopCourses: FC<Props> = ({ courses }) => {
+type Props = { courses: CourseProps[]; hideButton?: boolean }
+const TopCourses: FC<Props> = ({ courses, hideButton }) => {
+  const courseList = courses.slice(0, 2)
   return (
     <div className="bg-base padding">
       <div className="def-contain">
@@ -24,7 +26,13 @@ const TopCourses: FC<Props> = ({ courses }) => {
                 'Dive into 20+ courses encompassing Data Science, Software Engineering, Cloud Computing, and more, all available.'
               }
             />
-            <LinkButton url={'#'} label={'VIEW ALL COURSES'} isIcon={true} />
+            {!hideButton && (
+              <LinkButton
+                url={'/courses'}
+                label={'VIEW ALL COURSES'}
+                isIcon={true}
+              />
+            )}
           </motion.div>
           <motion.div
             initial={{ opacity: 0, translateX: 100 }}
@@ -34,9 +42,11 @@ const TopCourses: FC<Props> = ({ courses }) => {
             viewport={{ once: true }}
             className="md:flex-row flex flex-col gap-2 col-span-2 2xl:col-span-1"
           >
-            {courses.slice(0, 2).map((course, i) => (
-              <CourseCard key={i} course={course} />
-            ))}
+            {courseList.length < 1
+              ? Array.from({ length: 2 }, (_, i) => <CardLoader key={i} />)
+              : courseList.map((course, i) => (
+                  <CourseCard key={i} course={course} />
+                ))}
           </motion.div>
         </div>
       </div>

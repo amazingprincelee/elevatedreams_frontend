@@ -66,7 +66,7 @@ const Footer = () => {
               <h2 className="font-bold mb-6 text-xl">Contact Us</h2>
               <div className="grid gap-5">
                 <div className="flex-center gap-2">
-                  <div className="bg-primary/20 p-3 rounded-full">
+                  <div className="bg-primary/5 p-3 rounded-full">
                     <FaRegEnvelope
                       color="#DA2721"
                       size={16}
@@ -76,13 +76,13 @@ const Footer = () => {
                   <p className="text-footerText">customercare@loctechng.com</p>
                 </div>
                 <div className="flex-center gap-2">
-                  <div className="bg-primary/20 p-3 rounded-full">
+                  <div className="bg-primary/5 p-3 rounded-full">
                     <FaPhone color="#DA2721" size={16} className="text-2xl" />
                   </div>
                   <p className="text-footerText">+234 123 456 7890</p>
                 </div>
                 <div className="flex-center gap-2">
-                  <div className="bg-primary/20 p-3 rounded-full">
+                  <div className="bg-primary/5 p-3 rounded-full">
                     <FaClock color="#DA2721" size={16} className="text-2xl" />
                   </div>
                   <p className="text-footerText">
