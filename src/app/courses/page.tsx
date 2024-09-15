@@ -1,17 +1,14 @@
 'use client'
 
-import Blog from '@/components/pages/home/blog/blog'
-import Faq from '@/components/pages/home/faq/faq'
-import HomeHero from '@/components/pages/home/hero/home'
-import ReliedUpon from '@/components/pages/home/relied-upon/relied-upon'
 import CourseFilter from '@/components/shared/course/course-filter/course-filter'
+import HeroSection from '@/components/shared/hero/hero'
 import LearningJourney from '@/components/shared/learning-journey/learning-journey'
-import OfferingCourseCard from '@/components/shared/offering-course-card/offering-course-card'
 import TopCourses from '@/components/shared/top-courses/top-courses'
-import { useEffect, useState } from 'react'
-import { get } from '../../backend_services/api_services'
+import { FC, useEffect, useState } from 'react'
+import { get } from '../../../backend_services/api_services'
 
-export default function Home() {
+type Props = {}
+const CoursesPage: FC<Props> = ({}) => {
   const [courses, setCourses] = useState<any[]>([])
 
   useEffect(() => {
@@ -27,15 +24,12 @@ export default function Home() {
     fetchApiData()
   }, [])
   return (
-    <div className="bg-white">
-      <HomeHero />
-      <OfferingCourseCard />
-      <TopCourses courses={courses} />
-      <CourseFilter courses={courses} />
-      <ReliedUpon />
-      <Blog />
-      <Faq />
+    <div>
+      <HeroSection />
+      <TopCourses courses={courses} hideButton />
+      <CourseFilter courses={courses} row={3} showPagination />
       <LearningJourney />
     </div>
   )
 }
+export default CoursesPage

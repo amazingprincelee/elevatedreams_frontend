@@ -5,8 +5,8 @@ import CourseCard from '../course/course-card'
 import CardLoader from '../course/loader'
 import { Header, SubHeader } from '../header'
 
-type Props = { courses: CourseProps[] }
-const TopCourses: FC<Props> = ({ courses }) => {
+type Props = { courses: CourseProps[]; hideButton?: boolean }
+const TopCourses: FC<Props> = ({ courses, hideButton }) => {
   const courseList = courses.slice(0, 2)
   return (
     <div className="bg-base padding">
@@ -26,7 +26,13 @@ const TopCourses: FC<Props> = ({ courses }) => {
                 'Dive into 20+ courses encompassing Data Science, Software Engineering, Cloud Computing, and more, all available.'
               }
             />
-            <LinkButton url={'#'} label={'VIEW ALL COURSES'} isIcon={true} />
+            {!hideButton && (
+              <LinkButton
+                url={'/courses'}
+                label={'VIEW ALL COURSES'}
+                isIcon={true}
+              />
+            )}
           </motion.div>
           <motion.div
             initial={{ opacity: 0, translateX: 100 }}

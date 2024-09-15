@@ -55,7 +55,11 @@ const LeftComp: FC<Props> = ({}) => {
           animate={{ scale: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1 }}
         >
-          <LinkButton url={'#'} label={'Explore Our Courses'} isIcon={true} />
+          <LinkButton
+            url={'/courses'}
+            label={'EXPLORE OUR COURSES'}
+            isIcon={true}
+          />
         </motion.div>
         <motion.div
           initial={{ opacity: 0, x: 50 }}

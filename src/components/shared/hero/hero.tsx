@@ -37,7 +37,7 @@ const HeroSection: React.FC = () => {
 
         {/* Button */}
         <div className="font-bold py-3 px-6 inline-flex items-center">
-          <LinkButton url={''} label={'Explore Our Courses'} isIcon />
+          <LinkButton url={'/courses'} label={'Explore Our Courses'} isIcon />
         </div>
       </div>
 

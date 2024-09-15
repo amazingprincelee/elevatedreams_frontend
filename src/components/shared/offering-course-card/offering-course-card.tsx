@@ -55,7 +55,7 @@ const OfferingCourseCard = () => {
                 <div className="flex mt-5 lg:mt-0">
                   <div className="">
                     <LinkButton
-                      url={'#'}
+                      url={'/courses'}
                       label={'EXPLORE OUR COURSES'}
                       isIcon={true}
                       className={`${

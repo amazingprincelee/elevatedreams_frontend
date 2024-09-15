@@ -2,12 +2,11 @@
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tab'
 import { motion } from 'framer-motion'
-import { FC, useEffect, useState } from 'react'
-import { get } from '../../../../../backend_services/api_services'
+import { FC, useState } from 'react'
 import CoursesList from './courses-list'
 
-type Props = { courses: CourseProps[] }
-const CourseFilter: FC<Props> = ({ courses }) => {
+type Props = { courses: CourseProps[]; row?: number; showPagination?: boolean }
+const CourseFilter: FC<Props> = ({ courses, row, showPagination }) => {
   const [selected, setSelected] = useState<string>('featured')
 
   const defaultFilters = [
@@ -28,15 +27,11 @@ const CourseFilter: FC<Props> = ({ courses }) => {
   const filters =
     courses.length > 0 ? ['Featured', ...uniqueCategories] : defaultFilters
 
-  const selectedCourses = courses.filter((el) => {
-    return el.category.toLowerCase() === selected
-      ? el
-      : selected === 'featured' && el.featured === true
-        ? el
-        : null
-  })
-
-  console.log(filters)
+  const selectedCourses = courses.filter((el) =>
+    selected === 'featured'
+      ? el.featured === true
+      : el.category.toLowerCase() === selected,
+  )
 
   return (
     <div className="w-full bg-base pt-10 pb-20">
@@ -66,7 +61,11 @@ const CourseFilter: FC<Props> = ({ courses }) => {
           </TabsList>
           {filters.map((el, index) => (
             <TabsContent key={index} value={el.toLowerCase()}>
-              <CoursesList courses={selectedCourses} row={2} />
+              <CoursesList
+                courses={selectedCourses}
+                rowsPerPage={row}
+                showPagination={showPagination}
+              />
             </TabsContent>
           ))}
         </Tabs>
