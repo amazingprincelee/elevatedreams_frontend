@@ -2,6 +2,7 @@
 
 import HeroSection from '@/components/pages/about-us/hero'
 import CourseFilter from '@/components/shared/course/course-filter/course-filter'
+import CoursesHero from '@/components/shared/courses-hero/courses-hero'
 import LearningJourney from '@/components/shared/learning-journey/learning-journey'
 import TopCourses from '@/components/shared/top-courses/top-courses'
 import { FC, useEffect, useState } from 'react'
@@ -25,7 +26,9 @@ const CoursesPage: FC<Props> = ({}) => {
   }, [])
   return (
     <div>
+      <CoursesHero />
       <HeroSection />
+
       <TopCourses courses={courses} hideButton />
       <CourseFilter courses={courses} row={3} showPagination />
       <LearningJourney />
