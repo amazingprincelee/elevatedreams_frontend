@@ -1,4 +1,8 @@
+'use client'
+
+import { motion } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 import {
   FaClock,
@@ -14,11 +18,11 @@ import SocialLinks from './footer-social-links'
 
 const Footer = () => {
   const footerLinks = [
-    { label: 'About Us', href: '/about' },
+    { label: 'About Us', href: '/about-us' },
     { label: 'Courses', href: '/courses' },
     { label: 'Our Team', href: '/team' },
     { label: 'Blogs', href: '/blogs' },
-    { label: 'Contact Us', href: '/contact' },
+    { label: 'Contact Us', href: '/contact-us' },
   ]
 
   const socialLinks = [
@@ -33,11 +37,25 @@ const Footer = () => {
 
   return (
     <div className="def-contain">
-      <div className=" bg-footer rounded-[40px]  p-8 lg:p-12 2xl:p-24 mb-8 w-full">
+      <motion.div
+        initial={{ opacity: 0, translateY: 100 }}
+        whileInView={{ opacity: [0, 1], translateY: [100, 0] }}
+        animate={{ opacity: [0, 1], translateY: [100, 0] }}
+        transition={{ delay: 0.4, duration: 1, ease: 'easeInOut' }}
+        viewport={{ once: true }}
+        className=" bg-footer rounded-[40px]  p-8 lg:p-12 2xl:p-24 mb-8 w-full"
+      >
         <div className="grid lg:grid-cols-5 gap-5">
           {/* Logo and address */}
           <div className=" w-full  col-span-2">
-            {/* <Image src="/images/logo.png" width={116} height={52} alt="logo" /> */}
+            <Link href={'/'}>
+              <Image
+                src="/images/logo.png"
+                width={116}
+                height={52}
+                alt="logo"
+              />
+            </Link>
             <p className="mt-8 max-w-xs lg:max-w-none w-96 text-footerText font-extralight text-sm">
               No 4a Etim Okpoyo close, off Aba Express road by total filling
               station, Port Harcourt, Rivers State
@@ -56,7 +74,7 @@ const Footer = () => {
               <h2 className="font-bold mb-6 text-xl">Contact Us</h2>
               <div className="grid gap-5">
                 <div className="flex-center gap-2">
-                  <div className="bg-primary/20 p-3 rounded-full">
+                  <div className="bg-primary/5 p-3 rounded-full">
                     <FaRegEnvelope
                       color="#DA2721"
                       size={16}
@@ -66,13 +84,13 @@ const Footer = () => {
                   <p className="text-footerText">customercare@loctechng.com</p>
                 </div>
                 <div className="flex-center gap-2">
-                  <div className="bg-primary/20 p-3 rounded-full">
+                  <div className="bg-primary/5 p-3 rounded-full">
                     <FaPhone color="#DA2721" size={16} className="text-2xl" />
                   </div>
                   <p className="text-footerText">+234 123 456 7890</p>
                 </div>
                 <div className="flex-center gap-2">
-                  <div className="bg-primary/20 p-3 rounded-full">
+                  <div className="bg-primary/5 p-3 rounded-full">
                     <FaClock color="#DA2721" size={16} className="text-2xl" />
                   </div>
                   <p className="text-footerText">
@@ -91,7 +109,7 @@ const Footer = () => {
             © 2024 Built by Appnovia team. All rights reserved.
           </p>
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }

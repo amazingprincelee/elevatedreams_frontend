@@ -13,7 +13,6 @@ import { get } from '../../backend_services/api_services'
 
 export default function Home() {
   const [courses, setCourses] = useState<any[]>([])
-  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     async function fetchApiData() {
@@ -22,8 +21,6 @@ export default function Home() {
         if (apiData && apiData.data) setCourses(apiData.data)
       } catch (error) {
         //    toast.error("Please check your internet connectivity");
-      } finally {
-        setLoading(false)
       }
     }
 

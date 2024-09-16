@@ -1,7 +1,7 @@
-import React from 'react'
+import { FC } from 'react'
 
-const ContactUs = () => {
-  return <div></div>
+type Props = {}
+const ContactUsPage: FC<Props> = ({}) => {
+  return <></>
 }
-
-export default ContactUs
+export default ContactUsPage
