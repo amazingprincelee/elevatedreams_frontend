@@ -37,7 +37,7 @@ const Footer = () => {
         <div className="grid lg:grid-cols-5 gap-5">
           {/* Logo and address */}
           <div className=" w-full  col-span-2">
-            <Image src="/images/logo.png" width={116} height={52} alt="logo" />
+            {/* <Image src="/images/logo.png" width={116} height={52} alt="logo" /> */}
             <p className="mt-8 max-w-xs lg:max-w-none w-96 text-footerText font-extralight text-sm">
               No 4a Etim Okpoyo close, off Aba Express road by total filling
               station, Port Harcourt, Rivers State
