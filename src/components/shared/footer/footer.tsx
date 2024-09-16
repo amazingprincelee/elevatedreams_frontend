@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 import {
   FaClock,
@@ -17,11 +18,11 @@ import SocialLinks from './footer-social-links'
 
 const Footer = () => {
   const footerLinks = [
-    { label: 'About Us', href: '/about' },
+    { label: 'About Us', href: '/about-us' },
     { label: 'Courses', href: '/courses' },
     { label: 'Our Team', href: '/team' },
     { label: 'Blogs', href: '/blogs' },
-    { label: 'Contact Us', href: '/contact' },
+    { label: 'Contact Us', href: '/contact-us' },
   ]
 
   const socialLinks = [
@@ -47,7 +48,14 @@ const Footer = () => {
         <div className="grid lg:grid-cols-5 gap-5">
           {/* Logo and address */}
           <div className=" w-full  col-span-2">
-            <Image src="/images/logo.png" width={116} height={52} alt="logo" />
+            <Link href={'/'}>
+              <Image
+                src="/images/logo.png"
+                width={116}
+                height={52}
+                alt="logo"
+              />
+            </Link>
             <p className="mt-8 max-w-xs lg:max-w-none w-96 text-footerText font-extralight text-sm">
               No 4a Etim Okpoyo close, off Aba Express road by total filling
               station, Port Harcourt, Rivers State
