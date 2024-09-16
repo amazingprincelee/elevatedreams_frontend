@@ -1,5 +1,6 @@
 'use client'
 
+import { useWindowSize } from '@/lib/hooks/useResize'
 import { motion } from 'framer-motion'
 import { MicIcon, MicOffIcon } from 'lucide-react'
 import { FC, useEffect, useState } from 'react'
@@ -26,20 +27,15 @@ const VideoSection: FC<Props> = ({
   imgUrl,
   videoUrl,
 }) => {
-  const [loading, setLoading] = useState(true)
   const [muted, setMuted] = useState(true)
-
-  const handleLoadedData = () => {
-    setLoading(false)
-  }
-
-  const handleWaiting = () => {
-    setLoading(true)
-  }
 
   const toggleMute = () => {
     setMuted(!muted)
   }
+
+  const {
+    windowSize: { width },
+  } = useWindowSize()
 
   return (
     <motion.div
@@ -48,9 +44,9 @@ const VideoSection: FC<Props> = ({
       animate={{ opacity: [0, 1], translateX: [100, 0] }}
       transition={{ delay: 0.4, duration: 1, ease: 'easeInOut' }}
       viewport={{ once: true }}
-      className="absolute border-1 border-gray-300 h-fit bg-white z-10 top-[600px] md:top-[400px] lg:-bottom-10 lg:right-0 right-0 l mx-4 md:mx-8 lg:mx-0 lg:l lg:absolute-contain"
+      className={`absolute border-1 border-gray-300 h-fit bg-white z-10 top-[280px] md:top-[300px] lg:-bottom-10 lg:right-0 right-0 l mx-4 md:mx-8 lg:mx-0 lg:l lg:absolute-contain`}
     >
-      <div className="lg:min-w-[300px] relative">
+      <div className=" min-w-[280px] relative">
         <video
           src={videoUrl}
           poster={imgUrl}
@@ -58,11 +54,11 @@ const VideoSection: FC<Props> = ({
           autoPlay
           muted={muted} // Mute the video initially to allow autoplay
           loop
-          onLoadedData={handleLoadedData}
-          onEnded={handleWaiting}
-          onWaiting={handleWaiting}
+          // onLoadedData={handleLoadedData}
+          // onEnded={handleWaiting}
+          // onWaiting={handleWaiting}
           controls={false}
-          className="lg:w-[400px]"
+          className="lg:w-[400px] w-full"
         >
           <source src={videoUrl} type="video/mp4" />
           Your browser does not support the video tag.

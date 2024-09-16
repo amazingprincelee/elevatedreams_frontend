@@ -32,7 +32,7 @@ const CoursesList: FC<Props> = ({
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 2xl:gap-5 gap-10 md:gap-5">
+      <div className="grid md:grid-cols-2 lg:grid-cs-3 xl:grid-cols-3 2xl:grid-cols-4 2xl:gap-5 gap-10 md:gap-5">
         {displayedCourses.length === 0
           ? Array.from({ length: coursesPerPage }, (_, i) => (
               <CardLoader key={i} />

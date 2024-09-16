@@ -24,7 +24,7 @@
     @apply mx-auto max-w-[1680px];
   }
   .def-contain {
-    @apply px-4 md:px-10 lg:px-[100px] 2xl:px-[200px];
+    @apply px-4 md:px-7 lg:px-28 max-w-[1700px] mx-auto;
   }
   .absolute-contain {
     @apply mx-4 md:mx-10 lg:mx-[100px] 2xl:mx-[200px];

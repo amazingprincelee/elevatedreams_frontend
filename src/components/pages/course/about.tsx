@@ -24,9 +24,9 @@ const AboutCourse: FC<Props> = ({ course }) => {
       animate={{ opacity: [0, 1], translateY: [100, 0] }}
       transition={{ delay: 1.5, duration: 1.5, ease: 'easeInOut' }}
       viewport={{ once: true }}
-      className=" def-contain mt-[550px] sm:mt-[500px] md:mt-[650px] lg:mt-20 lg:margining mb-10"
+      className=" def-contain mt-[575px] md:mt-[730px] lg:mt-20 lg:margining mb-10"
     >
-      <div className=" flex flex-col lg:w-[60%]">
+      <div className=" flex flex-col lg:w-[50%] xl:w-[70%]">
         <Header text="About the Course" />
         <SubHeader text={overview} className="mt-2" />
       </div>
