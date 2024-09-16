@@ -17,18 +17,20 @@ const HeroSection: React.FC = () => {
           <p className="text-sm mb-2">Powered by the Best of IT Training</p>
         </div>
 
-        <h1 className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl lg:text-center font-jakarta font-bold p-5 mb-4">
-          The Leading Global Marketplace For Learning And Instruction
-        </h1>
+        <div className=" pr-28 ">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl lg:text-center font-jakarta font-bold p-5 mb-4">
+            The Leading Global Marketplace For Learning And Instruction
+          </h1>
 
-        {/* Text for small screens */}
-        <p className="text-base p-7 max-w-2xl mx-auto mb-8 font-jakarta font-thin block md:hidden">
-          Get certified in our industry standard course and smash all your tech
-          goals.
-        </p>
+          {/* Text for small screens */}
+          <p className="text-base pl-7 pr-32 max-w-2xl mx-auto mb-5 font-jakarta font-thin block md:hidden">
+            Get certified in our industry standard course and smash all your
+            tech goals.
+          </p>
+        </div>
 
         {/* Text for larger screens */}
-        <p className="text-base text-center  max-w-2xl mx-auto mb-8 font-jakarta font-thin hidden md:block">
+        <p className="text-base text-center md:text-justify lg:text-center lg:px-96 md:pl-5 md:pr-7 mx-auto mb-8 font-jakarta font-thin hidden md:block">
           Welcome to a beacon of IT training, where learning knows no bounds. As
           a leading global marketplace for learning and instruction, we
           transcend geographical limitations, bringing world-class IT education
