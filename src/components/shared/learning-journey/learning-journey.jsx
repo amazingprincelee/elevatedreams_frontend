@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { BsStars } from "react-icons/bs";
 import LinkButton from "../button/link-button";

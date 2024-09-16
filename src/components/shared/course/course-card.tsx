@@ -6,10 +6,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
 import { Button } from '../button/button'
+import { SubHeader } from '../header'
 
 type Props = { course: CourseProps }
 const CourseCard: FC<Props> = ({ course }) => {
   const {
+    _id,
     imgUrl,
     metaTitle,
     metaDescription,
@@ -30,7 +32,13 @@ const CourseCard: FC<Props> = ({ course }) => {
       <div className="flex flex-col justify-between mt-2 px-4 h-full">
         <div className="flex flex-col h-full">
           <div className="h-[70px]">
-            <Link href={`/courses/${slug}`}>
+            <Link
+              href={`/courses/${slug}`}
+              onClick={() => {
+                console.log('first')
+                localStorage.setItem('courseId', _id)
+              }}
+            >
               <h2 className="font-medium text-lg cursor-pointer hover:text-gray-600 hover:underline">
                 {truncateString(metaTitle, 60)}
               </h2>
@@ -39,9 +47,10 @@ const CourseCard: FC<Props> = ({ course }) => {
               {category}
             </span>
           </div>
-          <span className="text-sm font-light text-slate-500 leading-relaxed mt-5">
-            {truncateString(metaDescription, 200)}
-          </span>
+          <SubHeader
+            text={truncateString(metaDescription, 200)}
+            className="mt-1"
+          />
         </div>
         <div className="flex-center gap-3 mt-10 ">
           <div className="flex-center gap-1 bg-base rounded-lg px-4 py-2 w-full  justify-center ">
