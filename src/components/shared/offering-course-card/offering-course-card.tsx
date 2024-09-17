@@ -31,13 +31,13 @@ const OfferingCourseCard = () => {
       animate={{ opacity: [0, 1], translateY: [100, 0] }}
       transition={{ delay: 0.4, duration: 1, ease: 'easeInOut' }}
       viewport={{ once: true }}
-      className="margining def-contain"
+      className="margining"
     >
-      <div className=" flex flex-col ">
+      <div className=" flex flex-col def-contain">
         <Header text="Our Offerings" />
         <div className="grid grid-cols-1  md:grid-cols-2 h-fit mt-5 gap-6">
           {cardDetails.map((card, index) => (
-            <div key={index} className="bg-base rounded-[24px] overflow-hidden">
+            <div key={index} className="bg-base rounded-[24px]">
               <div className="p-4 2xl:p-6">
                 <Image
                   src={card.imageSrc}
@@ -46,31 +46,27 @@ const OfferingCourseCard = () => {
                   height={900}
                   className="w-full rounded-[24px]"
                 />
-                <div className="pt-6 font-jakarta lg:h-44 2xl:h-36">
+                <div className="pt-6 font-jakarta lg:h-40 xl:h-36">
                   <h3 className="text-2xl font-semibold mb-3">{card.title}</h3>
                   <p className="text-gray-600">{card.text}</p>
                 </div>
 
                 {/* action buttons */}
-                <div className="flex mt-5 lg:mt-0">
-                  <div className="">
-                    <LinkButton
-                      url={'/courses'}
-                      label={'EXPLORE OUR COURSES'}
-                      isIcon={true}
-                      className={`${
-                        index === 1
-                          ? 'bg-darkIndigo hover:bg-darkIndigo/90'
-                          : 'bg-primary'
-                      }`}
-                      iconClassName={`${
-                        index === 1
-                          ? 'text-darkIndigo hover:bg-darkIndigo/90'
-                          : 'text-primary'
-                      }`}
-                    />
-                  </div>
-                </div>
+                <LinkButton
+                  url={'/courses'}
+                  label={'EXPLORE OUR COURSES'}
+                  isIcon={true}
+                  className={`mt-5 lg:mt-0 w-full lg:w-fit ${
+                    index === 1
+                      ? 'bg-darkIndigo hover:bg-darkIndigo/90'
+                      : 'bg-primary'
+                  }`}
+                  iconClassName={`${
+                    index === 1
+                      ? 'text-darkIndigo hover:bg-darkIndigo/90'
+                      : 'text-primary'
+                  }`}
+                />
               </div>
             </div>
           ))}

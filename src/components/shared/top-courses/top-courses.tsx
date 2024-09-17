@@ -18,7 +18,7 @@ const TopCourses: FC<Props> = ({ courses, hideButton }) => {
             animate={{ opacity: [0, 1], translateX: [-100, 0] }}
             transition={{ delay: 0.4, duration: 1, ease: 'easeInOut' }}
             viewport={{ once: true }}
-            className="flex flex-col gap-3  2xl:w-[80%]"
+            className="flex flex-col gap-3  2xl:w-[60%]"
           >
             <Header text={'Top Courses'} />
             <SubHeader
@@ -40,7 +40,7 @@ const TopCourses: FC<Props> = ({ courses, hideButton }) => {
             animate={{ opacity: [0, 1], translateX: [100, 0] }}
             transition={{ delay: 0.4, duration: 1, ease: 'easeInOut' }}
             viewport={{ once: true }}
-            className="md:flex-row flex flex-col gap-2 col-span-2 2xl:col-span-1"
+            className="md:flex-row flex flex-col gap-5 col-span-2 2xl:col-span-1 justify-center items-center"
           >
             {courseList.length < 1
               ? Array.from({ length: 2 }, (_, i) => <CardLoader key={i} />)
