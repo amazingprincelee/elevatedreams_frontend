@@ -44,7 +44,7 @@ const VideoSection: FC<Props> = ({
       animate={{ opacity: [0, 1], translateX: [100, 0] }}
       transition={{ delay: 0.4, duration: 1, ease: 'easeInOut' }}
       viewport={{ once: true }}
-      className={`absolute border-1 border-gray-300 h-fit bg-white z-10 top-[280px] md:top-[300px] lg:-bottom-10 lg:right-0 right-0 l mx-4 md:mx-8 lg:mx-0 lg:l lg:absolute-contain`}
+      className={`absolute border-1 border-gray-300 h-fit bg-white z-10 top-[280px] md:top-[300px] lg:top-[150px] lg:-bottom-10 lg:right-0 right-0 l mx-4 md:mx-8 lg:mx-0 lg:l lg:absolute-contain`}
     >
       <div className=" min-w-[280px] relative">
         <video
