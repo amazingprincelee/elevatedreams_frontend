@@ -57,7 +57,7 @@ const Footer = () => {
                   alt="logo"
                 />
               </Link>
-              <p className="mt-8 max-w-xs lg:max-w-none w-full md:w-96 text-footerText font-medium text-sm md:text-base">
+              <p className="mt-8 max-w-xs lg:max-w-none w-full md:w-96 text-footerText font-medium text-medium ">
                 No 4a Etim Okpoyo close, off Aba Express road by total filling
                 station, Port Harcourt, Rivers State
               </p>

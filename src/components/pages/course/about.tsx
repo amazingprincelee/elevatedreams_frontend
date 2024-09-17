@@ -26,9 +26,9 @@ const AboutCourse: FC<Props> = ({ course }) => {
       viewport={{ once: true }}
       className=" def-contain mt-[575px] md:mt-[730px] lg:mt-20 lg:margining mb-10"
     >
-      <div className=" flex flex-col lg:w-[50%] xl:w-[70%]">
+      <div className=" flex flex-col lg:w-[70%]">
         <Header text="About the Course" />
-        <SubHeader text={overview} className="mt-2" />
+        <SubHeader text={overview} className="mt-2 lg:w-[70%]" />
       </div>
       <VideoSection
         amount={amount}
