@@ -3,6 +3,7 @@
 import AboutCourse from '@/components/pages/course/about'
 import Hero from '@/components/pages/course/hero'
 import KeyLearning from '@/components/pages/course/key-learning'
+import Loader from '@/components/pages/course/loader'
 import LearningJourney from '@/components/shared/learning-journey/learning-journey'
 import { FC, useEffect, useState } from 'react'
 import { get } from '../../../../backend_services/api_services'
@@ -33,10 +34,16 @@ const CoursePage: FC<Props> = ({}) => {
 
   return (
     <>
-      <Hero title={title} overview={metaTitle} metaDescription={overview} />
-      <AboutCourse course={course} />
-      <KeyLearning learning={learning} />
-      <LearningJourney />
+      {course !== null ? (
+        <>
+          <Hero title={title} overview={metaTitle} metaDescription={overview} />
+          <AboutCourse course={course} />
+          <KeyLearning learning={learning} />
+          <LearningJourney />
+        </>
+      ) : (
+        <Loader />
+      )}
     </>
   )
 }
