@@ -36,14 +36,14 @@ const Footer = () => {
   ]
 
   return (
-    <div className="md:def-contain">
+    <div className="md:def-contain ">
       <motion.div
         initial={{ opacity: 0, translateY: 100 }}
         whileInView={{ opacity: [0, 1], translateY: [100, 0] }}
         animate={{ opacity: [0, 1], translateY: [100, 0] }}
         transition={{ delay: 0.4, duration: 1, ease: 'easeInOut' }}
         viewport={{ once: true }}
-        className=" bg-footer md:rounded-[40px] p-4 md:p-8 lg:p-12 2xl:p-24 mb-8 w-full"
+        className=" bg-footer md:rounded-[40px] p-8 lg:p-12 2xl:p-24 mb-8 w-full"
       >
         <div>
           <div className="grid grid-cols-1 xl:grid-cols-5 gap-5">
@@ -57,7 +57,7 @@ const Footer = () => {
                   alt="logo"
                 />
               </Link>
-              <p className="mt-8 max-w-xs lg:max-w-none w-full md:w-96 text-footerText font-extralight text-sm">
+              <p className="mt-8 max-w-xs lg:max-w-none w-full md:w-96 text-footerText font-medium text-sm md:text-base">
                 No 4a Etim Okpoyo close, off Aba Express road by total filling
                 station, Port Harcourt, Rivers State
               </p>

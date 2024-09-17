@@ -19,7 +19,7 @@ const LearningJourney = () => {
       >
         <SvgEffect />
 
-        <div className="relative z-10 flex w-full flex-col items-center justify-center font-jakarta  h-full">
+        <div className="relative z-10 flex w-full flex-col items-center justify-center font-jakarta  h-full px-8 md:px-0">
           <div className="flex flex-row p-2">
             <BsStars size={24} />
             <p className="mb-4 text-sm ml-2 font-light">
