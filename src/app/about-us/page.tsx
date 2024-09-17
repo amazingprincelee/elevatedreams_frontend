@@ -3,6 +3,7 @@ import Diversity from '@/components/pages/about-us/diversity'
 import HeroSection from '@/components/pages/about-us/hero'
 import ClassLearning from '@/components/shared/class-learning'
 import LearningJourney from '@/components/shared/learning-journey/learning-journey'
+import TestimonialSlider from '@/components/shared/testimonial-slider/testimonial-slider'
 import { FC } from 'react'
 
 type Props = {}
@@ -39,6 +40,7 @@ const AboutUsPage: FC<Props> = ({}) => {
         img={'/images/about-us/img1.png'}
       />
       <LearningJourney />
+      <TestimonialSlider />
     </>
   )
 }
