@@ -7,6 +7,7 @@ import ReliedUpon from '@/components/pages/home/relied-upon/relied-upon'
 import CourseFilter from '@/components/shared/course/course-filter/course-filter'
 import LearningJourney from '@/components/shared/learning-journey/learning-journey'
 import OfferingCourseCard from '@/components/shared/offering-course-card/offering-course-card'
+import TestimonialSlider from '@/components/shared/testimonial-slider/testimonial-slider'
 import TopCourses from '@/components/shared/top-courses/top-courses'
 import { useEffect, useState } from 'react'
 import { get } from '../../backend_services/api_services'
@@ -32,6 +33,7 @@ export default function Home() {
       <OfferingCourseCard />
       <TopCourses courses={courses} />
       <CourseFilter courses={courses} />
+      <TestimonialSlider />
       <ReliedUpon />
       <Blog />
       <Faq />

@@ -21,7 +21,7 @@ const CourseCard: FC<Props> = ({ course }) => {
     slug,
   } = course
   return (
-    <div className="shadow-sm flex flex-col h-[560px] w-fit rounded-xl gap-3 pb-5 bg-white">
+    <div className="shadow-sm flex flex-col h-[560px] lg:max-w-full w-fit rounded-xl gap-3 pb-5 bg-white">
       <Image
         src={imgUrl}
         alt={'blog'}
@@ -35,12 +35,11 @@ const CourseCard: FC<Props> = ({ course }) => {
             <Link
               href={`/courses/${slug}`}
               onClick={() => {
-                console.log('first')
                 localStorage.setItem('courseId', _id)
               }}
             >
               <h2 className="font-medium text-lg cursor-pointer hover:text-gray-600 hover:underline">
-                {truncateString(metaTitle, 60)}
+                {truncateString(metaTitle, 45)}
               </h2>
             </Link>
             <span className="text-xs font-medium text-primary mt-1">
@@ -52,8 +51,8 @@ const CourseCard: FC<Props> = ({ course }) => {
             className="mt-1"
           />
         </div>
-        <div className="flex-center gap-3 mt-10 ">
-          <div className="flex-center gap-1 bg-base rounded-lg px-4 py-2 w-full  justify-center ">
+        <div className="flex items-center justify-between mt-10 w-full gap-2">
+          <div className=" flex-center gap-[2px] bg-base rounded-lg px-4 lg:px-3 xl:px-4 py-2 w-full  justify-center ">
             <Image
               src={'/icons/timer.svg'}
               alt="timer"
@@ -65,10 +64,13 @@ const CourseCard: FC<Props> = ({ course }) => {
               {duration}weeks
             </span>
           </div>
-          <span className="font-semibold text-center text-xs px-4 w-full py-2 bg-base rounded-lg p-2 leading-tight">
+          <span className="font-semibold text-center w-full text-xs px-2 lg:px-3 xl:px-4 xl:w-full py-2 bg-base rounded-lg p-2 leading-tight">
             ₦{Number(amount).toLocaleString()}
           </span>
-          <Button size={'sm'} className="flex-center gap-1 font-xs w-full ">
+          <Button
+            size={'sm'}
+            className="flex-center gap-1 font-thin w-fit md:w-full p-3"
+          >
             Buy Now
             <ShoppingCartIcon className="h-4 w-4" />
           </Button>
