@@ -3,7 +3,6 @@
 import AboutCourse from '@/components/pages/course/about'
 import Hero from '@/components/pages/course/hero'
 import KeyLearning from '@/components/pages/course/key-learning'
-import VideoSection from '@/components/pages/course/video-section'
 import LearningJourney from '@/components/shared/learning-journey/learning-journey'
 import { FC, useEffect, useState } from 'react'
 import { get } from '../../../../backend_services/api_services'
@@ -15,15 +14,8 @@ const CoursePage: FC<Props> = ({}) => {
   const {
     title = '',
     overview = '',
-    metaDescription = '',
     metaTitle = '',
     learning = [],
-    amount,
-    category,
-    duration,
-    mode,
-    videoUrl,
-    level,
   } = course || {}
 
   useEffect(() => {
@@ -39,7 +31,6 @@ const CoursePage: FC<Props> = ({}) => {
     fetchApiData()
   }, [])
 
-  console.log(course)
   return (
     <>
       <Hero title={title} overview={metaTitle} metaDescription={overview} />

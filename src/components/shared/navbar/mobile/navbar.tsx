@@ -6,8 +6,12 @@ import { FC } from 'react'
 import { linksData } from '..'
 import LinkButton from '../../button/link-button'
 
-type Props = { isOpen: boolean; setIsOpen: (val: boolean) => void }
-const MobileNavbar: FC<Props> = ({ isOpen, setIsOpen }) => {
+type Props = {
+  isOpen: boolean
+  setIsOpen: (val: boolean) => void
+  path: string
+}
+const MobileNavbar: FC<Props> = ({ isOpen, setIsOpen, path }) => {
   return (
     <div
       className={`bg-white z-30 fixed transition-transform duration-300 delay-100 ease-in-out trans-props h-full ${
@@ -31,7 +35,13 @@ const MobileNavbar: FC<Props> = ({ isOpen, setIsOpen }) => {
                 key={index}
                 className="flex-gap gap-3 py-4"
               >
-                <p className="">{item.name}</p>
+                <p
+                  className={`${
+                    path !== item.url ? 'text-gray-600' : 'text-primary'
+                  }`}
+                >
+                  {item.name}
+                </p>
               </motion.div>
             </Link>
           )
@@ -49,12 +59,12 @@ const MobileNavbar: FC<Props> = ({ isOpen, setIsOpen }) => {
         >
           <div className="grid gap-2 mt-10">
             <LinkButton
-              url={''}
+              url={'#'}
               label={'Log in'}
               className="border w-full border-primary bg-transparent text-primary hover:text-white py-3"
             ></LinkButton>
             <LinkButton
-              url={''}
+              url={'#'}
               label={'Get Started'}
               className=" w-full border py-3"
             ></LinkButton>

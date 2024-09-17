@@ -2,6 +2,7 @@
 
 import { FC, useEffect, useState } from 'react'
 import LeftComp from './left-comp'
+import Navigation from './navigation'
 
 type Props = {}
 const HomeHero: FC<Props> = ({}) => {
@@ -36,24 +37,17 @@ const HomeHero: FC<Props> = ({}) => {
           }`}
         />
       ))}
-      <LeftComp />
-      <div className="absolute h-fit w-fit md:mt-20 pt-14 top-0 md:right-0 ">
-        <div className="md:mx-8 lg:mx-[100px] 2xl:mx-[200px] flex md:flex-col gap-3 items-center pl-4 md:pl-0">
-          {list.map((_, i) =>
-            currentIndex === i ? (
-              <div
-                key={i}
-                onClick={() => setCurrentIndex(i)}
-                className="bg-white rounded-full h-2 w-2"
-              ></div>
-            ) : (
-              <div
-                key={i}
-                onClick={() => setCurrentIndex(i)}
-                className="rounded-full w-2 h-2 bg-gray-400"
-              ></div>
-            ),
-          )}
+
+      <div className="absolute top-0 left-0 h-full bg-gradient-to-r md:from-35% lg:from-30% w-full from-slate-950 ">
+        <div className="def-contain">
+          <div className="lg:mt-40 mt-28 grid grid-cols-1 lg:grid-cols-2">
+            <LeftComp />
+            <Navigation
+              currentIndex={currentIndex}
+              list={list}
+              setCurrentIndex={setCurrentIndex}
+            />
+          </div>
         </div>
       </div>
     </div>

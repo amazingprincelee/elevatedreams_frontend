@@ -1,6 +1,7 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { linksData } from '.'
 import LinkButton from '../button/link-button'
@@ -8,6 +9,8 @@ import MobileNavbar from './mobile/navbar'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+
+  const pathname = usePathname()
 
   return (
     <nav className="bg-white fixed top-0 w-full z-50 shadow-lg">
@@ -27,7 +30,9 @@ const Navbar = () => {
               <Link
                 key={index}
                 href={el.url}
-                className="text-gray-500 hover:text-gray-800 text-sm"
+                className={`${
+                  pathname === el.url ? 'text-primary' : 'text-gray-500'
+                } hover:text-gray-700 text-sm`}
               >
                 {el.name}
               </Link>
@@ -107,7 +112,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && <MobileNavbar isOpen setIsOpen={setIsOpen} />}
+      {isOpen && <MobileNavbar isOpen setIsOpen={setIsOpen} path={pathname} />}
     </nav>
   )
 }

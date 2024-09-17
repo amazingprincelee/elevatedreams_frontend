@@ -25,7 +25,7 @@ const KeyLearning: FC<Props> = ({ learning }) => {
                 key={index}
                 className="text-sm font-light text-slate-500 leading-relaxed flex items-center gap-3"
               >
-                <div className="ring-4 ring-primary h-[6px] w-[6px] rounded-full bg-white"></div>
+                <div className="ring-4 ring-primary md:h-[6px] md:w-[6px] w-1 h-1 rounded-full bg-white"></div>
                 {el.objective}
               </li>
             ))}
