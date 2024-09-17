@@ -5,29 +5,33 @@ import { HiMapPin } from 'react-icons/hi2'
 
 const ContactForm = () => {
   return (
-    <div className="lg:flex lg:justify-center lg:items-center lg:mt-16 lg:gap-12 container mx-auto mb-8">
-      <div className="flex flex-col  justify-center items-center w-full sm:w-1/2 lg:w-auto font-jakarta">
-        <h1 className="text-4xl font-semibold py-8">Get in touch with Us</h1>
-        <div className="grid gap-5 p-5">
-          <div className="flex-center gap-2">
+    <div className="lg:flex lg:justify-center lg:items-center lg:mt-16 lg:gap-56 container mx-auto mb-8">
+      <div className="flex flex-col  justify-center lg:justify-start lg:items-start items-center w-full sm:w-1/2 lg:w-auto font-jakarta">
+        <h1 className="text-4xl font-semibold py-8 lg:pl-5">
+          Get in touch with Us
+        </h1>
+        <div className="grid gap-5 p-5 lg:pl-9">
+          <div className="flex-center gap-3">
             <div className="bg-primary/5 p-3 rounded-full">
               <FaRegEnvelope color="#DA2721" size={22} className="text-2xl" />
             </div>
-            <p className="text-footerText text-lg">
+            <p className="text-footerText text-lg font-thin">
               customercare@loctechng.com
             </p>
           </div>
-          <div className="flex-center gap-2">
+          <div className="flex-center gap-3">
             <div className="bg-primary/5 p-3 rounded-full">
               <FaPhone color="#DA2721" size={22} className="text-2xl" />
             </div>
-            <p className="text-footerText text-lg">+234 703 888 5466</p>
+            <p className="text-footerText text-lg font-thin">
+              +234 703 888 5466
+            </p>
           </div>
-          <div className="flex-center gap-2">
+          <div className="flex-center gap-3">
             <div className="bg-primary/5 p-3 rounded-full">
               <FaClock color="#DA2721" size={22} className="text-2xl" />
             </div>
-            <p className="text-footerText text-lg">
+            <p className="text-footerText text-lg font-thin">
               Mon - Fri: 9:00 AM - 6:00 PM <br />
               Sunday: closed
             </p>
@@ -37,11 +41,11 @@ const ContactForm = () => {
               Visit our office.
             </h2>
 
-            <div className="flex-center gap-2">
+            <div className="flex-center gap-3">
               <div className="bg-primary/5 p-3 rounded-full">
                 <HiMapPin color="#DA2721" size={22} className="text-2xl" />
               </div>
-              <p className="text-black text-lg font-semibold lg:w-96">
+              <p className="text-black text-lg font-semibold ">
                 No 4a Etim Okpoyo close, off Aba Express road by total filling
                 station, Port harcourt, rivers State
               </p>
