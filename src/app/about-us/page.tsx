@@ -39,8 +39,8 @@ const AboutUsPage: FC<Props> = ({}) => {
         }
         img={'/images/about-us/img1.png'}
       />
-      <LearningJourney />
       <TestimonialSlider />
+      <LearningJourney />
     </>
   )
 }

@@ -16,7 +16,7 @@ const FooterLinks: React.FC<FooterLinksProps> = ({ links }) => {
       {links.map((link, index) => (
         <li
           key={index}
-          className="mb-4 text-footerText font-extralight hover:text-gray-400"
+          className="mb-4 text-footerText font-extralight md:text-lg hover:text-gray-400"
         >
           <Link href={link.href}>{link.label}</Link>
         </li>

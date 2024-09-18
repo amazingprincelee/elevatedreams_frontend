@@ -1,8 +1,8 @@
 'use client'
 
 import HeroSection from '@/components/pages/about-us/hero'
+import CoursesHero from '@/components/pages/courses/courses-hero'
 import CourseFilter from '@/components/shared/course/course-filter/course-filter'
-import CoursesHero from '@/components/shared/courses-hero/courses-hero'
 import LearningJourney from '@/components/shared/learning-journey/learning-journey'
 import TopCourses from '@/components/shared/top-courses/top-courses'
 import { FC, useEffect, useState } from 'react'
