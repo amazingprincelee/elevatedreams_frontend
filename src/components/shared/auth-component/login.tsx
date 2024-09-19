@@ -12,7 +12,7 @@ const Login = () => {
 
   return (
     <div className="flex justify-center min-h-screen bg-white">
-      <div className="w-full max-w-md  space-y-6 bg-white rounded-lg">
+      <div className="w-full  space-y-6 bg-white rounded-lg">
         <form
           onSubmit={handleLogin}
           className="w-full space-y-4 font-jakarta bg-white"
@@ -29,7 +29,7 @@ const Login = () => {
               autoComplete="email"
               required
               placeholder="Email"
-              className="w-full text-2xl text-gray-400 pl-14 pr-3 py-4 border border-gray-300 hover:border-blue-500 rounded-2xl focus:outline-none focus:border-blue-500"
+              className="w-full md:w-full text-2xl text-gray-400 pl-14 pr-3 py-4 border border-gray-300 hover:border-blue-500 rounded-2xl focus:outline-none focus:border-blue-500"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -46,7 +46,7 @@ const Login = () => {
               autoComplete="current-password"
               required
               placeholder="Password"
-              className="w-full text-xl  text-gray-400 font-thin px-3 pl-14 py-4 border border-gray-300 hover:border-blue-500 rounded-2xl focus:outline-none focus:border-blue-500"
+              className="w-full md:w-full text-xl  text-gray-400 font-thin px-3 pl-14 py-4 border border-gray-300 hover:border-blue-500 rounded-2xl focus:outline-none focus:border-blue-500"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />

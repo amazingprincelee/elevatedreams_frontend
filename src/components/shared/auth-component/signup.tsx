@@ -34,10 +34,10 @@ const SignUp = () => {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-white">
-      <div className="w-full max-w-md  bg-white rounded-lg">
+      <div className="w-full  md:max-w-md-none  bg-white rounded-lg">
         <form
           onSubmit={handleSignUp}
-          className="space-y-8 font-jakarta lg:w-full bg-white"
+          className=" space-y-8 font-jakarta lg:w-full bg-white"
         >
           <div className="relative flex  gap-3 items-center">
             <label htmlFor="email" className="sr-only">
@@ -50,7 +50,7 @@ const SignUp = () => {
               placeholder="First Name"
               autoComplete="email"
               required
-              className="w-full text-2xl  text-gray-400 font-thin pl-14 pr-5 py-4 border border-gray-300 hover:border-red-500 rounded-2xl focus:outline-none focus:border-red-500"
+              className="w-full md:w-full text-2xl  text-gray-400 font-thin pl-14 pr-5 py-4 border border-gray-300 hover:border-red-500 rounded-2xl focus:outline-none focus:border-red-500"
               value={form.firstName}
               onChange={handleInputChange}
             />
@@ -65,7 +65,7 @@ const SignUp = () => {
               name="lastName"
               placeholder="Last Name"
               required
-              className="w-full text-2xl  text-gray-400 font-thin pl-14 pr-5 py-4 border border-gray-300 hover:border-red-500 rounded-2xl focus:outline-none focus:border-red-500"
+              className="w-full md:w-full text-2xl  text-gray-400 font-thin pl-14 pr-5 py-4 border border-gray-300 hover:border-red-500 rounded-2xl focus:outline-none focus:border-red-500"
               value={form.lastName}
               onChange={handleInputChange}
             />
@@ -82,7 +82,7 @@ const SignUp = () => {
               autoComplete="email"
               required
               placeholder="Email"
-              className="w-full text-2xl  text-gray-400 font-thin pl-14 pr-5 py-4 border border-gray-300 hover:border-red-500 rounded-2xl focus:outline-none focus:border-red-500"
+              className="w-full md:w-full text-2xl  text-gray-400 font-thin pl-14 pr-5 py-4 border border-gray-300 hover:border-red-500 rounded-2xl focus:outline-none focus:border-red-500"
               value={form.email}
               onChange={handleInputChange}
             />
@@ -97,7 +97,7 @@ const SignUp = () => {
               name="phoneNumber"
               placeholder="Phone Number"
               required
-              className="w-full text-2xl  text-gray-400 font-thin pl-14 pr-5 py-4 border border-gray-300 hover:border-red-500 rounded-2xl focus:outline-none focus:border-red-500"
+              className="w-full md:w-full text-2xl  text-gray-400 font-thin pl-14 pr-5 py-4 border border-gray-300 hover:border-red-500 rounded-2xl focus:outline-none focus:border-red-500"
               value={form.phoneNumber}
               onChange={handleInputChange}
             />
@@ -112,7 +112,7 @@ const SignUp = () => {
               name="occupation"
               placeholder="Occupation"
               required
-              className="w-full text-2xl  text-gray-400 font-thin pl-14 pr-5 py-4 border border-gray-300 hover:border-red-500 rounded-2xl focus:outline-none focus:border-red-500"
+              className="w-full md:w-full text-2xl  text-gray-400 font-thin pl-14 pr-5 py-4 border border-gray-300 hover:border-red-500 rounded-2xl focus:outline-none focus:border-red-500"
               value={form.occupation}
               onChange={handleInputChange}
             />
@@ -127,7 +127,7 @@ const SignUp = () => {
               name="nextOfKinName"
               placeholder="Next of Kin Name"
               required
-              className="w-full text-2xl  text-gray-400 font-thin pl-14 pr-5 py-4 border border-gray-300 hover:border-red-500 rounded-2xl focus:outline-none focus:border-red-500"
+              className="w-full md:w-full text-2xl  text-gray-400 font-thin pl-14 pr-5 py-4 border border-gray-300 hover:border-red-500 rounded-2xl focus:outline-none focus:border-red-500"
               value={form.nextOfKinName}
               onChange={handleInputChange}
             />
@@ -142,7 +142,7 @@ const SignUp = () => {
               name="nextOfKinPhone"
               placeholder="Next of Kin Phone Number"
               required
-              className="w-full text-2xl  text-gray-400 font-thin pl-14 pr-5 py-4 border border-gray-300 hover:border-red-500 rounded-2xl focus:outline-none focus:border-red-500"
+              className="w-full md:w-full text-2xl  text-gray-400 font-thin pl-14 pr-5 py-4 border border-gray-300 hover:border-red-500 rounded-2xl focus:outline-none focus:border-red-500"
               value={form.nextOfKinPhone}
               onChange={handleInputChange}
             />
@@ -157,7 +157,7 @@ const SignUp = () => {
               name="password"
               placeholder="Password"
               required
-              className="w-full text-2xl  text-gray-400 font-thin pl-14 pr-5 py-4 border border-gray-300 hover:border-red-500 rounded-2xl focus:outline-none focus:border-red-500"
+              className="w-full md:w-full text-2xl  text-gray-400 font-thin pl-14 pr-5 py-4 border border-gray-300 hover:border-red-500 rounded-2xl focus:outline-none focus:border-red-500"
               value={form.password}
               onChange={handleInputChange}
             />

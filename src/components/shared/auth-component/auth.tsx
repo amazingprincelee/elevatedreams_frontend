@@ -8,7 +8,7 @@ const Auth = () => {
 
   return (
     <div className="def-contain mt-24 lg:mb-8 mx-auto  flex flex-col lg:flex-row items-center lg:items-start justify-center min-h-screen bg-white">
-      <div className="w-full max-w-md lg:max-w-none lg:p-16 bg-white rounded-lg shadow-md">
+      <div className="w-full max-w-md md:max-w-none lg:p-16 bg-white rounded-lg shadow-md">
         <div className="flex justify-center mb-6 font-jakarta">
           {/* Toggle Buttons */}
           <div className="flex justify-center w-full space-x-2 bg-gray-100 rounded-lg p-2 ">
