@@ -9,7 +9,7 @@ const ContactForm = () => {
       <div className="grid 2xl:gap-8 lg:grid-cols-2">
         {/* Contact Info Section */}
         <div className="flex flex-col justify-center items-center lg:items-start font-jakarta lg:relative">
-          <h1 className="text-4xl font-semibold py-8 lg:absolute lg:top-1">
+          <h1 className="text-5xl font-semibold py-8 lg:absolute lg:top-1">
             Get in touch with Us
           </h1>
           <div className="grid gap-5">
@@ -39,7 +39,7 @@ const ContactForm = () => {
               </p>
             </div>
             <div>
-              <h2 className="pb-2 text-2xl text-gray-400">Visit our office.</h2>
+              <h2 className="pb-2 text-lg text-gray-400">Visit our office.</h2>
               <div className="flex items-center gap-3">
                 <div className="bg-primary/5 p-3 rounded-full">
                   <HiMapPin color="#DA2721" size={22} />
@@ -84,7 +84,7 @@ const ContactForm = () => {
 
             <textarea
               placeholder="How can we help?"
-              className="p-5 rounded-lg h-32 w-full"
+              className="p-5 rounded-lg h-60 w-full"
             />
 
             <LinkButton
