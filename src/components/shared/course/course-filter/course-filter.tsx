@@ -2,12 +2,18 @@
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tab'
 import { motion } from 'framer-motion'
+import { useSearchParams } from 'next/navigation'
 import { FC, useState } from 'react'
 import CoursesList from './courses-list'
 
 type Props = { courses: CourseProps[]; row?: number; showPagination?: boolean }
 const CourseFilter: FC<Props> = ({ courses, row, showPagination }) => {
   const [selected, setSelected] = useState<string>('featured')
+  const searchParams = useSearchParams()
+
+  const classVariable = searchParams.get('mode')
+
+  console.log(classVariable)
 
   const defaultFilters = [
     'Featured',
@@ -27,10 +33,12 @@ const CourseFilter: FC<Props> = ({ courses, row, showPagination }) => {
   const filters =
     courses.length > 0 ? ['Featured', ...uniqueCategories] : defaultFilters
 
-  const selectedCourses = courses.filter((el) =>
-    selected === 'featured'
-      ? el.featured === true
-      : el.category.toLowerCase() === selected,
+  const selectedCourses = courses.filter(
+    (el) =>
+      (classVariable === null || el.mode === classVariable) &&
+      (selected === 'featured'
+        ? el.featured === true
+        : el.category.toLowerCase() === selected),
   )
 
   return (
