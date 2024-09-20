@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation'
 import { FC } from 'react'
 
 type Props = { children: React.ReactNode }
-const layout: FC<Props> = ({ children }) => {
+const Layout: FC<Props> = ({ children }) => {
   const pathname = usePathname()
   const isRegister = pathname === '/register'
 
@@ -33,4 +33,4 @@ const layout: FC<Props> = ({ children }) => {
     </div>
   )
 }
-export default layout
+export default Layout
