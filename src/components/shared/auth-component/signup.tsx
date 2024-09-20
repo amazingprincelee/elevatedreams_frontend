@@ -46,10 +46,10 @@ const SignUp = () => {
 
   const handleSignUp = async (data: object) => {}
   return (
-    <div className="flex flex-col px-2 items-center justify-center max-w-screen-sm mt-10 bg-white">
+    <div className="flex flex-col px-2 items-center justify-center max-w-screen-sm mt-10 bg-whit h-[55%] ">
       <form
         onSubmit={handleSubmit(handleSignUp)}
-        className=" space-y-8 font-jakarta lg:w-full bg-white   h-[1000px]  overflow-y-scroll"
+        className=" space-y-8 font-jakarta lg:w-full overflow-y-scroll scrollbar-hide  "
       >
         <Controller
           name="firstName"
