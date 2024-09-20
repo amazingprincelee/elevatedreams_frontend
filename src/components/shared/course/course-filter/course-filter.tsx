@@ -13,8 +13,6 @@ const CourseFilter: FC<Props> = ({ courses, row, showPagination }) => {
 
   const classVariable = searchParams.get('mode')
 
-  console.log(classVariable)
-
   const defaultFilters = [
     'Featured',
     'Software Development',

@@ -30,6 +30,8 @@ const CoursesList: FC<Props> = ({
   // Get the list of courses to display on the current page
   const displayedCourses = courses.slice(startIndex, endIndex)
 
+  console.log('courses', courses)
+
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="grid md:grid-cols-2 lg:grid-cs-3 xl:grid-cols-3 2xl:grid-cols-4 2xl:gap-5 gap-10 md:gap-5">

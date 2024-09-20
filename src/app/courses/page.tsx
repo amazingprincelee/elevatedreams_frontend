@@ -5,7 +5,7 @@ import CoursesHero from '@/components/pages/courses/courses-hero'
 import CourseFilter from '@/components/shared/course/course-filter/course-filter'
 import LearningJourney from '@/components/shared/learning-journey/learning-journey'
 import TopCourses from '@/components/shared/top-courses/top-courses'
-import { FC, useEffect, useState } from 'react'
+import { FC, Suspense, useEffect, useState } from 'react'
 import { get } from '../../../backend_services/api_services'
 
 type Props = {}
@@ -25,12 +25,12 @@ const CoursesPage: FC<Props> = ({}) => {
     fetchApiData()
   }, [])
   return (
-    <div>
+    <Suspense>
       <CoursesHero />
       <TopCourses courses={courses} hideButton />
       <CourseFilter courses={courses} row={3} showPagination />
       <LearningJourney />
-    </div>
+    </Suspense>
   )
 }
 export default CoursesPage
