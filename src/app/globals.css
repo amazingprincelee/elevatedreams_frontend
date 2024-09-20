@@ -50,6 +50,6 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-primary/10 rounded-2xl;
+    @apply bg-primary rounded-2xl;
   }
 }

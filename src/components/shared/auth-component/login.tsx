@@ -1,65 +1,94 @@
+import InputField from '@/components/ui/form-fields/input-field'
+import { yupResolver } from '@hookform/resolvers/yup'
+import { LockKeyhole } from 'lucide-react'
 import Link from 'next/link'
-import { useState } from 'react'
-import { MdEmail, MdLock } from 'react-icons/md'
+import React from 'react'
+import { Controller, useForm } from 'react-hook-form'
+import { MdEmail } from 'react-icons/md'
+import * as yup from 'yup'
+import { Button } from '../button/button'
+import EyeIcon from './icons/eye-icon'
+import EyeSlashIcon from './icons/eye-slash-icon'
+
+export const schema = yup.object({
+  email: yup.string().required('Email is required'),
+  password: yup.string().required('Password is required'),
+})
 
 const Login = () => {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [isVisible, setIsVisible] = React.useState(false)
 
-  const handleLogin = (e: React.FormEvent) => {
-    e.preventDefault()
-  }
+  const toggleVisibility = () => setIsVisible(!isVisible)
+
+  const {
+    handleSubmit,
+    formState: { errors },
+    control,
+  } = useForm({
+    defaultValues: {},
+
+    resolver: yupResolver(schema),
+  })
+
+  const handleLogin = async (data: { email: string; password: string }) => {}
 
   return (
-    <div className="flex justify-center min-h-screen bg-white">
+    <div className="flex mt-10 justify-center max-w-screen-sm bg-white">
       <div className="w-full  space-y-6 bg-white rounded-lg">
         <form
-          onSubmit={handleLogin}
-          className="w-full space-y-4 font-jakarta bg-white"
+          onSubmit={handleSubmit(handleLogin)}
+          className="w-full space-y-6 font-jakarta bg-white"
         >
-          <div className="relative flex  gap-3 items-center">
-            <label htmlFor="email" className="sr-only">
-              Email
-            </label>
-            <MdEmail className="absolute left-3 size-8  text-gray-400 " />
-            <input
-              id="email"
-              name="email"
-              type="email"
-              autoComplete="email"
-              required
-              placeholder="Email"
-              className="w-full md:w-full text-2xl text-gray-400 pl-14 pr-3 py-4 border border-gray-300 hover:border-blue-500 rounded-2xl focus:outline-none focus:border-blue-500"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div className="relative flex items-center">
-            <label htmlFor="password" className="sr-only">
-              Password
-            </label>
-            <MdLock className="absolute size-8 text-gray-400 left-3 " />
-            <input
-              id="password"
-              name="password"
-              type="password"
-              autoComplete="current-password"
-              required
-              placeholder="Password"
-              className="w-full md:w-full text-xl  text-gray-400 font-thin px-3 pl-14 py-4 border border-gray-300 hover:border-blue-500 rounded-2xl focus:outline-none focus:border-blue-500"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-          <button
-            type="submit"
-            className="w-full py-4 text-white bg-red-600 rounded-md hover:bg-red-700 focus:outline-none"
-          >
-            Sign Up
-          </button>
+          <Controller
+            name="email"
+            control={control}
+            render={({ field }) => (
+              <InputField
+                name="email"
+                placeholder="Enter Email"
+                value={field.value}
+                errors={errors}
+                field={field}
+                startContent={
+                  <MdEmail className="size-8  text-gray-400 pointer-events-none" />
+                }
+              />
+            )}
+          />
+          <Controller
+            name="password"
+            control={control}
+            render={({ field }) => (
+              <InputField
+                name="password"
+                type={isVisible ? 'text' : 'password'}
+                placeholder="Pas*****"
+                errors={errors}
+                startContent={<LockKeyhole className=" text-gray-600 size-8" />}
+                endContent={
+                  <button
+                    className="focus:outline-none"
+                    type="button"
+                    onClick={toggleVisibility}
+                  >
+                    {isVisible ? (
+                      <EyeSlashIcon className="text-2xl text-default-400 pointer-events-none" />
+                    ) : (
+                      <EyeIcon className="text-2xl text-default-400 pointer-events-none" />
+                    )}
+                  </button>
+                }
+                field={{ ...field }}
+              />
+            )}
+          />
+          <Button className="w-full" size={'lg'}>
+            {' '}
+            Login
+          </Button>
         </form>
         <div>
-          <Link href="/forgot-password" className="text-lg text-red-600">
+          <Link href="/forgot-password" className="text-sm text-red-600">
             Forgot Password?
           </Link>
         </div>
