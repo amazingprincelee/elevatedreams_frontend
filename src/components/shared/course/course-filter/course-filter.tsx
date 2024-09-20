@@ -48,7 +48,7 @@ const CourseFilter: FC<Props> = ({ courses, row, showPagination }) => {
           defaultValue="featured"
           className="w-full grid grid-cols-1 gap-5 "
         >
-          <TabsList className=" overflow-x-scroll gap-5  ">
+          <TabsList className=" overflow-x-scroll scrollbar-hide gap-5  ">
             {filters.map((el: string, index: number) => (
               <TabsTrigger
                 key={index}

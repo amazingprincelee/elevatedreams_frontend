@@ -28,7 +28,7 @@ export default function Home() {
     fetchApiData()
   }, [])
   return (
-    <div className="bg-white">
+    <div className="bg-white overflow-y-scroll">
       <HomeHero />
       <OfferingCourseCard />
       <TopCourses courses={courses} />

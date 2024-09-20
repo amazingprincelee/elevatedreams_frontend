@@ -1,5 +1,10 @@
+import InputField from '@/components/ui/form-fields/input-field'
+import { yupResolver } from '@hookform/resolvers/yup'
+import { LockKeyhole } from 'lucide-react'
 import Link from 'next/link'
 import { useState } from 'react'
+import React from 'react'
+import { Controller, useForm } from 'react-hook-form'
 import {
   MdEmail,
   MdLock,
@@ -8,178 +13,202 @@ import {
   MdPhone,
   MdWork,
 } from 'react-icons/md'
-import LinkButton from '../button/link-button'
+import * as yup from 'yup'
+import { Button } from '../button/button'
+import EyeIcon from './icons/eye-icon'
+import EyeSlashIcon from './icons/eye-slash-icon'
+
+export const schema = yup.object({
+  email: yup.string().required('Email is required'),
+  password: yup.string().required('Password is required'),
+  firstName: yup.string().required('First Name is required'),
+  lastName: yup.string().required('Last Name is required'),
+  phoneNumber: yup.string().required('Phone Number is required'),
+  occupation: yup.string().notRequired(),
+  nextOfKinName: yup.string().notRequired(),
+  nextOfKinPhone: yup.string().notRequired(),
+})
 
 const SignUp = () => {
-  const [form, setForm] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phoneNumber: '',
-    occupation: '',
-    nextOfKinName: '',
-    nextOfKinPhone: '',
-    password: '',
+  const [isVisible, setIsVisible] = React.useState(false)
+
+  const toggleVisibility = () => setIsVisible(!isVisible)
+
+  const {
+    handleSubmit,
+    formState: { errors },
+    control,
+  } = useForm({
+    defaultValues: {},
+
+    resolver: yupResolver(schema),
   })
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target
-    setForm({ ...form, [name]: value })
-  }
-
-  const handleSignUp = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle sign up logic
-  }
-
+  const handleSignUp = async (data: object) => {}
   return (
-    <div className="flex items-center justify-center min-h-screen bg-white">
-      <div className="w-full  md:max-w-md-none  bg-white rounded-lg">
-        <form
-          onSubmit={handleSignUp}
-          className=" space-y-8 font-jakarta lg:w-full bg-white"
-        >
-          <div className="relative flex  gap-3 items-center">
-            <label htmlFor="email" className="sr-only">
-              First Name
-            </label>
-            <MdPerson className="absolute left-3 size-8  text-gray-400 " />
-            <input
-              type="text"
+    <div className="flex flex-col px-2 items-center justify-center max-w-screen-sm mt-10 bg-white">
+      <form
+        onSubmit={handleSubmit(handleSignUp)}
+        className=" space-y-8 font-jakarta lg:w-full bg-white   h-[1000px]  overflow-y-scroll"
+      >
+        <Controller
+          name="firstName"
+          control={control}
+          render={({ field }) => (
+            <InputField
               name="firstName"
-              placeholder="First Name"
-              autoComplete="email"
-              required
-              className="w-full md:w-full text-2xl  text-gray-400 font-thin pl-14 pr-5 py-4 border border-gray-300 hover:border-red-500 rounded-2xl focus:outline-none focus:border-red-500"
-              value={form.firstName}
-              onChange={handleInputChange}
+              placeholder="Enter First Name"
+              value={field.value}
+              errors={errors}
+              field={field}
+              startContent={
+                <MdPerson className="size-8  text-gray-400 pointer-events-none " />
+              }
             />
-          </div>
-          <div className="relative flex  gap-3 items-center">
-            <label htmlFor="email" className="sr-only">
-              Last Name
-            </label>
-            <MdPerson className="absolute left-3 size-8  text-gray-400 " />
-            <input
-              type="text"
+          )}
+        />
+        <Controller
+          name="lastName"
+          control={control}
+          render={({ field }) => (
+            <InputField
               name="lastName"
-              placeholder="Last Name"
-              required
-              className="w-full md:w-full text-2xl  text-gray-400 font-thin pl-14 pr-5 py-4 border border-gray-300 hover:border-red-500 rounded-2xl focus:outline-none focus:border-red-500"
-              value={form.lastName}
-              onChange={handleInputChange}
+              placeholder="Enter Last Name"
+              value={field.value}
+              errors={errors}
+              field={field}
+              startContent={
+                <MdPerson className="size-8  text-gray-400 pointer-events-none " />
+              }
             />
-          </div>
-          <div className="relative flex  gap-3 items-center">
-            <label htmlFor="email" className="sr-only">
-              Email
-            </label>
-            <MdEmail className="absolute left-3 size-8  text-gray-400 " />
-            <input
-              id="email"
+          )}
+        />
+        <Controller
+          name="email"
+          control={control}
+          render={({ field }) => (
+            <InputField
               name="email"
-              type="email"
-              autoComplete="email"
-              required
-              placeholder="Email"
-              className="w-full md:w-full text-2xl  text-gray-400 font-thin pl-14 pr-5 py-4 border border-gray-300 hover:border-red-500 rounded-2xl focus:outline-none focus:border-red-500"
-              value={form.email}
-              onChange={handleInputChange}
+              placeholder="Enter Email"
+              value={field.value}
+              errors={errors}
+              field={field}
+              startContent={
+                <MdEmail className="size-8  text-gray-400 pointer-events-none" />
+              }
             />
-          </div>
-          <div className="relative flex  gap-3 items-center">
-            <label htmlFor="email" className="sr-only">
-              Phone Number
-            </label>
-            <MdPhone className="absolute left-3 size-8  text-gray-400 " />
-            <input
-              type="text"
+          )}
+        />
+        <Controller
+          name="phoneNumber"
+          control={control}
+          render={({ field }) => (
+            <InputField
               name="phoneNumber"
-              placeholder="Phone Number"
-              required
-              className="w-full md:w-full text-2xl  text-gray-400 font-thin pl-14 pr-5 py-4 border border-gray-300 hover:border-red-500 rounded-2xl focus:outline-none focus:border-red-500"
-              value={form.phoneNumber}
-              onChange={handleInputChange}
+              placeholder="Enter Phone Number"
+              value={field.value}
+              errors={errors}
+              field={field}
+              startContent={
+                <MdPhone className="size-8  text-gray-400 pointer-events-none" />
+              }
             />
-          </div>
-          <div className="relative flex  gap-3 items-center">
-            <label htmlFor="email" className="sr-only">
-              Occupation
-            </label>
-            <MdWork className="absolute left-3 size-8  text-gray-400 " />
-            <input
-              type="text"
+          )}
+        />
+        <Controller
+          name="occupation"
+          control={control}
+          render={({ field }) => (
+            <InputField
               name="occupation"
-              placeholder="Occupation"
-              required
-              className="w-full md:w-full text-2xl  text-gray-400 font-thin pl-14 pr-5 py-4 border border-gray-300 hover:border-red-500 rounded-2xl focus:outline-none focus:border-red-500"
-              value={form.occupation}
-              onChange={handleInputChange}
+              placeholder="Enter Occupation"
+              value={field.value}
+              errors={errors}
+              field={field}
+              startContent={
+                <MdWork className="size-8  text-gray-400 pointer-events-none" />
+              }
             />
-          </div>
-          <div className="relative flex  gap-3 items-center">
-            <label htmlFor="email" className="sr-only">
-              Next Of Kin Name
-            </label>
-            <MdPeople className="absolute left-3 size-8  text-gray-400 " />
-            <input
-              type="text"
+          )}
+        />
+        <Controller
+          name="nextOfKinName"
+          control={control}
+          render={({ field }) => (
+            <InputField
               name="nextOfKinName"
-              placeholder="Next of Kin Name"
-              required
-              className="w-full md:w-full text-2xl  text-gray-400 font-thin pl-14 pr-5 py-4 border border-gray-300 hover:border-red-500 rounded-2xl focus:outline-none focus:border-red-500"
-              value={form.nextOfKinName}
-              onChange={handleInputChange}
+              placeholder="Enter Next Of Kin Name"
+              value={field.value}
+              errors={errors}
+              field={field}
+              startContent={
+                <MdPeople className="size-8  text-gray-400 pointer-events-none" />
+              }
             />
-          </div>
-          <div className="relative flex  gap-3 items-center">
-            <label htmlFor="email" className="sr-only">
-              Next of Kin Phone Number
-            </label>
-            <MdPhone className="absolute left-3 size-8  text-gray-400 " />
-            <input
-              type="text"
+          )}
+        />
+        <Controller
+          name="nextOfKinPhone"
+          control={control}
+          render={({ field }) => (
+            <InputField
               name="nextOfKinPhone"
-              placeholder="Next of Kin Phone Number"
-              required
-              className="w-full md:w-full text-2xl  text-gray-400 font-thin pl-14 pr-5 py-4 border border-gray-300 hover:border-red-500 rounded-2xl focus:outline-none focus:border-red-500"
-              value={form.nextOfKinPhone}
-              onChange={handleInputChange}
+              placeholder="Enter Next Of Kin Phone Number"
+              value={field.value}
+              errors={errors}
+              field={field}
+              startContent={
+                <MdPhone className="size-8  text-gray-400 pointer-events-none" />
+              }
             />
-          </div>
-          <div className="relative flex  gap-3 items-center">
-            <label htmlFor="email" className="sr-only">
-              Password
-            </label>
-            <MdLock className="absolute left-3 size-8  text-gray-400 " />
-            <input
-              type="password"
+          )}
+        />
+        <Controller
+          name="password"
+          control={control}
+          render={({ field }) => (
+            <InputField
               name="password"
-              placeholder="Password"
-              required
-              className="w-full md:w-full text-2xl  text-gray-400 font-thin pl-14 pr-5 py-4 border border-gray-300 hover:border-red-500 rounded-2xl focus:outline-none focus:border-red-500"
-              value={form.password}
-              onChange={handleInputChange}
+              type={isVisible ? 'text' : 'password'}
+              placeholder="Pas*****"
+              errors={errors}
+              startContent={<LockKeyhole className=" text-gray-600 size-8" />}
+              endContent={
+                <button
+                  className="focus:outline-none"
+                  type="button"
+                  onClick={toggleVisibility}
+                >
+                  {isVisible ? (
+                    <EyeSlashIcon className="text-2xl text-default-400 pointer-events-none" />
+                  ) : (
+                    <EyeIcon className="text-2xl text-default-400 pointer-events-none" />
+                  )}
+                </button>
+              }
+              field={{ ...field }}
             />
-          </div>
-          <div className="flex justify-center">
-            <LinkButton url={''} label={'Sign Up'} className="w-full" />
-          </div>
-        </form>
-        <div className="flex gap-1 bg-red-100 text-center  font-jakarta text-gray-500 mt-4 px-6 py-4">
-          <input type="checkbox" className="size-10 border !border-red-400" />
+          )}
+        />
 
-          <div>
-            By Signing Up, you agree to our{' '}
-            <Link href="/terms" className="text-red-600 underline">
-              Terms & Conditions
-            </Link>{' '}
-            and{' '}
-            <Link href="/privacy-policy" className="text-red-600 underline">
-              Privacy Policy
-            </Link>
-            .
-          </div>
+        <Button className="w-full" size={'lg'}>
+          {' '}
+          Sign Up
+        </Button>
+      </form>
+      <div className="flex gap-1 bg-red-100 text-center  font-jakarta text-gray-500 mt-4 px-6 py-4">
+        <input type="checkbox" className="size-10 border !border-red-400" />
+
+        <div>
+          By Signing Up, you agree to our{' '}
+          <Link href="/#" className="text-red-600 underline">
+            Terms & Conditions
+          </Link>{' '}
+          and{' '}
+          <Link href="/#" className="text-red-600 underline">
+            Privacy Policy
+          </Link>
+          .
         </div>
       </div>
     </div>
