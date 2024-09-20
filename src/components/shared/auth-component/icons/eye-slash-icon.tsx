@@ -1,4 +1,3 @@
-import type { IconSvgProps } from '@/types'
 import React from 'react'
 
 export default function EyeSlashIcon({
