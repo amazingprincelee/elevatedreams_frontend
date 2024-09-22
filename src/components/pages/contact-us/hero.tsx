@@ -14,7 +14,7 @@ const HeroContactUs: React.FC = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-10 right-10">
+      <div className="absolute fixed bottom-10 right-10">
         <ScrollToTop />
       </div>
     </div>

@@ -28,7 +28,7 @@ const ScrollToTop = () => {
   return (
     <div className="scroll-to-top">
       {isVisible && (
-        <div onClick={scrollToTop} className=" cursor-pointer p-3 bg-white rounded-full text-red-600 hover:bg-red-700 hover:text-white">
+        <div onClick={scrollToTop} className="cursor-pointer p-3 bg-white rounded-full text-red-600 hover:bg-red-700 hover:text-white">
           <FaArrowUp size={20} />
         </div>
       )}
