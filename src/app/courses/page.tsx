@@ -1,6 +1,5 @@
 'use client'
 
-import HeroSection from '@/components/pages/about-us/hero'
 import CoursesHero from '@/components/pages/courses/courses-hero'
 import CourseFilter from '@/components/shared/course/course-filter/course-filter'
 import LearningJourney from '@/components/shared/learning-journey/learning-journey'

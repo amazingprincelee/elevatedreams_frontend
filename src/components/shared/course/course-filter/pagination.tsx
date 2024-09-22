@@ -17,7 +17,7 @@ const Pagination: FC<Props> = ({
 }) => {
   const [currentPage, setCurrentPage] = useState(1)
 
-  const totalCoursesViewed = startIndex + displayedCourses.length
+  const totalCoursesViewed = startIndex + displayedCourses?.length
 
   const handlePrevPage = () => {
     if (startIndex > 0) {
@@ -37,7 +37,7 @@ const Pagination: FC<Props> = ({
   return (
     <div className="flex justify-between mt-7 w-full items-center">
       <p>
-        Showing {currentPage} to {totalCoursesViewed} of {courses.length}{' '}
+        Showing {currentPage} to {totalCoursesViewed} of {courses?.length}{' '}
         entries
       </p>
       <div className="h-12 font-thin flex items-center gap-1 p-2 rounded-lg">
@@ -52,7 +52,7 @@ const Pagination: FC<Props> = ({
         <div></div>
         <div
           className={`bg-white p-1 rounded cursor-pointer ${
-            startIndex + coursesPerPage >= courses.length ? 'opacity-50' : ''
+            startIndex + coursesPerPage >= courses?.length ? 'opacity-50' : ''
           }`}
           onClick={handleNextPage}
         >

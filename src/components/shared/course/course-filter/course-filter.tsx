@@ -31,13 +31,27 @@ const CourseFilter: FC<Props> = ({ courses, row, showPagination }) => {
   const filters =
     courses.length > 0 ? ['Featured', ...uniqueCategories] : defaultFilters
 
-  const selectedCourses = courses.filter(
-    (el) =>
-      (classVariable === null || el.mode === classVariable) &&
-      (selected === 'featured'
-        ? el.featured === true
-        : el.category.toLowerCase() === selected),
-  )
+  const selectedCourses = (() => {
+    const filteredCourses = courses.filter(
+      (el) =>
+        (classVariable === null || el.mode === classVariable) &&
+        (selected === 'featured'
+          ? el.featured === true
+          : el.category.toLowerCase() === selected),
+    )
+
+    const noModeCourses = courses.every(
+      (el) => classVariable !== null && el.mode !== classVariable,
+    )
+
+    console.log('noModeCourses', noModeCourses, courses)
+
+    return courses.length <= 0
+      ? []
+      : noModeCourses
+        ? undefined
+        : filteredCourses
+  })()
 
   return (
     <div className="w-full bg-base pt-10 pb-20">

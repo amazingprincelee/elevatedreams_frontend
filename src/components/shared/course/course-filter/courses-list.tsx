@@ -7,7 +7,7 @@ import CardLoader from '../loader'
 import Pagination from './pagination'
 
 type Props = {
-  courses: CourseProps[]
+  courses: any
   rowsPerPage?: number
   showPagination?: boolean
 }
@@ -28,42 +28,48 @@ const CoursesList: FC<Props> = ({
   const endIndex = startIndex + coursesPerPage
 
   // Get the list of courses to display on the current page
-  const displayedCourses = courses.slice(startIndex, endIndex)
+  const displayedCourses = courses && courses.slice(startIndex, endIndex)
 
   console.log('courses', courses)
 
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="grid md:grid-cols-2 lg:grid-cs-3 xl:grid-cols-3 2xl:grid-cols-4 2xl:gap-5 gap-10 md:gap-5">
-        {displayedCourses.length === 0
-          ? Array.from({ length: coursesPerPage }, (_, i) => (
-              <CardLoader key={i} />
-            ))
-          : displayedCourses.map((course, index) => (
-              <motion.div
-                key={index}
-                initial={{ scale: 0.9 }}
-                transition={{
-                  ease: 'easeInOut',
-                  duration: 0.4,
-                  delay: 0.2 + 0.2 * index,
-                }}
-                viewport={{ once: true }}
-                exit="exit"
-                animate={{ scale: [0.9, 1] }}
-                whileInView={{ scale: [0.9, 1] }}
-              >
-                <CourseCard course={course} />
-              </motion.div>
-            ))}
+        {courses ? (
+          <>
+            {displayedCourses?.length === 0
+              ? Array.from({ length: coursesPerPage }, (_, i) => (
+                  <CardLoader key={i} />
+                ))
+              : displayedCourses!.map((course: any, index: number) => (
+                  <motion.div
+                    key={index}
+                    initial={{ scale: 0.9 }}
+                    transition={{
+                      ease: 'easeInOut',
+                      duration: 0.4,
+                      delay: 0.2 + 0.2 * index,
+                    }}
+                    viewport={{ once: true }}
+                    exit="exit"
+                    animate={{ scale: [0.9, 1] }}
+                    whileInView={{ scale: [0.9, 1] }}
+                  >
+                    <CourseCard course={course} />
+                  </motion.div>
+                ))}
+          </>
+        ) : (
+          <>Nothing found</>
+        )}
       </div>
 
-      {showPagination && (
+      {courses && courses?.length > 0 && showPagination && (
         <Pagination
           startIndex={startIndex}
           setStartIndex={setStartIndex}
-          displayedCourses={displayedCourses}
-          courses={courses}
+          displayedCourses={displayedCourses!}
+          courses={courses!}
           coursesPerPage={coursesPerPage}
         />
       )}

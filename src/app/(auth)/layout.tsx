@@ -2,6 +2,7 @@
 
 import AuthTabs from '@/components/pages/auth/auth-tabs'
 import Image from 'next/image'
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { FC } from 'react'
 
@@ -12,14 +13,16 @@ const Layout: FC<Props> = ({ children }) => {
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 h-screen overflow-hidden">
-      <div className="def-contain mt-24 lg:mb-8 w-full h-full ">
-        <Image
-          src="/images/logo.png"
-          width={116}
-          height={52}
-          alt="logo"
-          className="my-10"
-        />
+      <div className="def-contain flex-center flex-col  2xl:mt-24 mt-10 lg:mb-8 w-full h-full">
+        <Link href="/" className="flex">
+          <Image
+            src={'/images/logo.png'}
+            alt={'blog'}
+            width={1200}
+            height={900}
+            className=" w-20 object-cover mb-10 "
+          />
+        </Link>
         <AuthTabs pathname={pathname} />
         {children}
       </div>
