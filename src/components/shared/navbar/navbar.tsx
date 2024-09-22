@@ -57,12 +57,12 @@ const Navbar = () => {
             /> */}
             <div className="flex-center gap-3">
               <LinkButton
-                url={''}
+                url={'/login'}
                 label={'Log in'}
                 className="border border-primary bg-transparent text-primary hover:text-white py-3"
               ></LinkButton>
               <LinkButton
-                url={''}
+                url={'/register'}
                 label={'Get Started'}
                 className="hover:text-primary border hover:border-primary py-3 hover:bg-transparent"
               ></LinkButton>

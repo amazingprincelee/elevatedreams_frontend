@@ -1,11 +1,12 @@
 import { cn } from '@/lib/utils'
 import { ArrowRight } from 'lucide-react'
+import { Url } from 'next/dist/shared/lib/router/router'
 import Link from 'next/link'
 import { FC } from 'react'
 import { buttonVariants } from './button'
 
 type Props = {
-  url: string
+  url: Url
   label: string
   isIcon?: boolean
   className?: string
