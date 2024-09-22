@@ -8,6 +8,7 @@ interface OfferingCard {
   imageSrc: string
   title: string
   text: string
+  class: string
 }
 
 const OfferingCourseCard = () => {
@@ -15,11 +16,13 @@ const OfferingCourseCard = () => {
     {
       imageSrc: '/images/offering/img1.png',
       title: 'Classroom Learning',
+      class: 'Classroom',
       text: 'Immerse yourself in our expert-led, interactive classes for a hands-on learning experience that goes beyond traditional methods.',
     },
     {
       imageSrc: '/images/offering/img2.png',
       title: 'Online Learning',
+      class: 'Online',
       text: 'Discover the convenience of online learning with our courses, featuring interactive sessions and instant access to valuable resources.',
     },
   ]
@@ -53,7 +56,10 @@ const OfferingCourseCard = () => {
 
                 {/* action buttons */}
                 <LinkButton
-                  url={'/courses'}
+                  url={{
+                    pathname: '/courses',
+                    query: { mode: `${card.class}` },
+                  }}
                   label={'EXPLORE OUR COURSES'}
                   isIcon={true}
                   className={`mt-5 lg:mt-0 w-full lg:w-fit ${
