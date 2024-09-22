@@ -21,14 +21,17 @@ const CourseCard: FC<Props> = ({ course }) => {
     slug,
   } = course
   return (
-    <div className="shadow-sm flex flex-col h-[560px] lg:max-w-full w-fit rounded-xl gap-3 pb-5 bg-white">
-      <Image
-        src={imgUrl}
-        alt={'blog'}
-        width={1200}
-        height={900}
-        className="h-[40%] object-cover rounded-t-xl"
-      />
+    <div className="shadow-sm flex flex-col group h-[560px] lg:max-w-full w-fit rounded-xl gap-3 pb-5 bg-white">
+      <div className="relative h-[40%]">
+        <div className="h-full w-full group-hover:bg-black/30 rounded-t-xl bg-transparent absolute top-0 left-0"></div>
+        <Image
+          src={imgUrl}
+          alt={'blog'}
+          width={1200}
+          height={900}
+          className="h-full object-cover rounded-t-xl"
+        />
+      </div>
       <div className="flex flex-col justify-between mt-2 px-4 h-full">
         <div className="flex flex-col h-full">
           <div className="h-[70px]">
@@ -38,18 +41,15 @@ const CourseCard: FC<Props> = ({ course }) => {
                 localStorage.setItem('courseId', _id)
               }}
             >
-              <h2 className="font-medium text-lg cursor-pointer hover:text-gray-600 hover:underline">
-                {truncateString(metaTitle, 45)}
+              <h2 className="font-medium text-lg line-clamp-2 cursor-pointer hover:text-gray-600 hover:underline">
+                {metaTitle}
               </h2>
             </Link>
             <span className="text-xs font-medium text-primary mt-1">
               {category}
             </span>
           </div>
-          <SubHeader
-            text={truncateString(metaDescription, 200)}
-            className="mt-1"
-          />
+          <SubHeader text={metaDescription} className="mt-2 line-clamp-5" />
         </div>
         <div className="flex items-center justify-between mt-10 w-full gap-2">
           <div className=" flex-center gap-[2px] bg-base rounded-lg px-4 lg:px-3 xl:px-4 py-2 w-full  justify-center ">

@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 import {
   FaClock,
@@ -17,6 +18,8 @@ import FooterLinks from './footer-links'
 import SocialLinks from './footer-social-links'
 
 const Footer = () => {
+  const pathname = usePathname()
+
   const footerLinks = [
     { label: 'About Us', href: '/about-us' },
     { label: 'Courses', href: '/courses' },
@@ -36,7 +39,11 @@ const Footer = () => {
   ]
 
   return (
-    <div className="md:def-contain ">
+    <div
+      className={`md:def-contain ${
+        pathname === '/login' || pathname === '/register' ? 'hidden' : 'flex'
+      }`}
+    >
       <motion.div
         initial={{ opacity: 0, translateY: 100 }}
         whileInView={{ opacity: [0, 1], translateY: [100, 0] }}

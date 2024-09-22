@@ -24,3 +24,9 @@ type CourseProps = {
   featured: boolean
   slug: string
 }
+
+type IconSvgProps = SVGProps<SVGSVGElement> & {
+  size?: number
+  width?: number | string
+  height?: number | string
+}
