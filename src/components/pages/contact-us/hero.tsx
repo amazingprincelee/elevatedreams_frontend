@@ -1,3 +1,4 @@
+import ScrollToTop from '@/components/shared/scroll-to-top/scroll-to-top'
 import { FaArrowUp } from 'react-icons/fa6'
 
 const HeroContactUs: React.FC = () => {
@@ -13,10 +14,8 @@ const HeroContactUs: React.FC = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-10 right-10">
-        <div className="bg-white text-red-600 p-2 rounded-full shadow-lg">
-          <FaArrowUp />
-        </div>
+      <div className="absolute fixed bottom-10 right-10">
+        <ScrollToTop />
       </div>
     </div>
   )
