@@ -6,11 +6,22 @@ import * as yup from 'yup'
 import { Button } from '../button/button'
 
 export const schema = yup.object({
-  otp: yup
+  otp0: yup
     .string()
-    .required('OTP is required')
-    .min(4, 'OTP must be 4 digits')
-    .max(4, 'OTP must be 4 digits'),
+    .required('OTP digit is required')
+    .length(1, 'Must be 1 digit'),
+  otp1: yup
+    .string()
+    .required('OTP digit is required')
+    .length(1, 'Must be 1 digit'),
+  otp2: yup
+    .string()
+    .required('OTP digit is required')
+    .length(1, 'Must be 1 digit'),
+  otp3: yup
+    .string()
+    .required('OTP digit is required')
+    .length(1, 'Must be 1 digit'),
 })
 
 const VerifyOtp = () => {
@@ -19,11 +30,18 @@ const VerifyOtp = () => {
     formState: { errors },
     control,
   } = useForm({
-    defaultValues: { otp: '' },
+    defaultValues: { otp0: '', otp1: '', otp2: '', otp3: '' },
     resolver: yupResolver(schema),
   })
 
-  const handleOtpSubmit = async (data: { otp: string }) => {
+  const handleOtpSubmit = async (data: {
+    otp0: string
+    otp1: string
+    otp2: string
+    otp3: string
+  }) => {
+    const otp = `${data.otp0}${data.otp1}${data.otp2}${data.otp3}` // Combine the 4 digits into a single OTP
+    console.log('Submitted OTP:', otp)
     // Handle OTP verification logic here
   }
 
@@ -42,7 +60,7 @@ const VerifyOtp = () => {
               {Array.from({ length: 4 }).map((_, idx) => (
                 <Controller
                   key={idx}
-                  name={`otp${idx}`}
+                  name="otp0"
                   control={control}
                   render={({ field }) => (
                     <input
@@ -50,7 +68,7 @@ const VerifyOtp = () => {
                       type="text"
                       maxLength={1}
                       className={`border p-4 text-xl font-semibold text-center w-14 h-14 rounded-lg ${
-                        errors.otp ? 'border-red-500' : 'border-gray-300'
+                        errors.otp0 ? 'border-red-500' : 'border-gray-300'
                       }`}
                       placeholder="-"
                     />
@@ -59,9 +77,9 @@ const VerifyOtp = () => {
               ))}
             </div>
 
-            {errors.otp && (
+            {errors.otp0 && (
               <p className="text-red-500 text-sm text-center">
-                {errors.otp.message}
+                {errors.otp0.message}
               </p>
             )}
 

@@ -4,6 +4,7 @@ import Blog from '@/components/pages/home/blog/blog'
 import Faq from '@/components/pages/home/faq/faq'
 import HomeHero from '@/components/pages/home/hero/home'
 import ReliedUpon from '@/components/pages/home/relied-upon/relied-upon'
+import ChangePassword from '@/components/shared/auth-component/change-password'
 import CourseFilter from '@/components/shared/course/course-filter/course-filter'
 import LearningJourney from '@/components/shared/learning-journey/learning-journey'
 import OfferingCourseCard from '@/components/shared/offering-course-card/offering-course-card'
@@ -31,6 +32,7 @@ export default function Home() {
     <div className="bg-white overflow-y-scroll">
       <HomeHero />
       <OfferingCourseCard />
+      <ChangePassword />
       <TopCourses courses={courses} />
       <CourseFilter courses={courses} />
       <TestimonialSlider />
