@@ -38,12 +38,20 @@ const Footer = () => {
     { icon: <FaYoutube className="text-lg" />, href: 'https://youtube.com/' },
   ]
 
+  const hideFooterPaths = [
+    '/login',
+    '/register',
+    '/reset-password',
+    '/verify-otp',
+    '/forgot-password',
+  ]
+
+  if (hideFooterPaths.includes(pathname)) {
+    return null
+  }
+
   return (
-    <div
-      className={`md:def-contain ${
-        pathname === '/login' || pathname === '/register' ? 'hidden' : 'flex'
-      }`}
-    >
+    <div className={`md:def-contain`}>
       <motion.div
         initial={{ opacity: 0, translateY: 100 }}
         whileInView={{ opacity: [0, 1], translateY: [100, 0] }}
