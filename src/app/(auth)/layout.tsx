@@ -12,7 +12,7 @@ const Layout: FC<Props> = ({ children }) => {
   const isRegister = pathname === '/register'
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 h-screen overflow-hidden">
+    <div className="grid grid-cols-1 lg:grid-cols-2 lg:h-screen overflow-hidden my-10 lg:my-0">
       <div className="def-contain flex-center flex-col  2xl:mt-24 mt-10 lg:mb-8 w-full h-full">
         <Link href="/" className="flex">
           <Image

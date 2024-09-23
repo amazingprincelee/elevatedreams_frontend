@@ -1,12 +1,12 @@
 import ChangePassword from '@/components/shared/auth-component/change-password'
-import React from 'react'
+import { FC } from 'react'
 
-const page = () => {
+type Props = {}
+const page: FC<Props> = ({}) => {
   return (
-    <div>
+    <>
       <ChangePassword />
-    </div>
+    </>
   )
 }
-
 export default page

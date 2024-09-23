@@ -1,5 +1,8 @@
+'use client'
+
 import InputField from '@/components/ui/form-fields/input-field'
 import { yupResolver } from '@hookform/resolvers/yup'
+import { motion } from 'framer-motion'
 import { LockKeyhole } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
@@ -33,11 +36,18 @@ const Login = () => {
   const handleLogin = async (data: { email: string; password: string }) => {}
 
   return (
-    <div className="flex mt-10 justify-center max-w-screen-sm bg-white">
-      <div className="w-full  space-y-6 bg-white rounded-lg">
+    <motion.div
+      initial={{ opacity: 0, translateY: 50 }}
+      whileInView={{ opacity: [0, 1], translateY: [50, 0] }}
+      animate={{ opacity: [0, 1], translateY: [50, 0] }}
+      transition={{ delay: 0.2, duration: 0.7, ease: 'easeInOut' }}
+      viewport={{ once: true }}
+      className="flex flex-col mt-10 max-w-screen-sm  w-full"
+    >
+      <div className="w-full  space-y-6  rounded-lg">
         <form
           onSubmit={handleSubmit(handleLogin)}
-          className="w-full space-y-6 font-jakarta bg-white"
+          className="w-full space-y-6 font-jakarta"
         >
           <Controller
             name="email"
@@ -93,7 +103,7 @@ const Login = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
