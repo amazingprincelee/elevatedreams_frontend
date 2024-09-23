@@ -12,12 +12,20 @@ const Navbar = () => {
 
   const pathname = usePathname()
 
+  const hideFooterPaths = [
+    '/login',
+    '/register',
+    '/reset-password',
+    '/verify-otp',
+    '/forgot-password',
+  ]
+
+  if (hideFooterPaths.includes(pathname)) {
+    return null
+  }
+
   return (
-    <nav
-      className={`${
-        pathname === '/login' || pathname === '/register' ? 'hidden' : 'fixed'
-      } bg-white top-0 w-full z-50 shadow-lg`}
-    >
+    <nav className={`fixed bg-white top-0 w-full z-50 shadow-lg`}>
       <div className="def-contain">
         <div className="flex items-center justify-between h-16">
           <Link href="/">
