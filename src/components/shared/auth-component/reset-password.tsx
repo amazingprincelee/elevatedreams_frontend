@@ -28,10 +28,10 @@ const ResetPassword = () => {
   }
 
   return (
-    <div className="def-contain flex justify-center items-center">
+    <div className=" flex justify-center items-center">
       <div className="bg-white rounded-lg overflow-hidden w-full grid grid-cols-1 md:grid-cols-[40%_60%]">
         {/* Left side - Reset Password form */}
-        <div className="w-full md:px-9 lg:px-16">
+        <div className="w-full md:pt-40 md:px-9 lg:px-16">
           <h2 className="text-2xl font-semibold mb-4">Reset Password</h2>
           <p className="text-sm text-gray-600 mb-6">
             We will send a <strong>4 digit code</strong> to your email address.
@@ -69,7 +69,7 @@ const ResetPassword = () => {
         </div>
 
         {/* Right side - Image */}
-        <div className="hidden md:block">
+        <div className="w-full hidden md:block">
           <Image
             src="/images/auth/young-people.png"
             alt="Person with laptop"

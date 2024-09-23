@@ -47,10 +47,10 @@ const VerifyOtp = () => {
   }
 
   return (
-    <div className="def-contain flex justify-center items-center">
+    <div className="flex justify-center items-center">
       <div className="bg-white rounded-lg overflow-hidden w-full grid grid-cols-1 md:grid-cols-[40%_60%]">
         {/* Left side - OTP Verification */}
-        <div className="w-full md:px-9 lg:px-16">
+        <div className="w-full md:px-9 md:pt-40 lg:px-16">
           <h2 className="text-2xl font-semibold mb-6">Verify OTP</h2>
           <p className="text-sm text-gray-600 mb-4">
             Confirm the OTP sent to you
