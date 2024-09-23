@@ -1,3 +1,4 @@
+'use client'
 import InputField from '@/components/ui/form-fields/input-field'
 import { yupResolver } from '@hookform/resolvers/yup'
 import Image from 'next/image'
