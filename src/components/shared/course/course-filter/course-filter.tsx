@@ -2,12 +2,16 @@
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tab'
 import { motion } from 'framer-motion'
+import { useSearchParams } from 'next/navigation'
 import { FC, useState } from 'react'
 import CoursesList from './courses-list'
 
 type Props = { courses: CourseProps[]; row?: number; showPagination?: boolean }
 const CourseFilter: FC<Props> = ({ courses, row, showPagination }) => {
   const [selected, setSelected] = useState<string>('featured')
+  const searchParams = useSearchParams()
+
+  const classVariable = searchParams.get('mode')
 
   const defaultFilters = [
     'Featured',
@@ -27,11 +31,27 @@ const CourseFilter: FC<Props> = ({ courses, row, showPagination }) => {
   const filters =
     courses.length > 0 ? ['Featured', ...uniqueCategories] : defaultFilters
 
-  const selectedCourses = courses.filter((el) =>
-    selected === 'featured'
-      ? el.featured === true
-      : el.category.toLowerCase() === selected,
-  )
+  const selectedCourses = (() => {
+    const filteredCourses = courses.filter(
+      (el) =>
+        (classVariable === null || el.mode === classVariable) &&
+        (selected === 'featured'
+          ? el.featured === true
+          : el.category.toLowerCase() === selected),
+    )
+
+    const noModeCourses = courses.every(
+      (el) => classVariable !== null && el.mode !== classVariable,
+    )
+
+    console.log('noModeCourses', noModeCourses, courses)
+
+    return courses.length <= 0
+      ? []
+      : noModeCourses
+        ? undefined
+        : filteredCourses
+  })()
 
   return (
     <div className="w-full bg-base pt-10 pb-20">

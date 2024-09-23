@@ -9,7 +9,7 @@ import LearningJourney from '@/components/shared/learning-journey/learning-journ
 import OfferingCourseCard from '@/components/shared/offering-course-card/offering-course-card'
 import TestimonialSlider from '@/components/shared/testimonial-slider/testimonial-slider'
 import TopCourses from '@/components/shared/top-courses/top-courses'
-import { useEffect, useState } from 'react'
+import { Suspense, useEffect, useState } from 'react'
 import { get } from '../../backend_services/api_services'
 
 export default function Home() {
@@ -28,16 +28,18 @@ export default function Home() {
     fetchApiData()
   }, [])
   return (
-    <div className="bg-white overflow-y-scroll">
-      <HomeHero />
-      <OfferingCourseCard />
-      <TopCourses courses={courses} />
-      <CourseFilter courses={courses} />
-      <TestimonialSlider />
-      <ReliedUpon />
-      <Blog />
-      <Faq />
-      <LearningJourney />
-    </div>
+    <Suspense>
+      <div className="bg-white overflow-y-scroll">
+        <HomeHero />
+        <OfferingCourseCard />
+        <TopCourses courses={courses} />
+        <CourseFilter courses={courses} />
+        <TestimonialSlider />
+        <ReliedUpon />
+        <Blog />
+        <Faq />
+        <LearningJourney />
+      </div>
+    </Suspense>
   )
 }
