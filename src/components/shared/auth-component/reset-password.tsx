@@ -1,6 +1,7 @@
 'use client'
 import InputField from '@/components/ui/form-fields/input-field'
 import { yupResolver } from '@hookform/resolvers/yup'
+import { ArrowLeft } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -28,16 +29,14 @@ const ResetPassword = () => {
   }
 
   return (
-    <div
-      className="h-screen flex justify-center items-center"
-      style={{ border: '1px solid red' }}
-    >
-      <div className="bg-white rounded-lg overflow-hidden w-full grid grid-cols-1 md:grid-cols-[50%_50%]">
+    <div className="h-screen flex justify-center items-center">
+      <div className="h-screen bg-white rounded-lg overflow-hidden w-full grid grid-cols-1 md:grid-cols-[50%_50%]">
         {/* Left side - Reset Password form */}
-        <div
-          className="w-full h-full md:pt-40 md:px-9 lg:px-36"
-          style={{ border: '1px solid red' }}
-        >
+        <div className="w-full h-full md:pt-40 md:px-9 lg:px-36">
+          <p className="self-start mb-8 flex gap-2 items-center">
+            <ArrowLeft className="size-5" />
+            Go back to <span className="text-primary">Blog</span>
+          </p>
           <Link href="/" className="flex justify-center">
             <Image
               src={'/images/logo.png'}

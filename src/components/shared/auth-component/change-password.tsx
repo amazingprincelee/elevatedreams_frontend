@@ -2,7 +2,7 @@
 import InputField from '@/components/ui/form-fields/input-field'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { strong } from 'framer-motion/client'
-import { EyeIcon, LockKeyhole } from 'lucide-react'
+import { ArrowLeft, EyeIcon, LockKeyhole } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -40,7 +40,20 @@ const ChangePassword = () => {
     <div className="flex justify-center items-center">
       <div className="bg-white  rounded-lg overflow-hidden w-full grid grid-cols-1 md:grid-cols-[40%_60%]">
         {/* Left side - Reset Password form */}
-        <div className="w-full md:px-9 md:pt-40 lg:px-16">
+        <div className="w-full md:px-9 md:pt-40 lg:px-36">
+          <p className="self-start mb-8 flex gap-2 items-center">
+            <ArrowLeft className="size-5" />
+            Go back to <span className="text-primary">Blog</span>
+          </p>
+          <Link href="/" className="flex justify-center">
+            <Image
+              src={'/images/logo.png'}
+              alt={'blog'}
+              width={1200}
+              height={900}
+              className=" w-20 object-cover mb-10 "
+            />
+          </Link>
           <h2 className="text-2xl font-semibold mb-4">Change Password</h2>
           <p className="text-sm text-gray-600 mb-6">
             Set a new password for your account
@@ -111,7 +124,7 @@ const ChangePassword = () => {
             />
 
             <Button className="w-full bg-red-600 text-white py-2" size={'lg'}>
-              Set new password
+              <p className="p-3">Set new password</p>
             </Button>
           </form>
         </div>
