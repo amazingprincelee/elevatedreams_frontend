@@ -6,7 +6,7 @@ const page: FC<Props> = ({}) => {
   return (
     <div>
       <HeroComp />
-      <div className="mt-10"></div>
+      <div className="mt-12"></div>
     </div>
   )
 }
