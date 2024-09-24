@@ -10,7 +10,7 @@ const HeroComp: FC<Props> = ({}) => {
       <div className="def-contain w-full">
         <p className="self-start flex gap-2 items-center">
           <ArrowLeft className="size-5" />
-          Go back to <span className="text-primary">Blog</span>
+          Go back to <span className="text-primary cursor-pointer">Blog</span>
         </p>
         <div className="flex flex-col space-y-4 items-center">
           <div className={buttonVariants()}>Web Debelopment</div>

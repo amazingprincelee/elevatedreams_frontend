@@ -1,12 +1,15 @@
+import { ArrowLeft } from 'lucide-react'
 import { FC } from 'react'
 
 type Props = {}
 const HeroComp: FC<Props> = ({}) => {
   return (
-    <div className="w-full h-[665px] flex lg:h-[300px] pt-32 my-auto">
+    <div className="w-full h-[355px] flex bg-base lg:h-[350px] pt-32 my-auto">
       <div className="def-contain w-full">
-        <p className="self-start">
-          Go back to <span className="text-primary">loctechng.com</span>
+        <p className="self-start flex gap-2 items-center">
+          <ArrowLeft className="size-5" />
+          Go back to
+          <span className="text-primary cursor-pointer">loctechng.com</span>
         </p>
         <div className="flex flex-col space-y-4 items-center">
           <h1 className="font-sans text-4xl font-bold">Blog</h1>

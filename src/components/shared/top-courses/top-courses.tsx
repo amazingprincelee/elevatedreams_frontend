@@ -11,7 +11,7 @@ const TopCourses: FC<Props> = ({ courses, hideButton }) => {
   return (
     <div className="bg-base padding">
       <div className="def-contain">
-        <div className="grid grid-cols-1 lg:grid-cols-3 2xl:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 xl:grid-cols-3 2xl:grid-cols-2 gap-5">
           <motion.div
             initial={{ opacity: 0, translateX: -100 }}
             whileInView={{ opacity: [0, 1], translateX: [-100, 0] }}
