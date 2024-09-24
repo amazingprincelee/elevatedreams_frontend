@@ -4,7 +4,9 @@ import React from 'react'
 
 const page = () => {
   return (
-    <AuthLayout children={<OTPForm />} img={'/images/auth/young-people2.png'} />
+    <AuthLayout img={'/images/auth/young-people2.png'}>
+      {<OTPForm />}
+    </AuthLayout>
   )
 }
 

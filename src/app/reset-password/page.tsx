@@ -4,10 +4,9 @@ import React from 'react'
 
 const page = () => {
   return (
-    <AuthLayout
-      children={<ResetPasswordForm />}
-      img={'/images/auth/young-people.png'}
-    />
+    <AuthLayout img={'/images/auth/young-people.png'}>
+      {<ResetPasswordForm />}
+    </AuthLayout>
   )
 }
 
