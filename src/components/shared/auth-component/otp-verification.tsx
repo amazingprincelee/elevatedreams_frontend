@@ -75,7 +75,7 @@ const VerifyOtp = () => {
               {Array.from({ length: 4 }).map((_, idx) => (
                 <Controller
                   key={idx}
-                  name={`otp${idx}`} // Dynamically set the correct field name for each input
+                  name={`otp${idx}` as `otp${0 | 1 | 2 | 3}`} // Casting dynamic name correctly
                   control={control}
                   render={({ field }) => (
                     <input
@@ -83,7 +83,7 @@ const VerifyOtp = () => {
                       type="text"
                       maxLength={1}
                       className={`border p-4 text-xl font-semibold text-center w-14 h-14 rounded-lg ${
-                        errors[`otp${idx}`]
+                        errors[`otp${idx}` as `otp${0 | 1 | 2 | 3}`]
                           ? 'border-red-500'
                           : 'border-gray-300'
                       }`}
