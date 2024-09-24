@@ -121,8 +121,8 @@ const ChangePassword = () => {
           <Image
             src="/images/auth/changepwd.png"
             alt="Person with laptop"
-            width={500}
-            height={500}
+            width={3360}
+            height={3034}
             className="object-cover w-full h-full"
           />
         </div>

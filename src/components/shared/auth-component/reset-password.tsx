@@ -28,10 +28,25 @@ const ResetPassword = () => {
   }
 
   return (
-    <div className=" flex justify-center items-center">
-      <div className="bg-white rounded-lg overflow-hidden w-full grid grid-cols-1 md:grid-cols-[40%_60%]">
+    <div
+      className="h-screen flex justify-center items-center"
+      style={{ border: '1px solid red' }}
+    >
+      <div className="bg-white rounded-lg overflow-hidden w-full grid grid-cols-1 md:grid-cols-[50%_50%]">
         {/* Left side - Reset Password form */}
-        <div className="w-full md:pt-40 md:px-9 lg:px-16">
+        <div
+          className="w-full h-full md:pt-40 md:px-9 lg:px-36"
+          style={{ border: '1px solid red' }}
+        >
+          <Link href="/" className="flex justify-center">
+            <Image
+              src={'/images/logo.png'}
+              alt={'blog'}
+              width={1200}
+              height={900}
+              className=" w-20 object-cover mb-10 "
+            />
+          </Link>
           <h2 className="text-2xl font-semibold mb-4">Reset Password</h2>
           <p className="text-sm text-gray-600 mb-6">
             We will send a <strong>4 digit code</strong> to your email address.
@@ -56,8 +71,8 @@ const ResetPassword = () => {
               )}
             />
 
-            <Button className="w-full bg-red-600 text-white py-2" size={'lg'}>
-              Send reset email
+            <Button className="w-full bg-red-600 text-white  py-2" size={'lg'}>
+              <p className="p-3">Send reset email</p>
             </Button>
           </form>
 
@@ -69,12 +84,12 @@ const ResetPassword = () => {
         </div>
 
         {/* Right side - Image */}
-        <div className="w-full hidden md:block">
+        <div className="w-full h-full hidden md:block">
           <Image
             src="/images/auth/young-people.png"
             alt="Person with laptop"
-            width={500}
-            height={500}
+            width={3360}
+            height={3016}
             className="object-cover w-full h-full"
           />
         </div>
