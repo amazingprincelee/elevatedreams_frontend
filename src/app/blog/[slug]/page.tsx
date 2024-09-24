@@ -1,4 +1,4 @@
-import HeroComp from '@/components/pages/blogs/hero'
+import HeroComp from '@/components/pages/blog/hero'
 import { FC } from 'react'
 
 type Props = {}

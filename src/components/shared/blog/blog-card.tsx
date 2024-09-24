@@ -7,32 +7,15 @@ import Link from 'next/link'
 import { FC, useState } from 'react'
 import { buttonVariants } from '../button/button'
 
-type Props = { row?: number; showPagination?: boolean }
-const BlogCard: FC<Props> = ({ row = 1, showPagination }) => {
-  const [blogs, setBlogs] = useState(['', '', '', ''])
+type Props = { img?: string }
+const BlogCard: FC<Props> = ({ img }) => {
   const slug = 'test'
 
-  const {
-    windowSize: { width },
-  } = useWindowSize()
-
-  const count =
-    typeof width === 'number'
-      ? width > 1024 && width < 1660
-        ? 3
-        : width > 300 && width < 1024
-          ? 2
-          : 4
-      : 0
-
-  const totalRow = row * count
-
-  const blogList = blogs.slice(0, totalRow)
   return (
     <div className="border shadow-sm grid min-w-full max-h-[530px] rounded-xl p-4 gap-3">
       <div className="relative h-full">
         <Image
-          src={'/images/oil.jpg'}
+          src={img ?? '/images/oil.jpg'}
           alt={'blog'}
           width={1200}
           height={900}
