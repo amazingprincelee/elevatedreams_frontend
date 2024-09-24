@@ -5,10 +5,9 @@ import { FC } from 'react'
 type Props = {}
 const page: FC<Props> = ({}) => {
   return (
-    <AuthLayout
-      children={<ChangePasswordForm />}
-      img={'/images/auth/changepwd.png'}
-    />
+    <AuthLayout img={'/images/auth/changepwd.png'}>
+      {<ChangePasswordForm />}
+    </AuthLayout>
   )
 }
 export default page
