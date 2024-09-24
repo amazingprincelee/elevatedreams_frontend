@@ -1,12 +1,33 @@
 'use client'
 
-import { buttonVariants } from '@/components/shared/button/button'
+import { useWindowSize } from '@/lib/hooks/useResize'
 import { truncateString } from '@/lib/utils'
 import Image from 'next/image'
-import { FC } from 'react'
+import Link from 'next/link'
+import { FC, useState } from 'react'
+import { buttonVariants } from '../button/button'
 
-type Props = {}
-const BlogCard: FC<Props> = ({}) => {
+type Props = { row?: number; showPagination?: boolean }
+const BlogCard: FC<Props> = ({ row = 1, showPagination }) => {
+  const [blogs, setBlogs] = useState(['', '', '', ''])
+  const slug = 'test'
+
+  const {
+    windowSize: { width },
+  } = useWindowSize()
+
+  const count =
+    typeof width === 'number'
+      ? width > 1024 && width < 1660
+        ? 3
+        : width > 300 && width < 1024
+          ? 2
+          : 4
+      : 0
+
+  const totalRow = row * count
+
+  const blogList = blogs.slice(0, totalRow)
   return (
     <div className="border shadow-sm grid min-w-full max-h-[530px] rounded-xl p-4 gap-3">
       <div className="relative h-full">
@@ -21,9 +42,11 @@ const BlogCard: FC<Props> = ({}) => {
           Data Science
         </div>
       </div>
-      <h2 className="font-semibold text-lg">
-        Getting started with Python Programming Language
-      </h2>
+      <Link href={`/blog/${slug}`}>
+        <h2 className="font-medium text-lg line-clamp-2 cursor-pointer hover:text-gray-600 hover:underline">
+          Getting started with Python Programming Language
+        </h2>
+      </Link>
       <span className="text-xs font-light text-justify text-slate-600 leading-relaxed">
         {truncateString(`Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur
         eligendi aut, corporis dolorum saepe earum id nobis voluptate rem neque

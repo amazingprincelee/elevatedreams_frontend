@@ -1,6 +1,5 @@
 import { useWindowSize } from '@/lib/hooks/useResize'
 import { motion } from 'framer-motion'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { FC, useState } from 'react'
 import CourseCard from '../course-card'
 import CardLoader from '../loader'
@@ -29,8 +28,6 @@ const CoursesList: FC<Props> = ({
 
   // Get the list of courses to display on the current page
   const displayedCourses = courses && courses.slice(startIndex, endIndex)
-
-  console.log('courses', courses)
 
   return (
     <div className="flex flex-col items-center justify-center">
