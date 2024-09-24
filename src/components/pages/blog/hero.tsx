@@ -6,15 +6,15 @@ import { FC } from 'react'
 type Props = {}
 const HeroComp: FC<Props> = ({}) => {
   return (
-    <div className="w-full h-[665px] flex lg:h-[400px] pt-32 bg-base my-auto">
+    <div className="w-full h-[550px] md:h-[450px] pt-32 bg-base my-auto">
       <div className="def-contain w-full">
-        <p className="self-start flex gap-2 items-center">
+        <p className="self-start hidden md:flex gap-2 items-center mb-2">
           <ArrowLeft className="size-5" />
           Go back to <span className="text-primary cursor-pointer">Blog</span>
         </p>
         <div className="flex flex-col space-y-4 items-center">
           <div className={buttonVariants()}>Web Debelopment</div>
-          <h1 className="font-sans text-5xl font-bold w-[50%] text-center">
+          <h1 className="font-sans text-5xl font-bold xl:w-[70%] text-center">
             The importance of good leadership in a growing business
           </h1>
           <div className="flex-center gap-4 mt-2">
