@@ -29,8 +29,8 @@ const Layout: FC<Props> = ({ children }) => {
       <Image
         src={isRegister ? '/images/auth/signup.png' : '/images/auth/login.png'} // Dynamic image based on isLogin state
         alt={isRegister ? 'sign up image' : 'login image'}
-        width={350}
-        height={350}
+        width={3360}
+        height={3016}
         className="hidden lg:flex w-full h-full object-cover "
       />
     </div>
