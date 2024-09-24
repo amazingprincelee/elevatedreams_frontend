@@ -1,11 +1,10 @@
-import VerifyOtp from '@/components/shared/auth-component/otp-verification'
+import AuthLayout from '@/components/shared/auth-component/layout'
+import OTPForm from '@/components/shared/auth-component/verify-otp-form'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>
-      <VerifyOtp />
-    </div>
+    <AuthLayout children={<OTPForm />} img={'/images/auth/young-people2.png'} />
   )
 }
 
