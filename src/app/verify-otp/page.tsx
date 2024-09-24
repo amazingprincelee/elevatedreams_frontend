@@ -1,7 +1,7 @@
 import VerifyOtp from '@/components/shared/auth-component/otp-verification'
 import React from 'react'
 
-const pages = () => {
+const page = () => {
   return (
     <div>
       <VerifyOtp />
@@ -9,4 +9,4 @@ const pages = () => {
   )
 }
 
-export default pages
+export default page

@@ -37,10 +37,10 @@ const ChangePassword = () => {
   const handlePasswordChange = async (data: object) => {}
 
   return (
-    <div className="def-contain flex justify-center items-center">
-      <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full grid grid-cols-1 md:grid-cols-[40%_60%]">
+    <div className="flex justify-center items-center">
+      <div className="bg-white  rounded-lg overflow-hidden w-full grid grid-cols-1 md:grid-cols-[40%_60%]">
         {/* Left side - Reset Password form */}
-        <div className="w-full md:px-9 lg:px-16">
+        <div className="w-full md:px-9 md:pt-40 lg:px-16">
           <h2 className="text-2xl font-semibold mb-4">Change Password</h2>
           <p className="text-sm text-gray-600 mb-6">
             Set a new password for your account
