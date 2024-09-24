@@ -14,62 +14,70 @@ type Props = {
 const MobileNavbar: FC<Props> = ({ isOpen, setIsOpen, path }) => {
   return (
     <div
-      className={`bg-white z-30 fixed transition-transform duration-300 delay-100 ease-in-out trans-props h-full ${
-        isOpen ? ' translate-x-0' : '-translate-x-full'
-      } w-[75%] px-6 block lg:hidden pt-8 md:w-1/2`}
+      className={`bg-gray-500/70 z-30 fixed transition duration-[2000ms] delay-150 ease-in-out h-full ${
+        isOpen === false
+          ? ' opacity-0 -translate-x-0'
+          : ' translate-x-100 opacity-100 '
+      } w-full  `}
     >
-      <div className="">
-        {linksData.map((item, index) => {
-          return (
-            <Link href={item.url} onClick={() => setIsOpen(false)} key={index}>
-              <motion.div
-                transition={{
-                  ease: 'easeInOut',
-                  duration: 0.4,
-                  delay: 0.2 + 0.2 * index,
-                }}
-                animate={{
-                  opacity: [0, 1],
-                  translateX: [-100, 0],
-                }}
+      <div className={`bg-white  h-full w-[75%] px-6  md:w-1/2 pt-5`}>
+        <div className="">
+          {linksData.map((item, index) => {
+            return (
+              <Link
+                href={item.url}
+                onClick={() => setIsOpen(false)}
                 key={index}
-                className="flex-gap gap-3 py-4"
               >
-                <p
-                  className={`${
-                    path !== item.url ? 'text-gray-600' : 'text-primary'
-                  }`}
+                <motion.div
+                  transition={{
+                    ease: 'easeInOut',
+                    duration: 0.4,
+                    delay: 0.2 + 0.2 * index,
+                  }}
+                  animate={{
+                    opacity: [0, 1],
+                    translateX: [-100, 0],
+                  }}
+                  key={index}
+                  className="flex-gap gap-3 py-4"
                 >
-                  {item.name}
-                </p>
-              </motion.div>
-            </Link>
-          )
-        })}
-        <motion.div
-          transition={{
-            ease: 'easeInOut',
-            duration: 0.7,
-            delay: 1.4,
-          }}
-          animate={{
-            opacity: [0, 1],
-            translateX: [-100, 0],
-          }}
-        >
-          <div className="grid gap-2 mt-10">
-            <LinkButton
-              url={'#'}
-              label={'Log in'}
-              className="border w-full border-primary bg-transparent text-primary hover:text-white py-3"
-            ></LinkButton>
-            <LinkButton
-              url={'#'}
-              label={'Get Started'}
-              className=" w-full border py-3"
-            ></LinkButton>
-          </div>
-        </motion.div>
+                  <p
+                    className={`${
+                      path !== item.url ? 'text-gray-600' : 'text-primary'
+                    }`}
+                  >
+                    {item.name}
+                  </p>
+                </motion.div>
+              </Link>
+            )
+          })}
+          <motion.div
+            transition={{
+              ease: 'easeInOut',
+              duration: 0.7,
+              delay: 1.4,
+            }}
+            animate={{
+              opacity: [0, 1],
+              translateX: [-100, 0],
+            }}
+          >
+            <div className="grid gap-2 mt-10">
+              <LinkButton
+                url={'#'}
+                label={'Log in'}
+                className="border w-full border-primary bg-transparent text-primary hover:text-white py-3"
+              ></LinkButton>
+              <LinkButton
+                url={'#'}
+                label={'Get Started'}
+                className=" w-full border py-3"
+              ></LinkButton>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </div>
   )
