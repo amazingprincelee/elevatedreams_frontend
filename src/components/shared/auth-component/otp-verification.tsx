@@ -1,6 +1,8 @@
 'use client'
 import { yupResolver } from '@hookform/resolvers/yup'
+import { ArrowLeft } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import * as yup from 'yup'
@@ -50,18 +52,30 @@ const VerifyOtp = () => {
     <div className="flex justify-center items-center">
       <div className="bg-white rounded-lg overflow-hidden w-full grid grid-cols-1 md:grid-cols-[40%_60%]">
         {/* Left side - OTP Verification */}
-        <div className="w-full md:px-9 md:pt-40 lg:px-16">
+        <div className="w-full md:px-9 md:pt-40 lg:px-36">
+          <p className="self-start mb-8 flex gap-2 items-center">
+            <ArrowLeft className="size-5" />
+            Go back to <span className="text-primary">Blog</span>
+          </p>
+          <Link href="/" className="flex justify-center">
+            <Image
+              src={'/images/logo.png'}
+              alt={'blog'}
+              width={1200}
+              height={900}
+              className=" w-20 object-cover mb-10 "
+            />
+          </Link>
           <h2 className="text-2xl font-semibold mb-6">Verify OTP</h2>
           <p className="text-sm text-gray-600 mb-4">
             Confirm the OTP sent to you
           </p>
-
           <form onSubmit={handleSubmit(handleOtpSubmit)} className="space-y-6">
             <div className="flex space-x-4 justify-center">
               {Array.from({ length: 4 }).map((_, idx) => (
                 <Controller
                   key={idx}
-                  name="otp0"
+                  name={`otp${idx}` as `otp${0 | 1 | 2 | 3}`} // Casting dynamic name correctly
                   control={control}
                   render={({ field }) => (
                     <input
@@ -69,7 +83,9 @@ const VerifyOtp = () => {
                       type="text"
                       maxLength={1}
                       className={`border p-4 text-xl font-semibold text-center w-14 h-14 rounded-lg ${
-                        errors.otp0 ? 'border-red-500' : 'border-gray-300'
+                        errors[`otp${idx}` as `otp${0 | 1 | 2 | 3}`]
+                          ? 'border-red-500'
+                          : 'border-gray-300'
                       }`}
                       placeholder="-"
                     />
@@ -85,7 +101,7 @@ const VerifyOtp = () => {
             )}
 
             <Button className="w-full bg-red-600 text-white py-2" size={'lg'}>
-              Verify OTP
+              <p className="p-3">Verify OTP</p>
             </Button>
           </form>
 
@@ -99,8 +115,8 @@ const VerifyOtp = () => {
           <Image
             src="/images/auth/young-people2.png"
             alt="Person with laptop"
-            width={500}
-            height={500}
+            width={3360}
+            height={3016}
             className="object-cover w-full h-full"
           />
         </div>
