@@ -9,7 +9,17 @@ import Pagination from './pagination'
 
 type Props = { row?: number; showPagination?: boolean }
 const BlogFilter: FC<Props> = ({ row = 1, showPagination }) => {
-  const [blogs, setBlogs] = useState(['', '', '', '', '', '', '', '', ''])
+  const [blogs, setBlogs] = useState([
+    '/images/blogs/img5.png',
+    '/images/blogs/img2.png',
+    '/images/blogs/img3.png',
+    '/images/blogs/img4.png',
+    '/images/blogs/img5.png',
+    '/images/blogs/img1.png',
+    '/images/blogs/img2.png',
+    '/images/blogs/img3.png',
+    '/images/blogs/img4.png',
+  ])
 
   const {
     windowSize: { width },
@@ -51,7 +61,7 @@ const BlogFilter: FC<Props> = ({ row = 1, showPagination }) => {
               }}
               key={index}
             >
-              <BlogCard />
+              <BlogCard img={el} />
             </motion.div>
           ))}
       {/* {blogs && blogs?.length > 0 && showPagination && (
