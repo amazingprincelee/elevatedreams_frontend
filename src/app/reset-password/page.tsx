@@ -1,11 +1,12 @@
-import ResetPassword from '@/components/shared/auth-component/reset-password'
+import AuthLayout from '@/components/shared/auth-component/layout'
+import ResetPasswordForm from '@/components/shared/auth-component/reset-password-form'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>
-      <ResetPassword />
-    </div>
+    <AuthLayout img={'/images/auth/young-people.png'}>
+      {<ResetPasswordForm />}
+    </AuthLayout>
   )
 }
 
