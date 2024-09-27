@@ -10,8 +10,6 @@ const ContactUsPage: FC<Props> = ({}) => {
     <>
       <HeroContactUs />
       <ContactForm />
-      <DashboardNavbar />
-      <DashboardFooter />
     </>
   )
 }
