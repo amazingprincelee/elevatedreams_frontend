@@ -1,7 +1,5 @@
 'use client'
 import React from 'react'
-import { AiOutlineClose } from 'react-icons/ai'
-import { FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa'
 import { socialLinks } from './footer'
 import SocialLinks from './footer-social-links'
 
