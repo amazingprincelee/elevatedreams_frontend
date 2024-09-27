@@ -12,7 +12,6 @@ type Props = {
   path: string
 }
 const MobileNavbar: FC<Props> = ({ isOpen, setIsOpen, path }) => {
-  const contentRef = useRef<HTMLDivElement>(null)
   return (
     <div
       className={` z-30 grid grid-cols-[70%_30%] md:grid-cols-[50%_50%] fixed transition duration-[2000ms] delay-150 ease-in-out h-full ${
