@@ -17,26 +17,26 @@ import {
 import FooterLinks from './footer-links'
 import SocialLinks from './footer-social-links'
 
-const Footer = () => {
+const footerLinks = [
+  { label: 'About Us', href: '/about-us' },
+  { label: 'Courses', href: '/courses' },
+  { label: 'Our Team', href: '/team' },
+  { label: 'Blogs', href: '/blogs' },
+  { label: 'Contact Us', href: '/contact-us' },
+]
+
+export const socialLinks = [
+  { icon: <FaXTwitter className="text-lg" />, href: 'https://twitter.com' },
+  {
+    icon: <FaInstagram className="text-lg" />,
+    href: 'https://instagram.com',
+  },
+  { icon: <FaLinkedin className="text-lg" />, href: 'https://linkedin.com/' },
+  { icon: <FaYoutube className="text-lg" />, href: 'https://youtube.com/' },
+]
+
+export const Footer = () => {
   const pathname = usePathname()
-
-  const footerLinks = [
-    { label: 'About Us', href: '/about-us' },
-    { label: 'Courses', href: '/courses' },
-    { label: 'Our Team', href: '/team' },
-    { label: 'Blogs', href: '/blogs' },
-    { label: 'Contact Us', href: '/contact-us' },
-  ]
-
-  const socialLinks = [
-    { icon: <FaXTwitter className="text-lg" />, href: 'https://twitter.com' },
-    {
-      icon: <FaInstagram className="text-lg" />,
-      href: 'https://instagram.com',
-    },
-    { icon: <FaLinkedin className="text-lg" />, href: 'https://linkedin.com/' },
-    { icon: <FaYoutube className="text-lg" />, href: 'https://youtube.com/' },
-  ]
 
   const hideFooterPaths = [
     '/login',

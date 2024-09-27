@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { FC } from 'react'
+import { FC, useRef } from 'react'
 import { linksData } from '..'
 import LinkButton from '../../button/link-button'
 
@@ -14,11 +14,26 @@ type Props = {
 const MobileNavbar: FC<Props> = ({ isOpen, setIsOpen, path }) => {
   return (
     <div
-      className={`bg-white z-30 fixed transition-transform duration-300 delay-100 ease-in-out trans-props h-full ${
-        isOpen ? ' translate-x-0' : '-translate-x-full'
-      } w-[75%] px-6 block lg:hidden pt-8 md:w-1/2`}
+      className={` z-30 grid grid-cols-[70%_30%] md:grid-cols-[50%_50%] fixed transition duration-[2000ms] delay-150 ease-in-out h-full ${
+        isOpen
+          ? 'translate-x-[0] lg:-translate-x-[100%]'
+          : '-translate-x-[100%]'
+      } w-full  block lg:hidden`}
     >
-      <div className="">
+      <motion.div
+        initial={false}
+        transition={{
+          ease: 'easeInOut',
+          duration: 0.4,
+          delay: 0.5,
+        }}
+        animate={{
+          opacity: [0, 1],
+          translateX: [-100, 0],
+        }}
+        // style={{ overflow: "hidden" }}
+        className={`bg-white  h-full px-6 pt-5`}
+      >
         {linksData.map((item, index) => {
           return (
             <Link href={item.url} onClick={() => setIsOpen(false)} key={index}>
@@ -59,18 +74,24 @@ const MobileNavbar: FC<Props> = ({ isOpen, setIsOpen, path }) => {
         >
           <div className="grid gap-2 mt-10">
             <LinkButton
-              url={'#'}
+              url={'/login'}
               label={'Log in'}
               className="border w-full border-primary bg-transparent text-primary hover:text-white py-3"
             ></LinkButton>
             <LinkButton
-              url={'#'}
+              url={'/register'}
               label={'Get Started'}
               className=" w-full border py-3"
             ></LinkButton>
           </div>
         </motion.div>
-      </div>
+      </motion.div>
+      {isOpen && (
+        <div
+          className="bg-gray-500/70 h-full"
+          onClick={() => setIsOpen(false)}
+        ></div>
+      )}
     </div>
   )
 }
