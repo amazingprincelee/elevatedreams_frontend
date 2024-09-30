@@ -5,7 +5,7 @@ import CourseFilter from '@/components/shared/course/course-filter/course-filter
 import LearningJourney from '@/components/shared/learning-journey/learning-journey'
 import TopCourses from '@/components/shared/top-courses/top-courses'
 import { FC, Suspense, useEffect, useState } from 'react'
-import { get } from '../../../backend_services/api_services'
+import { get } from '../../../../backend_services/api_services'
 
 type Props = {}
 const CoursesPage: FC<Props> = ({}) => {
