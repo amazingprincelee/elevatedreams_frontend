@@ -10,7 +10,7 @@ import OfferingCourseCard from '@/components/shared/offering-course-card/offerin
 import TestimonialSlider from '@/components/shared/testimonial-slider/testimonial-slider'
 import TopCourses from '@/components/shared/top-courses/top-courses'
 import { Suspense, useEffect, useState } from 'react'
-import { get } from '../../backend_services/api_services'
+import { get } from '../../../backend_services/api_services'
 
 export default function Home() {
   const [courses, setCourses] = useState<any[]>([])
