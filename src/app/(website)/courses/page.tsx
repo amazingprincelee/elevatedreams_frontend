@@ -26,7 +26,7 @@ const CoursesPage: FC<Props> = ({}) => {
   return (
     <Suspense>
       <CoursesHero />
-      <TopCourses courses={courses} hideButton />
+      <TopCourses />
       <CourseFilter courses={courses} row={3} showPagination />
       <LearningJourney />
     </Suspense>
