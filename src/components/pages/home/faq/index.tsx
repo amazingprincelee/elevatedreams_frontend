@@ -1,27 +1,26 @@
 export const dataInfo = [
   {
-    question: `What type of courses do you offer?`,
-    answer: `We offer wide range of I.T courses, including programming,cybersecurity, networking, data science, web development, and more. Whether you’re a beginner or looking to enhance your skills, we have courses to suit your needs.`,
+    question: `What services do you offer at Elevate Dreams?`,
+    answer: `At Elevate Dreams, we specialize in business formation, immigration consulting, and investment opportunities. Our services include expert guidance for EB1, EB2, and EB5 visa applications, helping clients navigate immigration complexities and secure a brighter future.`,
   },
   {
-    question: 'Are the courses taught in-person or online?',
-    answer: `Yes, our courses at Loctech are offered both in-person and online to provide flexibility and accessibility to our students. You can choose the mode of instruction that suits your learning style and schedule, ensuring a convenient and effective learning experience`,
+    question: `How can Elevate Dreams help with U.S. immigration?`,
+    answer: `We provide personalized strategies and thorough guidance for EB1, EB2, and EB5 visa applications. Our team helps exceptional individuals, skilled professionals, and investors successfully navigate the U.S. immigration process with confidence.`,
   },
   {
-    question: 'How do I enroll in a course?',
-    answer:
-      "Enrolling in a Loctech course is easy. Visit our website, choose your course, and follow the online enrollment instructions. If you need assistance, our team is here to help. We can't wait to have you join us in your tech journey!",
+    question: `What is the EB5 visa program, and how can I get started?`,
+    answer: `The EB5 visa program allows investors to obtain U.S. residency by investing in job-creating projects. Our experts will assess your eligibility, guide you through the investment process, and ensure compliance with all requirements to maximize your success.`,
   },
   {
-    question: 'Is financial aid or scholarships available?',
-    answer: `Certainly! At Loctech, we understand the importance of financial support for your education. We offer various financial aid options and scholarships to eligible students. Our goal is to make quality tech education accessible to all. You can explore the available financial assistance programs on our website or reach out to us for personalized guidance on your options.`,
+    question: `Do you assist with business formation?`,
+    answer: `Absolutely! At Elevate Dreams, we offer comprehensive business formation services tailored to entrepreneurs and visionaries. From selecting the right business structure to navigating legal requirements, we help set up your business for success.`,
   },
   {
-    question: 'Can I access course materials after the training?',
-    answer: `Absolutely! After completing your training at Loctech, you will continue to have access to course materials. We believe in providing ongoing support to our students as they pursue their tech careers.`,
+    question: `How do I schedule a consultation with Elevate Dreams?`,
+    answer: `Booking a consultation is simple. Visit our website, fill out the consultation request form, and one of our experts will contact you to discuss your needs and how we can assist you.`,
   },
   {
-    question: 'How do I contact customer support for further assistace?',
-    answer: `You will continue to have access to ce believe in providing ongoing support to our students as they pursue their tech careers.`,
+    question: `How do I contact your support team?`,
+    answer: `You can reach our support team via email or through the contact form on our website. We are here to answer your questions and guide you through your journey to success.`,
   },
 ]

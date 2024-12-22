@@ -39,7 +39,7 @@ const ClassLearning: FC<Props> = ({}) => {
                   height={900}
                   className="w-6"
                 />
-                <p>Classroom Learning</p>
+                <p>Business Consulation</p>
               </div>
             </div>
           </motion.div>
@@ -70,7 +70,7 @@ const ClassLearning: FC<Props> = ({}) => {
                   height={900}
                   className="w-6"
                 />
-                <p>Online Learning</p>
+                <p>Online Consultation</p>
               </div>
             </div>
           </motion.div>
@@ -86,14 +86,18 @@ const ClassLearning: FC<Props> = ({}) => {
           }}
           className="lg:w-[85%] flex-col flex gap-4"
         >
-          <Header text={'Classroom and Online Learning'} />
+          <Header text={'In-Person and Online Consulting'} />
           <SubHeader
             text={
-              'Choose the learning experience that suits you best – at Loctech, we offer both traditional classroom settings and the convenience of online learning. Our state-of-the-art facilities provide an immersive in-person experience, while our robust online platform ensures flexibility and accessibility for learners worldwide. Whatever your preference, Loctech is here to cater to your unique educational journey.'
+              'Choose the service that best fits your needs – at Elevate Dreams, we offer personalized immigration, business, and investment consulting both in-person and online. Our expert guidance is accessible globally, ensuring flexibility and tailored support for your journey.'
             }
           />
           <div className="mt-6 ">
-            <LinkButton url={'/courses'} label={'EXPLORE OUR COURSES'} isIcon />
+            <LinkButton
+              url={'/services'}
+              label={'EXPLORE OUR SERVICES'}
+              isIcon
+            />
           </div>
         </motion.div>
       </div>

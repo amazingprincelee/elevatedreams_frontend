@@ -9,6 +9,7 @@ import MobileNavbar from './mobile/navbar'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [dropdownOpen, setDropdownOpen] = useState(false) // Add state for dropdown
 
   const pathname = usePathname()
 
@@ -34,21 +35,64 @@ const Navbar = () => {
               alt={'blog'}
               width={1200}
               height={900}
-              className=" w-20 object-cover"
+              className=" w-32 object-cover"
             />
           </Link>
           <div className="hidden lg:flex space-x-8 items-center">
-            {linksData.map((el, index) => (
-              <Link
-                key={index}
-                href={el.url}
-                className={`${
-                  pathname === el.url ? 'text-primary' : 'text-gray-500'
-                } hover:text-gray-700 text-sm`}
-              >
-                {el.name}
-              </Link>
-            ))}
+            {linksData.map((el, index) => {
+              if (el.name === 'Services') {
+                return (
+                  <div
+                    key={index}
+                    className="relative"
+                    onMouseEnter={() => setDropdownOpen(true)}
+                    onMouseLeave={() => setDropdownOpen(false)}
+                  >
+                    <div
+                      className={`${
+                        pathname === el.url ? 'text-primary' : 'text-gray-500'
+                      } hover:text-gray-700 text-sm flex items-center cursor-pointer`}
+                    >
+                      {el.name}
+                      <span className="ml-2">▼</span>
+                    </div>
+                    {dropdownOpen && (
+                      <div className="absolute top-full left-0 mt-2 bg-white shadow-lg border rounded w-48">
+                        <Link
+                          href="/services/immigration"
+                          className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-primary"
+                        >
+                          Immigration
+                        </Link>
+                        <Link
+                          href="/services/business-formation"
+                          className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-primary"
+                        >
+                          International Business Formation
+                        </Link>
+                        <Link
+                          href="/services/investment"
+                          className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-primary"
+                        >
+                          International Investment
+                        </Link>
+                      </div>
+                    )}
+                  </div>
+                )
+              }
+              return (
+                <Link
+                  key={index}
+                  href={el.url}
+                  className={`${
+                    pathname === el.url ? 'text-primary' : 'text-gray-500'
+                  } hover:text-gray-700 text-sm`}
+                >
+                  {el.name}
+                </Link>
+              )
+            })}
             <Image
               src={'/icons/whatsapp.svg'}
               alt={'blog'}
@@ -56,13 +100,6 @@ const Navbar = () => {
               height={900}
               className="h-6 w-6 object-cover"
             />
-            {/* <Image
-              src={'/icons/cart.svg'}
-              alt={'blog'}
-              width={1200}
-              height={900}
-              className="h-6 w-6 object-cover"
-            /> */}
             <div className="flex-center gap-3">
               <LinkButton
                 url={'/login'}
@@ -84,16 +121,9 @@ const Navbar = () => {
               height={900}
               className="h-6 w-6 object-cover"
             />
-            {/* <Image
-              src={'/icons/cart.svg'}
-              alt={'blog'}
-              width={1200}
-              height={900}
-              className="h-6 w-6 object-cover"
-            /> */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-text-gray-600  hover:text-gray-300 focus:outline-none"
+              className="text-text-gray-600 hover:text-gray-300 focus:outline-none"
             >
               <svg
                 className="w-6 h-6"

@@ -18,7 +18,9 @@ const ReliedUpon: FC<Props> = ({}) => {
       className="hidden md:flex margining"
     >
       <div className="flex flex-col justify-center items-center def-contain gap-10">
-        <Header text={'Relied upon by many students'} />
+        <Header
+          text={'Trusted by a growing community of stakers and investors.'}
+        />
         <div className="grid md:grid-cols-4 gap-5 ">
           {dataInfo.map((el, index) => (
             <motion.div

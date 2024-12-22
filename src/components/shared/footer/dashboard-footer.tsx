@@ -13,7 +13,7 @@ const DashboardFooter = () => {
 
       {/* Copyright */}
       <p className="text-sm text-gray-600">
-        © 2024 Crafelo Studios. All rights reserved.
+        © 2024 Built by Collabogig Innovations. All rights reserved.
       </p>
     </footer>
   )

@@ -16,7 +16,7 @@ const Faq: FC<Props> = ({}) => {
   }
 
   return (
-    <div className="padding bg-base">
+    <div className="padding bg-base mb-5">
       <motion.div
         initial={{ opacity: 0, translateY: 100 }}
         whileInView={{ opacity: [0, 1], translateY: [100, 0] }}

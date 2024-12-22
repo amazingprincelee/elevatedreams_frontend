@@ -1,8 +1,12 @@
+//navbar/index.tsx
 export const linksData = [
+  { name: 'Home', url: '/' },
   { name: 'About Us', url: '/about-us' },
-  { name: 'Courses', url: '/courses' },
+  { name: 'Services', url: '/services' },
+  { name: 'Meet Our Team', url: '/' },
   { name: 'Contact Us', url: '/contact-us' },
-  { name: 'Blog', url: '/blog' },
+  { name: 'FAQS', url: '/' },
+  { name: 'Blog', url: '/' },
 ]
 
 export const dashboardLinksData = [

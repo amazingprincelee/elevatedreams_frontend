@@ -1,6 +1,4 @@
 'use client'
-
-import { truncateString } from '@/lib/utils'
 import { Card, CardHeader } from '@nextui-org/react'
 import { ShoppingCartIcon } from 'lucide-react'
 import Image from 'next/image'
