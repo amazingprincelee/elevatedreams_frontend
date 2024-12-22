@@ -74,7 +74,7 @@ const OfferingCourseCard = () => {
                 {/* action buttons */}
                 <LinkButton
                   url={{
-                    pathname: '/courses',
+                    pathname: '/',
                     query: { mode: `${card.class}` },
                   }}
                   label={'Read more'}
