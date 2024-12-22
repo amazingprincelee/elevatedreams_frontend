@@ -5,8 +5,7 @@ import Hero from '@/components/pages/course/hero'
 import KeyLearning from '@/components/pages/course/key-learning'
 import Loader from '@/components/pages/course/loader'
 import LearningJourney from '@/components/shared/learning-journey/learning-journey'
-import { FC, useEffect, useState } from 'react'
-import { get } from '../../../../backend_services/api_services'
+import { FC, useState } from 'react'
 
 type Props = {}
 const CoursePage: FC<Props> = ({}) => {
@@ -18,19 +17,6 @@ const CoursePage: FC<Props> = ({}) => {
     metaTitle = '',
     learning = [],
   } = course || {}
-
-  useEffect(() => {
-    async function fetchApiData() {
-      try {
-        const apiData: any = await get(`/course/${slug}`)
-        if (apiData && apiData.data) setCourse(apiData.data)
-      } catch (error) {
-        //    toast.error("Please check your internet connectivity");
-      }
-    }
-
-    fetchApiData()
-  }, [])
 
   return (
     <>
