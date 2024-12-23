@@ -15,26 +15,26 @@ const ContactForm = () => {
           <div className="grid gap-5">
             <div className="flex items-center gap-3">
               <div className="bg-primary/5 p-3 rounded-full">
-                <FaRegEnvelope color="#DA2721" size={22} />
+                <FaRegEnvelope color="#006965" size={22} />
               </div>
               <p className="text-footerText text-lg font-thin">
-                customercare@loctechng.com
+                customercare@elevatedreams.com
               </p>
             </div>
             <div className="flex items-center gap-3">
               <div className="bg-primary/5 p-3 rounded-full">
-                <FaPhone color="#DA2721" size={22} />
+                <FaPhone color="#006965" size={22} />
               </div>
               <p className="text-footerText text-lg font-thin">
-                +234 703 888 5466
+                +234 810 763 9372
               </p>
             </div>
             <div className="flex items-center gap-3">
               <div className="bg-primary/5 p-3 rounded-full">
-                <FaClock color="#DA2721" size={22} />
+                <FaClock color="#006965" size={22} />
               </div>
               <p className="text-footerText text-lg font-thin">
-                Mon - Fri: 9:00 AM - 6:00 PM <br />
+                Mon - Sat: 9:00 AM - 6:00 PM <br />
                 Sunday: closed
               </p>
             </div>
@@ -42,11 +42,11 @@ const ContactForm = () => {
               <h2 className="pb-2 text-lg text-gray-400">Visit our office.</h2>
               <div className="flex items-center gap-3">
                 <div className="bg-primary/5 p-3 rounded-full">
-                  <HiMapPin color="#DA2721" size={22} />
+                  <HiMapPin color="#006965" size={22} />
                 </div>
                 <p className="text-black mb-8 text-lg font-semibold">
-                  No 4a Etim Okpoyo close, off Aba Express road by total filling
-                  station, Port harcourt, rivers State
+                  No 4 East West Express road, Tank, Ruomokwurusi opposite Sobaz
+                  filling station, Port harcourt, rivers State
                 </p>
               </div>
             </div>

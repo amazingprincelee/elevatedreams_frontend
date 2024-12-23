@@ -73,7 +73,8 @@ export const Footer = () => {
                 />
               </Link>
               <p className="mt-8 max-w-xs lg:max-w-none w-full md:w-96 text-footerText font-medium text-medium ">
-                6391 Elgin St. Celina, NYC 10299
+                No 4 East West Express road, Tank, Ruomokwurusi opposite Sobaz
+                filling station, Port harcourt, rivers State
               </p>
             </div>
 
