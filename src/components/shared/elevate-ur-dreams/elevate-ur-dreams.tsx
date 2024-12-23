@@ -1,8 +1,16 @@
+'use client'
+
 import Image from 'next/image'
-// components/ElevateYourDreams.js
+import { useRouter } from 'next/navigation'
 import React from 'react'
 
 const ElevateYourDreams = () => {
+  const router = useRouter()
+
+  const handleNavigation = () => {
+    router.push('/about-us')
+  }
+
   return (
     <section className="flex flex-col lg:flex-row items-center justify-center px-6 lg:px-16 py-12 bg-white">
       {/* Left Section */}
@@ -107,7 +115,10 @@ const ElevateYourDreams = () => {
 
         {/* Button */}
         <div className="mt-6">
-          <button className="bg-secondary text-white px-6 py-2 rounded-lg hover:bg-green-600">
+          <button
+            className="bg-secondary text-white px-6 py-2 rounded-lg hover:bg-green-600"
+            onClick={handleNavigation}
+          >
             MORE ABOUT US
           </button>
         </div>

@@ -2,8 +2,8 @@
 
 import CoursesHero from '@/components/pages/courses/courses-hero'
 import CourseFilter from '@/components/shared/course/course-filter/course-filter'
+import TopCourses from '@/components/shared/elevate-ur-dreams/elevate-ur-dreams'
 import LearningJourney from '@/components/shared/learning-journey/learning-journey'
-import TopCourses from '@/components/shared/top-courses/top-courses'
 import { FC, Suspense, useEffect, useState } from 'react'
 // import { get } from '../../../../backend_services/api_services'
 

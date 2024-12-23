@@ -57,7 +57,7 @@ const LeftComp: FC<Props> = ({}) => {
         transition={{ duration: 0.5, delay: 1 }}
       >
         <LinkButton
-          url={'/services'}
+          url={'/immigration'}
           label={'EXPLORE OUR SERVICES'}
           isIcon={true}
         />

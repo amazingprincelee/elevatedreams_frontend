@@ -35,7 +35,7 @@ const Navbar = () => {
               alt={'blog'}
               width={1200}
               height={900}
-              className=" w-32 object-cover"
+              className="w-32 object-cover"
             />
           </Link>
           <div className="hidden lg:flex space-x-8 items-center">
@@ -59,19 +59,19 @@ const Navbar = () => {
                     {dropdownOpen && (
                       <div className="absolute top-full left-0 mt-2 bg-white shadow-lg border rounded w-48">
                         <Link
-                          href="/services/immigration"
+                          href="/immigration"
                           className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-primary"
                         >
                           Immigration
                         </Link>
                         <Link
-                          href="/services/business-formation"
+                          href="/immigration"
                           className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-primary"
                         >
                           International Business Formation
                         </Link>
                         <Link
-                          href="/services/investment"
+                          href="/immigration"
                           className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-primary"
                         >
                           International Investment

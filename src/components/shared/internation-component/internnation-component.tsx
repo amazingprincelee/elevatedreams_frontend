@@ -2,7 +2,6 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import React from 'react'
 import LinkButton from '../button/link-button'
-import { Header } from '../header'
 
 interface OfferingCard {
   imageSrc: string
@@ -11,18 +10,18 @@ interface OfferingCard {
   class: string
 }
 
-const OfferingCourseCard = () => {
+const Internations = () => {
   const cardDetails: OfferingCard[] = [
     {
       imageSrc: '/images/offering/img1.png',
-      title: 'EB1 Visa (Employment-Based First Preference)',
-      class: 'Classroom',
+      title: 'Internation Business Formation',
+      class: 'Business',
       text: 'If you’ve reached the top of your field—whether in the arts, sciences, business, or athletics—the EB1 visa is designed for you.',
     },
     {
       imageSrc: '/images/offering/img2.png',
-      title: 'EB2 Visa (Employment-Based Second Preference)',
-      class: 'Online',
+      title: 'Internation Investment',
+      class: 'Business',
       text: 'If you hold an advanced degree (like a Master’s or higher) or have exceptional talent in your field, the EB2 visa may be your gateway to the U.S.',
     },
     {
@@ -43,15 +42,7 @@ const OfferingCourseCard = () => {
       className="margining"
     >
       <div className="flex flex-col def-contain">
-        <div className="text-center">
-          <Header text="What We Do" />
-          <p>
-            We simplify the U.S. visa process, focusing on three key pathways to
-            residency
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 h-fit mt-5 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 h-fit  gap-6">
           {cardDetails.map((card, index) => (
             <div key={index} className="bg-base rounded-[24px]">
               <div className="p-4 2xl:p-6 flex flex-col justify-between h-full">
@@ -99,4 +90,4 @@ const OfferingCourseCard = () => {
   )
 }
 
-export default OfferingCourseCard
+export default Internations
