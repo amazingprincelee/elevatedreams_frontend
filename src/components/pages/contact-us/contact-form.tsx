@@ -39,12 +39,30 @@ const ContactForm = () => {
               </p>
             </div>
             <div>
-              <h2 className="pb-2 text-lg text-gray-400">Visit our office.</h2>
+              <h2 className="pb-2 text-lg text-gray-400">Visit our offices.</h2>
               <div className="flex items-center gap-3">
                 <div className="bg-primary/5 p-3 rounded-full">
                   <HiMapPin color="#006965" size={22} />
                 </div>
-                <p className="text-black mb-8 text-lg font-semibold">
+                <p className="text-black mb-8 text-sm font-semibold">
+                  No 4 East West Express road, Tank, Ruomokwurusi opposite Sobaz
+                  filling station, Port harcourt, rivers State
+                </p>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="bg-primary/5 p-3 rounded-full">
+                  <HiMapPin color="#006965" size={22} />
+                </div>
+                <p className="text-black mb-8 text-sm font-semibold">
+                  No 4 East West Express road, Tank, Ruomokwurusi opposite Sobaz
+                  filling station, Port harcourt, rivers State
+                </p>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="bg-primary/5 p-3 rounded-full">
+                  <HiMapPin color="#006965" size={22} />
+                </div>
+                <p className="text-black mb-8 text-sm font-semibold">
                   No 4 East West Express road, Tank, Ruomokwurusi opposite Sobaz
                   filling station, Port harcourt, rivers State
                 </p>

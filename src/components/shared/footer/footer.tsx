@@ -20,7 +20,7 @@ import SocialLinks from './footer-social-links'
 const footerLinks = [
   { label: 'About Us', href: '/about-us' },
   { label: 'Services', href: '/immigration' },
-  { label: 'Our Team', href: '/team' },
+  { label: 'Our Team', href: '/our-team' },
   { label: 'Blogs', href: '/blogs' },
   { label: 'Contact Us', href: '/contact-us' },
 ]
@@ -72,9 +72,21 @@ export const Footer = () => {
                   alt="logo"
                 />
               </Link>
+
               <p className="mt-8 max-w-xs lg:max-w-none w-full md:w-96 text-footerText font-medium text-medium ">
-                No 4 East West Express road, Tank, Ruomokwurusi opposite Sobaz
-                filling station, Port harcourt, rivers State
+                <h3 className="text-secondary">Dallas Office:</h3>
+                Dallas Office: 910 S. Pearl Expy, Dallas, TX 75201, USA Phone:
+                214-432-3113 Fax: 214-432-3116
+              </p>
+
+              <p className="mt-8 max-w-xs lg:max-w-none w-full md:w-96 text-footerText font-medium text-medium ">
+                <h3 className="text-secondary">Houston Office:</h3>
+                4008 Chartres St, Houston, TX 77004, USA Phone: 713-244-6695
+              </p>
+
+              <p className="mt-8 max-w-xs lg:max-w-none w-full md:w-96 text-footerText font-medium text-medium ">
+                <h3 className="text-secondary">Port Harcourt Office:</h3>
+                ExpertHub Tank, Rumukrusi, Port Harcourt, Rivers State, Nigeria
               </p>
             </div>
 
