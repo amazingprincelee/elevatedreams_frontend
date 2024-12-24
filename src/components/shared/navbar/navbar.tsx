@@ -65,13 +65,13 @@ const Navbar = () => {
                           Immigration
                         </Link>
                         <Link
-                          href="/immigration"
+                          href="/international-business-formation"
                           className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-primary"
                         >
                           International Business Formation
                         </Link>
                         <Link
-                          href="/immigration"
+                          href="/international-investment"
                           className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-primary"
                         >
                           International Investment
@@ -107,7 +107,7 @@ const Navbar = () => {
                 className="border border-primary bg-transparent text-primary hover:text-white py-3"
               ></LinkButton>
               <LinkButton
-                url={'/register'}
+                url={'/immigration'}
                 label={'Get Started'}
                 className="hover:text-primary border hover:border-primary py-3 hover:bg-transparent"
               ></LinkButton>

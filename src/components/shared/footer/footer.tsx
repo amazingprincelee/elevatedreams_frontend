@@ -19,7 +19,7 @@ import SocialLinks from './footer-social-links'
 
 const footerLinks = [
   { label: 'About Us', href: '/about-us' },
-  { label: 'Courses', href: '/courses' },
+  { label: 'Services', href: '/immigration' },
   { label: 'Our Team', href: '/team' },
   { label: 'Blogs', href: '/blogs' },
   { label: 'Contact Us', href: '/contact-us' },

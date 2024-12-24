@@ -8,27 +8,31 @@ interface OfferingCard {
   title: string
   text: string
   class: string
+  route: string // Add a route property
 }
 
 const Internations = () => {
   const cardDetails: OfferingCard[] = [
     {
       imageSrc: '/images/offering/img1.png',
-      title: 'Internation Business Formation',
+      title: 'International Business Formation',
       class: 'Business',
-      text: 'If you’ve reached the top of your field—whether in the arts, sciences, business, or athletics—the EB1 visa is designed for you.',
+      text: 'If you hold an advanced degree (like a Master’s or higher) or have exceptional talent in your field, the EB2 visa may be your gateway to the U.S.',
+      route: '/international-business-formation', // Define specific route
     },
     {
       imageSrc: '/images/offering/img2.png',
-      title: 'Internation Investment',
+      title: 'International Investment',
       class: 'Business',
-      text: 'If you hold an advanced degree (like a Master’s or higher) or have exceptional talent in your field, the EB2 visa may be your gateway to the U.S.',
+      text: 'We simplify the process of building a life and business in the United States, focusing on three key pathways.',
+      route: '/international-investment', // Define specific route
     },
     {
       imageSrc: '/images/offering/img3.png',
       title: 'EB5 Visa (Employment-Based Fifth Preference)',
       class: 'Blended',
       text: 'This visa is ideal if you’re looking to invest in the U.S. economy. By investing a substantial amount in a U.S.',
+      route: '/immigration', // Define specific route
     },
   ]
 
@@ -42,7 +46,7 @@ const Internations = () => {
       className="margining"
     >
       <div className="flex flex-col def-contain">
-        <div className="grid grid-cols-1 md:grid-cols-3 h-fit  gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 h-fit gap-6">
           {cardDetails.map((card, index) => (
             <div key={index} className="bg-base rounded-[24px]">
               <div className="p-4 2xl:p-6 flex flex-col justify-between h-full">
@@ -64,10 +68,7 @@ const Internations = () => {
 
                 {/* action buttons */}
                 <LinkButton
-                  url={{
-                    pathname: '/immigration',
-                    query: { mode: `${card.class}` },
-                  }}
+                  url={card.route} // Use the route property
                   label={'Read more'}
                   isIcon={true}
                   className={`mt-5 w-full lg:w-fit ${

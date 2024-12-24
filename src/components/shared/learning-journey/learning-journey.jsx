@@ -37,7 +37,7 @@ const LearningJourney = () => {
           </p>
 
           <LinkButton
-            url={"#"}
+            url={"/immigration"}
             label={"Get Started"}
             isIcon={true}
             className="w-[#177px]"
