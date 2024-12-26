@@ -14,7 +14,7 @@ const teamMembers: TeamMember[] = [
   {
     id: 1,
     name: 'Leslie Alexander',
-    role: 'Sr. Tour Manager',
+    role: 'Co founder',
     image: '/images/team/member1.png', // Updated path
     socials: [
       { platform: 'Facebook', link: 'https://facebook.com' },
@@ -25,7 +25,7 @@ const teamMembers: TeamMember[] = [
   {
     id: 2,
     name: 'Leslie Alexander',
-    role: 'Sr. Tour Manager',
+    role: 'Co founder',
     image: '/images/team/member2.png', // Updated path
     socials: [
       { platform: 'Facebook', link: 'https://facebook.com' },
@@ -36,7 +36,7 @@ const teamMembers: TeamMember[] = [
   {
     id: 3,
     name: 'Leslie Alexander',
-    role: 'Sr. Tour Manager',
+    role: 'Co founder',
     image: '/images/team/member3.png', // Updated path
     socials: [
       { platform: 'Facebook', link: 'https://facebook.com' },

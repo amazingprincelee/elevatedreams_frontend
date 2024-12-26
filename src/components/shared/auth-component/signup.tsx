@@ -67,7 +67,7 @@ const SignUp = () => {
           render={({ field }) => (
             <InputField
               name="firstName"
-              placeholder="Enter First Name"
+              placeholder="Enter Your Full Name"
               value={field.value}
               errors={errors}
               field={field}
@@ -77,22 +77,7 @@ const SignUp = () => {
             />
           )}
         />
-        <Controller
-          name="lastName"
-          control={control}
-          render={({ field }) => (
-            <InputField
-              name="lastName"
-              placeholder="Enter Last Name"
-              value={field.value}
-              errors={errors}
-              field={field}
-              startContent={
-                <MdPerson className="size-8  text-gray-400 pointer-events-none " />
-              }
-            />
-          )}
-        />
+
         <Controller
           name="email"
           control={control}
@@ -137,38 +122,6 @@ const SignUp = () => {
               field={field}
               startContent={
                 <MdWork className="size-8  text-gray-400 pointer-events-none" />
-              }
-            />
-          )}
-        />
-        <Controller
-          name="nextOfKinName"
-          control={control}
-          render={({ field }) => (
-            <InputField
-              name="nextOfKinName"
-              placeholder="Enter Next Of Kin Name"
-              value={field.value}
-              errors={errors}
-              field={field}
-              startContent={
-                <MdPeople className="size-8  text-gray-400 pointer-events-none" />
-              }
-            />
-          )}
-        />
-        <Controller
-          name="nextOfKinPhone"
-          control={control}
-          render={({ field }) => (
-            <InputField
-              name="nextOfKinPhone"
-              placeholder="Enter Next Of Kin Phone Number"
-              value={field.value}
-              errors={errors}
-              field={field}
-              startContent={
-                <MdPhone className="size-8  text-gray-400 pointer-events-none" />
               }
             />
           )}

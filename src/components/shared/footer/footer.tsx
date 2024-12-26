@@ -7,12 +7,13 @@ import { usePathname } from 'next/navigation'
 import React from 'react'
 import {
   FaClock,
+  FaFacebook,
   FaInstagram,
   FaLinkedin,
   FaPhone,
   FaRegEnvelope,
+  FaTiktok,
   FaXTwitter,
-  FaYoutube,
 } from 'react-icons/fa6'
 import FooterLinks from './footer-links'
 import SocialLinks from './footer-social-links'
@@ -26,13 +27,26 @@ const footerLinks = [
 ]
 
 export const socialLinks = [
-  { icon: <FaXTwitter className="text-lg" />, href: 'https://twitter.com' },
+  {
+    icon: <FaXTwitter className="text-lg" />,
+    href: 'https://x.com/elgdreams55370?s=21&t=fUwimDHibflD8nGOhBheyQ',
+  },
   {
     icon: <FaInstagram className="text-lg" />,
-    href: 'https://instagram.com',
+    href: 'https://www.instagram.com/elevatedreamselg/profilecard/?igsh=YWdmbXkxaGVxdms=',
   },
-  { icon: <FaLinkedin className="text-lg" />, href: 'https://linkedin.com/' },
-  { icon: <FaYoutube className="text-lg" />, href: 'https://youtube.com/' },
+  {
+    icon: <FaLinkedin className="text-lg" />,
+    href: 'https://www.linkedin.com/company/elevatedreamselg/',
+  },
+  {
+    icon: <FaFacebook className="text-lg" />,
+    href: 'https://www.facebook.com/share/S7YuBQZYZZjVx5Ky/?mibextid=LQQJ4d',
+  },
+  {
+    icon: <FaTiktok className="text-lg" />,
+    href: 'https://www.tiktok.com/@elevatedreamselg?_t=8s4QSRW6Pgk&_r=1',
+  },
 ]
 
 export const Footer = () => {

@@ -1,5 +1,6 @@
 import Footer from '@/components/shared/footer/footer'
 import Navbar from '@/components/shared/navbar/navbar'
+import WidgetScript from '@/components/shared/widget/widget-script'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Providers } from '../providers'
@@ -24,6 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Providers>
+          <WidgetScript />
           <Navbar />
           {children}
           <Footer />

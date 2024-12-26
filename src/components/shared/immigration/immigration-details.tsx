@@ -1,4 +1,5 @@
 import React from 'react'
+import ConsultationButton from '../consultation-button/book-consultation-button'
 
 function ImmigrationDetails() {
   return (
@@ -56,9 +57,7 @@ function ImmigrationDetails() {
         </div>
 
         <div className="flex justify-center mt-6">
-          <button className="bg-secondary text-white py-3 px-6 rounded-md shadow-lg hover:bg-green-700">
-            BOOK CONSULTATION
-          </button>
+          <ConsultationButton />
         </div>
       </div>
     </div>

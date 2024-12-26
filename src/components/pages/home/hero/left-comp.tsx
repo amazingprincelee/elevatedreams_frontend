@@ -1,5 +1,6 @@
 'use client'
 
+import ConsultationButton from '@/components/shared/consultation-button/book-consultation-button'
 import { motion } from 'framer-motion'
 import { FC } from 'react'
 import LinkButton from '../../../shared/button/link-button'
@@ -56,11 +57,11 @@ const LeftComp: FC<Props> = ({}) => {
         animate={{ scale: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 1 }}
       >
-        <LinkButton
-          url={'/immigration'}
-          label={'EXPLORE OUR SERVICES'}
-          isIcon={true}
-        />
+        <div className="flex space-x-4 items-center">
+          <ConsultationButton />
+
+          <LinkButton url={'/about-us'} label={'LEARN MORE'} isIcon={true} />
+        </div>
       </motion.div>
       <motion.div
         initial={{ opacity: 0, x: 50 }}
