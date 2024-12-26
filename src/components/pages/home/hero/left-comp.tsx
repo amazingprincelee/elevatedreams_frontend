@@ -57,9 +57,8 @@ const LeftComp: FC<Props> = ({}) => {
         animate={{ scale: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 1 }}
       >
-        <div className="flex space-x-4 items-center">
+        <div className="flex flex-col sm:flex-row sm:space-x-4 items-center">
           <ConsultationButton />
-
           <LinkButton url={'/about-us'} label={'LEARN MORE'} isIcon={true} />
         </div>
       </motion.div>
