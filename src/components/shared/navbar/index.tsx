@@ -5,7 +5,7 @@ export const linksData = [
   { name: 'Services', url: '/services' },
   { name: 'Meet Our Team', url: '/our-team' },
   { name: 'Contact Us', url: '/contact-us' },
-  { name: 'FAQS', url: '/' },
+  { name: 'FAQS', url: '/faqs' },
   { name: 'Blog', url: '/' },
 ]
 
