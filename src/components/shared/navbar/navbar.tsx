@@ -9,8 +9,8 @@ import MobileNavbar from './mobile/navbar'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const [dropdownOpen, setDropdownOpen] = useState(false) // Add state for dropdown
-
+  const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null) // To store the timeout ID
   const pathname = usePathname()
 
   const hideFooterPaths = [
@@ -23,6 +23,16 @@ const Navbar = () => {
 
   if (hideFooterPaths.includes(pathname)) {
     return null
+  }
+
+  const handleMouseEnter = () => {
+    if (timeoutId) clearTimeout(timeoutId) // Clear any existing timeout when mouse enters
+    setDropdownOpen(true)
+  }
+
+  const handleMouseLeave = () => {
+    const id = setTimeout(() => setDropdownOpen(false), 300) // Delay before hiding the dropdown
+    setTimeoutId(id) // Save timeout ID to clear it if mouse enters before timeout completes
   }
 
   return (
@@ -45,8 +55,8 @@ const Navbar = () => {
                   <div
                     key={index}
                     className="relative"
-                    onMouseEnter={() => setDropdownOpen(true)}
-                    onMouseLeave={() => setDropdownOpen(false)}
+                    onMouseEnter={handleMouseEnter} // Handle mouse enter
+                    onMouseLeave={handleMouseLeave} // Handle mouse leave
                   >
                     <div
                       className={`${
