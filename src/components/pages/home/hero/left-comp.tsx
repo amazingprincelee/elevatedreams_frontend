@@ -7,10 +7,11 @@ import LinkButton from '../../../shared/button/link-button'
 import ImageList from './image-list'
 
 type Props = {}
+
 const LeftComp: FC<Props> = ({}) => {
   return (
     <div className="flex flex-col gap-5">
-      <div className="text-white font-bold lg:text-6xl text-4xl md:w-[50%] lg:w-[80%]">
+      <div className="text-white font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl md:w-[50%] lg:w-[80%]">
         <div className="flex-center gap-1 w-full">
           Welcome
           <motion.div
@@ -38,7 +39,7 @@ const LeftComp: FC<Props> = ({}) => {
           <p className="text-primary">Dreams</p>
         </motion.span>
       </div>
-      <div className="md:w-[50%] lg:w-[60%] w-full">
+      <div className="w-full md:w-[50%] lg:w-[60%]">
         <motion.span
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -69,8 +70,8 @@ const LeftComp: FC<Props> = ({}) => {
         className="flex-center"
       >
         <ImageList />
-        <div className="2xl:w-[20%] md:w-[30%] lg:w-[60%] w-[60%] text-white">
-          <p className="text-xs font-normal">
+        <div className="w-full md:w-[30%] lg:w-[60%] text-white">
+          <p className="text-xs md:text-sm font-normal">
             Join over 2,000 clients worldwide who trust us to elevate their
             business.
           </p>
@@ -79,4 +80,5 @@ const LeftComp: FC<Props> = ({}) => {
     </div>
   )
 }
+
 export default LeftComp
