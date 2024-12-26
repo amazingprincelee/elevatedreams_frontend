@@ -1,8 +1,8 @@
 'use client'
-
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import React from 'react'
+import { FaCogs, FaUserTie } from 'react-icons/fa'
 
 const ElevateYourDreams = () => {
   const router = useRouter()
@@ -61,20 +61,7 @@ const ElevateYourDreams = () => {
         <div className="flex flex-col lg:flex-row mt-6 space-y-6 lg:space-y-0 lg:space-x-8">
           <div>
             <div className="flex items-center justify-center lg:justify-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="2"
-                stroke="currentColor"
-                className="w-8 h-8 text-secondary"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M8 12h.01M12 12h.01M16 12h.01M9 16h6M9 8h6m4 4h.01M4 4l.01 16M20 4l.01 16"
-                />
-              </svg>
+              <FaCogs size={30} />
               <h3 className="text-lg font-semibold ml-2">
                 Complete Application Support
               </h3>
@@ -88,20 +75,7 @@ const ElevateYourDreams = () => {
 
           <div>
             <div className="flex items-center justify-center lg:justify-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="2"
-                stroke="currentColor"
-                className="w-8 h-8 text-secondary"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M16.5 3.75v16.5m-9-16.5v16.5M3 9.75h18m-18 4.5h18"
-                />
-              </svg>
+              <FaUserTie size={20} />
               <h3 className="text-lg font-semibold ml-2">
                 Personalized Consultations
               </h3>

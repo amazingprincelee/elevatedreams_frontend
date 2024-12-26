@@ -2,7 +2,7 @@
 import Faq from '@/components/pages/home/faq/faq'
 import HomeHero from '@/components/pages/home/hero/home'
 import ReliedUpon from '@/components/pages/home/relied-upon/relied-upon'
-import TopCourses from '@/components/shared/elevate-ur-dreams/elevate-ur-dreams'
+import ElevateYourDream from '@/components/shared/elevate-ur-dreams/elevate-ur-dreams'
 import LearningJourney from '@/components/shared/learning-journey/learning-journey'
 import OurTeam from '@/components/shared/our-team/our-team'
 import WhatWeDo from '@/components/shared/what-we-do/what-we-do'
@@ -31,7 +31,7 @@ export default function Home() {
         <HomeHero />
         <WhatWeDo />
         <InternationBusiness />
-        <TopCourses />
+        <ElevateYourDream />
         <OurTeam />
         <ReliedUpon />
         <Faq />
