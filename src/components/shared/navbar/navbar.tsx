@@ -103,13 +103,13 @@ const Navbar = () => {
                 </Link>
               )
             })}
-            <Image
+            {/* <Image
               src={'/icons/whatsapp.svg'}
               alt={'blog'}
               width={1200}
               height={900}
               className="h-6 w-6 object-cover"
-            />
+            /> */}
             <div className="flex-center gap-3">
               <LinkButton
                 url={'/login'}
@@ -124,13 +124,13 @@ const Navbar = () => {
             </div>
           </div>
           <div className="lg:hidden flex space-x-5 items-center">
-            <Image
+            {/* <Image
               src={'/icons/whatsapp.svg'}
               alt={'blog'}
               width={1200}
               height={900}
               className="h-6 w-6 object-cover"
-            />
+            /> */}
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-text-gray-600 hover:text-gray-300 focus:outline-none"
