@@ -89,8 +89,10 @@ export const Footer = () => {
 
               <p className="mt-8 max-w-xs lg:max-w-none w-full md:w-96 text-footerText font-medium text-medium ">
                 <h3 className="text-secondary">Dallas Office:</h3>
-                Dallas Office: 910 S. Pearl Expy, Dallas, TX 75201, USA Phone:
-                214-432-3113 Fax: 214-432-3116
+                <p>
+                  Dallas Office: 910 S. Pearl Expy, Dallas, <br /> TX 75201, USA
+                </p>{' '}
+                <p> Phone: 214-432-3113 </p> Fax: 214-432-3116
               </p>
 
               <p className="mt-8 max-w-xs lg:max-w-none w-full md:w-96 text-footerText font-medium text-medium ">
@@ -136,7 +138,7 @@ export const Footer = () => {
                       <FaPhone color="#006965" size={16} className="text-2xl" />
                     </div>
                     <p className="text-footerText text-sm md:text-lg">
-                      +234 810 763 9372
+                      214-432-3113
                     </p>
                   </div>
                   <div className="flex-center gap-2">
@@ -156,7 +158,8 @@ export const Footer = () => {
         <div className="flex flex-col items-center mt-16">
           <SocialLinks links={socialLinks} />
           <p className="text-center mt-4">
-            © 2024 Built by Collabogig Innovations. All rights reserved.
+            © {new Date().getFullYear()} Built by Elevate Dreams. All rights
+            reserved.
           </p>
         </div>
       </motion.div>
