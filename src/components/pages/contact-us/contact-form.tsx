@@ -18,16 +18,14 @@ const ContactForm = () => {
                 <FaRegEnvelope color="#006965" size={22} />
               </div>
               <p className="text-footerText text-lg font-thin">
-                customercare@elevatedreams.com
+                assist@elevatedreams.com
               </p>
             </div>
             <div className="flex items-center gap-3">
               <div className="bg-primary/5 p-3 rounded-full">
                 <FaPhone color="#006965" size={22} />
               </div>
-              <p className="text-footerText text-lg font-thin">
-                +234 810 763 9372
-              </p>
+              <p className="text-footerText text-lg font-thin">214-432-3113</p>
             </div>
             <div className="flex items-center gap-3">
               <div className="bg-primary/5 p-3 rounded-full">

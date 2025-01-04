@@ -130,7 +130,7 @@ export const Footer = () => {
                       />
                     </div>
                     <p className="text-footerText text-sm md:text-lg">
-                      customercare@elevatedreams.com
+                      assist@elevatedreams.com
                     </p>
                   </div>
                   <div className="flex-center gap-2">
