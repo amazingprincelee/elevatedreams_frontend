@@ -46,11 +46,11 @@ const LeftComp: FC<Props> = ({}) => {
           transition={{ duration: 0.5, delay: 0.8 }}
           className="text-sm font-normal text-white text-wrap"
         >
-          At Elevate Dreams, we specialize in business formation, immigration
-          consulting, and investment opportunities. Our services include expert
-          guidance for EB1, EB2, and EB5 visa applications, tailored to help you
-          navigate the complexities of immigration law and secure a brighter
-          future.
+          At Elevate Dreams, we empower individuals, entrepreneurs, and
+          visionaries to reach their fullest potential by simplifying the path
+          to U.S. immigration and business success, helping exceptional
+          individuals, skilled professionals, and investors achieve their
+          goals...
         </motion.span>
       </div>
       <motion.div
@@ -60,7 +60,7 @@ const LeftComp: FC<Props> = ({}) => {
       >
         <div className="flex flex-col sm:flex-row sm:space-x-4 items-center">
           <ConsultationButton />
-          <LinkButton url={'/about-us'} label={'LEARN MORE'} isIcon={true} />
+          <LinkButton url={'/about-us'} label={'Learn More'} isIcon={true} />
         </div>
       </motion.div>
       <motion.div
@@ -69,7 +69,10 @@ const LeftComp: FC<Props> = ({}) => {
         transition={{ duration: 0.5, delay: 1.2 }}
         className="flex-center"
       >
-        <ImageList />
+        <div>
+          <ImageList />
+        </div>
+
         <div className="w-full md:w-[30%] lg:w-[60%] text-white">
           <p className="text-xs md:text-sm font-normal">
             Join over 2,000 clients worldwide who trust us to elevate their

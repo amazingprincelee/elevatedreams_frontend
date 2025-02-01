@@ -50,11 +50,10 @@ const ElevateYourDreams = () => {
         <p className="mt-4 text-gray-700">
           We Elevate Dreams, because we believe that the journey to building a
           life in the United States should be as smooth and inspiring as the
-          dreams that drive it. We specialize in EB1, EB2, and EB5 visa
-          applications, guiding you every step of the way so that the
-          complexities of immigration law don’t get in the way of your future.
-          Our approach is simple: we care deeply about your success and go the
-          extra mile to make it happen.
+          dreams that drive it. Our EB1, EB2, and EB5 visa application process
+          will guide you by reducing the complexities of immigration law. Our
+          approach is simple: we care deeply about your success and go the extra
+          mile to make it happen.
         </p>
 
         {/* Features */}

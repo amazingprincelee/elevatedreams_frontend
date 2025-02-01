@@ -22,9 +22,9 @@ const Internations = () => {
     },
     {
       imageSrc: '/images/offering/img2.png',
-      title: 'International Investment',
+      title: 'Intellectual Property Protection',
       class: 'Business',
-      text: 'We simplify the process of building a life and business in the United States, focusing on three key pathways.',
+      text: 'We protect your intellectual property, safeguard your brand identity by registering trade marks and protect your creative works including film, music, Art and literature. ',
       route: '/international-investment', // Define specific route
     },
     {

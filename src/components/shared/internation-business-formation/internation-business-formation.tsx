@@ -3,7 +3,7 @@ import ConsultationButton from '../consultation-button/book-consultation-button'
 
 function BusinessFormationDetails() {
   return (
-    <div className="flex justify-center items-center min-h-screen ">
+    <div className="flex justify-center items-center min-h-screen mb-5">
       <div className="w-full max-w-4xl p-6 bg-white rounded-2xl shadow-md">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
           Internation Business Formation
@@ -20,12 +20,12 @@ function BusinessFormationDetails() {
               • Business Registration::
             </h2>
             <p className="text-gray-700 mt-2">
-              We guide you through registering your business entity in the U.S.,
+              Guiding you through registering your business entity in the U.S.,
               ensuring compliance with all legal and regulatory requirements.
             </p>
           </div>
 
-          <div>
+          {/* <div>
             <h2 className="text-lg font-semibold text-gray-900">
               • Setting Up Physical Offices:
             </h2>
@@ -38,19 +38,19 @@ function BusinessFormationDetails() {
               help identify the best options that align with your goals and
               objectives.
             </p>
-          </div>
+          </div> */}
 
           <div>
             <h2 className="text-lg font-semibold text-gray-900">
               Lease Agreements:
             </h2>
             <p className="text-gray-700 mt-2">
-              Once the ideal location is secured, we guide you through the Lease
-              Agreement process. Our team helps negotiate favorable terms,
-              ensuring you understand all the details, from rent and maintenance
-              costs to the length of the lease and renewal options. We ensure
-              that your lease aligns with your business strategy and protects
-              your interests as you establish your U.S. operations.
+              If you elect to set up a physical office, we can guide you through
+              the lease agreement process. Our team helps negotiate favorable
+              terms, ensuring you understand all the details, from rent and
+              maintenance costs to the length of the lease and renewal options.
+              We ensure your lease aligns with your business strategy and
+              protects your interests as you establish your U.S. operations.
             </p>
           </div>
 
@@ -59,12 +59,12 @@ function BusinessFormationDetails() {
               Partnership:
             </h2>
             <p className="text-gray-700 mt-2">
-              We help you identify and establish partnerships with U.S. firms
-              that align with your business goals. From selecting the right
-              partner to structuring agreements, we ensure a smooth
-              collaboration. Our team guides you through all legal and
-              operational aspects, creating a strong foundation for a
-              successful, mutually beneficial partnership.
+              Helping you identify and establish partnerships with U.S. firms
+              that align with your business goals. We ensure a smooth
+              collaboration, from selecting the right partner to structuring
+              agreements. Our team guides you through all legal and operational
+              aspects, creating a strong foundation for a successful, mutually
+              beneficial partnership.
             </p>
           </div>
 
@@ -73,9 +73,9 @@ function BusinessFormationDetails() {
               Bank Account Opening:
             </h2>
             <p className="text-gray-700 mt-2">
-              We help navigate the complexities of opening business bank
-              accounts in the U.S., providing guidance on required documentation
-              and processes.
+              Navigating the complexities of opening business bank accounts in
+              the U.S., providing guidance on required documentation and
+              processes.
             </p>
           </div>
 
@@ -90,7 +90,7 @@ function BusinessFormationDetails() {
             </p>
           </div>
 
-          <div>
+          {/* <div>
             <h2 className="text-lg font-semibold text-gray-900">
               ⁠Intellectual Property Registration:
             </h2>
@@ -98,14 +98,15 @@ function BusinessFormationDetails() {
               Protect your innovations and brand by registering trademarks,
               copyrights, and patents in the U.S.
             </p>
-          </div>
+          </div> */}
+
           <div>
             <h2 className="text-lg font-semibold text-gray-900">
               ⁠⁠Customized Solutions:
             </h2>
             <p className="text-gray-700 mt-2">
               We understand that every client’s needs are unique. Book a
-              consultation, tell us what you want, and we will craft a tailored
+              consultation, and tell us what you want. We will craft a tailored
               solution to make your vision a reality.
             </p>
           </div>

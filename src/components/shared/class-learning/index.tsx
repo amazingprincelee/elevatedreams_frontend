@@ -89,13 +89,13 @@ const ClassLearning: FC<Props> = ({}) => {
           <Header text={'In-Person and Online Consulting'} />
           <SubHeader
             text={
-              'Choose the service that best fits your needs – at Elevate Dreams, we offer personalized immigration, business, and investment consulting both in-person and online. Our expert guidance is accessible globally, ensuring flexibility and tailored support for your journey.'
+              'Choose the service that best fits your needs – at Elevate Dreams, we offer personalized immigration, business, and intellectual property consulting both in-person and online. Our guidance is accessible globally, ensuring flexibility and tailored support for your journey.'
             }
           />
           <div className="mt-6 ">
             <LinkButton
               url={'/services'}
-              label={'EXPLORE OUR SERVICES'}
+              label={'Explore our Services'}
               isIcon
             />
           </div>

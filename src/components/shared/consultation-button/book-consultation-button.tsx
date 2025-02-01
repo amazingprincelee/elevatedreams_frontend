@@ -54,7 +54,7 @@ const ConsultationButton = () => {
           visible={true}
         />
       ) : (
-        'BOOK CONSULTATION'
+        'Book Consultation'
       )}
     </button>
   )

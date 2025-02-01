@@ -17,13 +17,11 @@ function ImmigrationDetails() {
               • EB1 Visa (Employment-Based First Preference):
             </h2>
             <p className="text-gray-700 mt-2">
-              If you’ve reached the top of your field—whether in the arts,
-              sciences, business, or athletics—the EB1 visa is designed for you.
-              This visa is for those who have extraordinary achievements that
-              set them apart. It’s also available for outstanding professors,
-              researchers, or multinational executives and managers. What’s
-              unique about this visa is that it doesn’t require a job offer,
-              meaning you can apply based on your accomplishments.
+              Ideal for individuals with extraordinary abilities in the arts,
+              sciences, business, or athletics. Also available for outstanding
+              professors, researchers, and multinational executives or managers.
+              This visa allows you to apply based on your accomplishments, with
+              no job offer required.
             </p>
           </div>
 
@@ -32,13 +30,10 @@ function ImmigrationDetails() {
               • EB2 Visa (Employment-Based Second Preference):
             </h2>
             <p className="text-gray-700 mt-2">
-              If you hold an advanced degree (Master’s or higher) or have
-              exceptional talent in your field, the EB2 visa may be your gateway
-              to the U.S. While this visa usually requires a job offer from a
-              U.S. employer, the National Interest Waiver (NIW) allows you to
-              skip this requirement if your work benefits the U.S. as a whole.
-              This pathway is often used by researchers, entrepreneurs, and
-              artists making a meaningful impact.
+              For individuals with advanced degrees or exceptional talents. The
+              National Interest Waiver (NIW) pathway allows applicants to bypass
+              the job offer requirement if their work significantly benefits the
+              U.S.
             </p>
           </div>
 
@@ -47,11 +42,10 @@ function ImmigrationDetails() {
               EB5 Visa (Employment-Based Fifth Preference):
             </h2>
             <p className="text-gray-700 mt-2">
-              This visa is ideal for those looking to invest in the U.S.
-              economy. By making a substantial investment in a U.S. business
-              (typically $1 million, or $500,000 in targeted employment areas),
-              you can secure permanent residency for yourself and your immediate
-              family while creating jobs for U.S. workers.
+              This visa is designed for entrepreneurs who create jobs for U.S.
+              workers. By investing in an approved U.S. business, you can secure
+              permanent residency for yourself and your family while
+              contributing to economic growth.
             </p>
           </div>
         </div>
