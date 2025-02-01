@@ -36,7 +36,7 @@ const ContactForm = () => {
                 Sunday: closed
               </p>
             </div>
-            <div>
+            {/* <div>
               <h2 className="pb-2 text-lg text-gray-400">Visit our offices.</h2>
               <div className="flex items-center gap-3">
                 <div className="bg-primary/5 p-3 rounded-full">
@@ -65,7 +65,7 @@ const ContactForm = () => {
                   filling station, Port harcourt, rivers State
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
