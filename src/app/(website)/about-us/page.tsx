@@ -31,14 +31,14 @@ const AboutUsPage: FC<Props> = ({}) => {
         img={'/images/relied/img1.png'}
       />
 
-      <Card
+      {/* <Card
         data={data2}
         header={'Certified Expert'}
         subHeader={
           'At the core of our success are our seasoned consultants. With extensive experience and recognized expertise, they bring unmatched insights to every consultation. We carefully select professionals who are not only leaders in their fields but are also dedicated to guiding and empowering our clients. At Elevate Dreams, our commitment to excellence begins with our team.'
         }
         img={'/images/about-us/img1.png'}
-      />
+      /> */}
 
       <LearningJourney />
     </>

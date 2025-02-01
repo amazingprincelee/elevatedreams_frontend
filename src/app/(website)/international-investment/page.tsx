@@ -1,5 +1,5 @@
 import Video from '@/components/shared/immigration/video'
-import InternationIvestmentDetails from '@/components/shared/internation-investment/internation-investment'
+import InternationIvestmentDetails from '@/components/shared/internation-investment/intellectual-property'
 import React from 'react'
 
 function InternationInvestment() {

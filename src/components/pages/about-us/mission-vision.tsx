@@ -24,13 +24,12 @@ const WelcomeSection: React.FC = () => {
 
         {/* Description */}
         <p className="text-lg text-gray-700 mb-8">
-          Welcome to Elevate Dreams, where we empower individuals,
-          entrepreneurs, and visionaries to reach their fullest potential. Our
-          goal is to simplify the path to U.S. immigration and business success,
-          helping exceptional individuals, skilled professionals, and investors
-          achieve their goals. Through personalized support and comprehensive
-          services, we elevate our clients’ dreams and deliver outstanding
-          results.
+          At Elevate Dreams, we empower individuals, entrepreneurs, and
+          visionaries to reach their fullest potential. We simplify the path to
+          U.S. immigration and business success, helping exceptional
+          individuals, skilled professionals, and investors achieve their goals.
+          Through personalized support and comprehensive services, we elevate
+          our clients’ dreams and deliver outstanding service.
         </p>
 
         {/* Mission Section */}
@@ -59,6 +58,35 @@ const WelcomeSection: React.FC = () => {
             or grow a business is a seamless process, filled with trust,
             opportunity, and hope. At Elevate Dreams, we open doors for
             individuals and businesses alike, turning aspirations into reality.
+          </p>
+        </div>
+
+        <div className="mt-5">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            About us
+          </h2>
+          <p className="text-gray-700">
+            Elevate Dreams exists to guide individuals and businesses in
+            navigating complex immigration and business processes with clarity
+            and confidence. We specialize in employment-based visas,
+            international business formation, and intellectual property
+            protection. Our team is committed to offering tailored solutions
+            that cater to your unique circumstances, ensuring every step of your
+            journey is smooth and efficient.
+          </p>
+        </div>
+        <div className="mt-5">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            Our Promise
+          </h2>
+          <p className="text-gray-700">
+            <strong>Clarity:</strong> We make complicated processes easy to
+            understand. <br />
+            <strong>Dedication:</strong> Your goals are at the heart of
+            everything we do.
+            <br />
+            <strong>Results:</strong> We work tirelessly to deliver tangible,
+            impactful outcomes.
           </p>
         </div>
       </div>

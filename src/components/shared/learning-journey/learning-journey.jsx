@@ -24,7 +24,7 @@ const LearningJourney = () => {
             <BsStars size={24} />
             <p className="mb-4 text-sm ml-2 font-light">
               {" "}
-              Empowering Success in Immigration, Business, and Investments
+              Empowering Success in Immigration, Business, and Intellectual Property Protection
             </p>
           </div>
 

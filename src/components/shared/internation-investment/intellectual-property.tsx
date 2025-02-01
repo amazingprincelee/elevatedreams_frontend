@@ -6,15 +6,15 @@ function InvestmentDetails() {
     <div className="flex justify-center items-center min-h-screen ">
       <div className="w-full max-w-4xl p-6 bg-white rounded-2xl shadow-md">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Internation Investment
+          Intellectual property Protection
         </h1>
         <p className="text-lg text-gray-700 mb-6">
-          We simplify the process of building a life and business in the United
-          States, focusing on three key pathways:
+          Your ideas and creations are valuable. Protect them with our
+          intellectual property services:
         </p>
 
         <div className="space-y-6">
-          <div>
+          {/* <div>
             <h2 className="text-lg font-semibold text-gray-900">
               • EB1 Visa (Employment-Based First Preference):
             </h2>
@@ -27,24 +27,28 @@ function InvestmentDetails() {
               unique about this visa is that it doesn’t require a job offer,
               meaning you can apply based on your accomplishments.
             </p>
-          </div>
-
+          </div> */}
           <div>
             <h2 className="text-lg font-semibold text-gray-900">
-              • EB2 Visa (Employment-Based Second Preference):
+              • Trademark Registration:
             </h2>
             <p className="text-gray-700 mt-2">
-              If you hold an advanced degree (Master’s or higher) or have
-              exceptional talent in your field, the EB2 visa may be your gateway
-              to the U.S. While this visa usually requires a job offer from a
-              U.S. employer, the National Interest Waiver (NIW) allows you to
-              skip this requirement if your work benefits the U.S. as a whole.
-              This pathway is often used by researchers, entrepreneurs, and
-              artists making a meaningful impact.
+              Safeguard your brand identity by registering trademarks in the
+              U.S.
             </p>
           </div>
 
           <div>
+            <h2 className="text-lg font-semibold text-gray-900">
+              • Copyright Registration:
+            </h2>
+            <p className="text-gray-700 mt-2">
+              Protect your creative works, including film, music, art, and
+              literature.
+            </p>
+          </div>
+
+          {/* <div>
             <h2 className="text-lg font-semibold text-gray-900">
               EB5 Visa (Employment-Based Fifth Preference):
             </h2>
@@ -55,7 +59,7 @@ function InvestmentDetails() {
               you can secure permanent residency for yourself and your immediate
               family while creating jobs for U.S. workers.
             </p>
-          </div>
+          </div> */}
         </div>
 
         <div className="flex justify-center mt-6">

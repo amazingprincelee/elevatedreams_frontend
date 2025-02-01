@@ -84,7 +84,7 @@ const Navbar = () => {
                           href="/international-investment"
                           className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-primary"
                         >
-                          International Investment
+                          Intellectual Property Protection
                         </Link>
                       </div>
                     )}
