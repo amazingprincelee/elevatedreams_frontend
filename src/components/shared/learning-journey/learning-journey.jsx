@@ -29,15 +29,15 @@ const LearningJourney = () => {
           </div>
 
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 mt-4 text-center">
-          Start your journey to success!
+          Book Consultation
           </h1>
 
           <p className="md:text-lg text-base md:font-light font-[10] mb-12 mt-3 text-center">
-          Transform your business with our industry-standard services and achieve all your business goals on an international scale.
+          Ready to get started? Book a consultation today, and let’s discuss how we can make your vision a reality.<br/> We’re excited to partner with you on this transformative journey!
           </p>
 
           <LinkButton
-            url={"/immigration"}
+            url={"https://www.speakmeet.com/elevatedreams"}
             label={"Get Started"}
             isIcon={true}
             className="w-[#177px]"

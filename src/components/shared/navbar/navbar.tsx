@@ -116,11 +116,14 @@ const Navbar = () => {
                 label={'Log in'}
                 className="border border-primary bg-transparent text-primary hover:text-white py-3"
               ></LinkButton>
-              <LinkButton
-                url={'/immigration'}
-                label={'Get Started'}
-                className="hover:text-primary border hover:border-primary py-3 hover:bg-transparent"
-              ></LinkButton>
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded">
+                <a
+                  href="https://www.speakmeet.com/elevatedreams"
+                  target="_blank"
+                >
+                  Get Started
+                </a>
+              </button>
             </div>
           </div>
           <div className="lg:hidden flex space-x-5 items-center">

@@ -13,7 +13,7 @@ type TeamMember = {
 const teamMembers: TeamMember[] = [
   {
     id: 1,
-    name: 'Leslie Alexander',
+    name: 'Lorraine Birabil',
     role: 'Co founder',
     image: '/images/team/member1.png', // Updated path
     socials: [
@@ -35,7 +35,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     id: 3,
-    name: 'Leslie Alexander',
+    name: 'Evans Dule',
     role: 'Co founder',
     image: '/images/team/member3.png', // Updated path
     socials: [
@@ -63,6 +63,13 @@ const Team: FC = () => {
           Meet Our Experienced{' '}
           <span className="text-green-600">Team Members</span>
         </h2>
+        <div className="flex justify-center mb-5 mt-5">
+          <p className="text-center w-[50rem] text-lg">
+            With years of experience across immigration, business formation, and
+            intellectual property, our consultants are here to help you navigate
+            your journey with confidence and clarity.
+          </p>
+        </div>
       </motion.div>
       <motion.div
         initial={{ opacity: 0, translateY: 50 }}

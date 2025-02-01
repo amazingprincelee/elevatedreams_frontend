@@ -6,7 +6,7 @@ function BusinessFormationDetails() {
     <div className="flex justify-center items-center min-h-screen mb-5">
       <div className="w-full max-w-4xl p-6 bg-white rounded-2xl shadow-md">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Internation Business Formation
+          International Business Formation
         </h1>
         <p className="text-lg text-gray-700 mb-6">
           At Elevate Dreams, we offer comprehensive support to help individuals

@@ -1,12 +1,12 @@
 import Video from '@/components/shared/immigration/video'
-import InternationIvestmentDetails from '@/components/shared/internation-investment/intellectual-property'
+import InternationIvestmentDetails from '@/components/shared/intellectual-property/intellectual-property'
 import React from 'react'
 
 function InternationInvestment() {
   return (
     <div style={{ marginTop: '150px' }}>
       <h1 className="text-center text-5xl text-secondary">
-        Internation Investment
+        Intellectual property Protection
       </h1>
       <Video />
       <InternationIvestmentDetails />

@@ -5,9 +5,6 @@ function InvestmentDetails() {
   return (
     <div className="flex justify-center items-center min-h-screen ">
       <div className="w-full max-w-4xl p-6 bg-white rounded-2xl shadow-md">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Intellectual property Protection
-        </h1>
         <p className="text-lg text-gray-700 mb-6">
           Your ideas and creations are valuable. Protect them with our
           intellectual property services:

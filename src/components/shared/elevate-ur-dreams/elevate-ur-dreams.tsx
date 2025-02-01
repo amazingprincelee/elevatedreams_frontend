@@ -45,16 +45,16 @@ const ElevateYourDreams = () => {
       {/* Right Section */}
       <div className="w-full lg:w-1/2 text-center lg:text-left p-5">
         <h1 className="text-3xl lg:text-4xl font-bold leading-snug">
-          We <span className="text-secondary italic">Elevate</span> Your Dreams
+          How we <span className="text-secondary italic">Operate</span>
         </h1>
-        <p className="mt-4 text-gray-700">
+        {/* <p className="mt-4 text-gray-700">
           We Elevate Dreams, because we believe that the journey to building a
           life in the United States should be as smooth and inspiring as the
           dreams that drive it. Our EB1, EB2, and EB5 visa application process
           will guide you by reducing the complexities of immigration law. Our
           approach is simple: we care deeply about your success and go the extra
           mile to make it happen.
-        </p>
+        </p> */}
 
         {/* Features */}
         <div className="flex flex-col lg:flex-row mt-6 space-y-6 lg:space-y-0 lg:space-x-8">
@@ -62,13 +62,13 @@ const ElevateYourDreams = () => {
             <div className="flex items-center justify-center lg:justify-start">
               <FaCogs size={30} />
               <h3 className="text-lg font-semibold ml-2">
-                Complete Application Support
+                Complete Application <br /> and Business Support
               </h3>
             </div>
             <p className="mt-2 text-gray-600">
-              From preparing documents to liaising with U.S. immigration
-              authorities, we handle every step of the process so you can focus
-              on what matters most.
+              From preparing documents to liaising with U.S. authorities, we
+              handle every step of the process, whether it’s immigration,
+              business setup, or IP registration.
             </p>
           </div>
 
@@ -81,7 +81,17 @@ const ElevateYourDreams = () => {
             </div>
             <p className="mt-2 text-gray-600">
               We take the time to understand your unique situation and craft the
-              best legal strategy for your immigration journey.
+              best strategy for your journey.
+            </p>
+          </div>
+          <div>
+            <div className="flex items-center justify-center lg:justify-start">
+              <FaUserTie size={20} />
+              <h3 className="text-lg font-semibold ml-2">Ongoing Guidance</h3>
+            </div>
+            <p className="mt-2 text-gray-600">
+              We stay by your side even after submission, keeping you updated
+              and helping with any follow-ups or adjustments needed.
             </p>
           </div>
         </div>
