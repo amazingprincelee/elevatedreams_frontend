@@ -92,7 +92,7 @@ export const Footer = () => {
                 <p>
                   Dallas Office: 910 S. Pearl Expy, Dallas, <br /> TX 75201, USA
                 </p>{' '}
-                <p> Phone: 214-432-3113 </p> Fax: 214-432-3116
+                <p> Phone: +234 811 848 4516 </p>
               </p>
 
               <p className="mt-8 max-w-xs lg:max-w-none w-full md:w-96 text-footerText font-medium text-medium ">
@@ -138,7 +138,7 @@ export const Footer = () => {
                       <FaPhone color="#006965" size={16} className="text-2xl" />
                     </div>
                     <p className="text-footerText text-sm md:text-lg">
-                      214-432-3113
+                      +234 811 848 4516
                     </p>
                   </div>
                   <div className="flex-center gap-2">

@@ -25,7 +25,9 @@ const ContactForm = () => {
               <div className="bg-primary/5 p-3 rounded-full">
                 <FaPhone color="#006965" size={22} />
               </div>
-              <p className="text-footerText text-lg font-thin">214-432-3113</p>
+              <p className="text-footerText text-lg font-thin">
+                +234 811 848 4516
+              </p>
             </div>
             <div className="flex items-center gap-3">
               <div className="bg-primary/5 p-3 rounded-full">
