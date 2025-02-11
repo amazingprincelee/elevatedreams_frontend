@@ -9,7 +9,7 @@ export default function TeamMemberBio2() {
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
           <div className="relative w-48 h-48 md:w-64 md:h-64 flex-shrink-0">
             <Image
-              src="/images/team/member2.png"
+              src="/images/team/member3.png"
               alt="Lorraine Birabil, Esq."
               layout="fill"
               objectFit="cover" // "contain" works too, but may leave whitespace
