@@ -16,8 +16,8 @@ const HeroSection: React.FC = () => {
         </div>
 
         <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center font-jakarta font-bold ">
-          The Leading Marketplace for Immigration, Business, and intellectual
-          property right protection
+          The Leading Marketplace for Immigration, Business, and Intellectual
+          Property Rights Protection
         </h1>
 
         <p className="text-base max-w-2xl mx-auto font-jakarta font-thin text-center block md:hidden">
@@ -27,9 +27,7 @@ const HeroSection: React.FC = () => {
 
         <p className="text-base text-center mx-auto font-jakarta font-thin hidden md:block lg:max-w-2xl 2xl:max-w-4xl">
           Welcome to Elevate Dreams, where we empower individuals with
-          immigration, business, and intellectual property consulting. We
-          provide world-class guidance to help you navigate complex processes
-          and achieve success globally.
+          Immigration, Business, and Intellectual Property Consulting.
         </p>
 
         <div className="font-bold px-6 inline-flex self-center">

@@ -29,7 +29,7 @@ const OfferingCourseCard = () => {
       imageSrc: '/images/offering/img3.png',
       title: 'EB5 Visa (Employment-Based Fifth Preference)',
       class: 'Blended',
-      text: 'This visa is ideal if you’re looking to invest in the U.S. economy. By investing a substantial amount in a U.S.',
+      text: 'This visa is designed for entrepreneurs who create jobs for U.S. workers. By investing in an approved U.S. business, you can secure permanent residency for yourself and your family while contributing to economic growth.',
     },
   ]
 

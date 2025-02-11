@@ -13,18 +13,18 @@ const LeftComp: FC<Props> = ({}) => {
     <div className="flex flex-col gap-5">
       <div className="text-white font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl md:w-[50%] lg:w-[80%]">
         <div className="flex-center gap-1 w-full">
-          Welcome
+          <span className="whitespace-nowrap">Welcome To</span>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5, type: 'spring' }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="relative border-l-primary border-l-1 border-r-1 h-[50px] lg:h-[70px] flex-center border-r-primary"
+            className="relative border-l-primary border-l-1 border-r-1 h-[50px] lg:h-[70px] flex-center border-r-primary ml-2"
           >
             <div className="absolute top-1 bg-primary -left-1 w-2 h-[1px]"></div>
             <div className="absolute bottom-1 bg-primary -left-1 w-2 h-[1px]"></div>
             <motion.p className="whitespace-nowrap bg-primary/20">
-              To Elevate
+              Elevate
             </motion.p>
             <div className="absolute top-1 bg-primary -right-1 w-2 h-[1px]"></div>
             <div className="absolute bottom-1 bg-primary -right-1 w-2 h-[1px]"></div>

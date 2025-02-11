@@ -54,18 +54,31 @@ const Navbar = () => {
                 return (
                   <div
                     key={index}
-                    className="relative"
-                    onMouseEnter={handleMouseEnter} // Handle mouse enter
-                    onMouseLeave={handleMouseLeave} // Handle mouse leave
+                    className="relative flex items-center"
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
                   >
-                    <div
+                    {/* Clicking this navigates to /services */}
+                    <Link
+                      href={el.url}
                       className={`${
                         pathname === el.url ? 'text-primary' : 'text-gray-500'
-                      } hover:text-gray-700 text-sm flex items-center cursor-pointer`}
+                      } hover:text-gray-700 text-sm`}
                     >
                       {el.name}
-                      <span className="ml-2">▼</span>
-                    </div>
+                    </Link>
+
+                    {/* Clicking the down arrow toggles the dropdown */}
+                    <span
+                      className="ml-2 cursor-pointer"
+                      onClick={(e) => {
+                        e.stopPropagation() // Prevent navigation when clicking the arrow
+                        setDropdownOpen(!dropdownOpen)
+                      }}
+                    >
+                      ▼
+                    </span>
+
                     {dropdownOpen && (
                       <div className="absolute top-full left-0 mt-2 bg-white shadow-lg border rounded w-48">
                         <Link

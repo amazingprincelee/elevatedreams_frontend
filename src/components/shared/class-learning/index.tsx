@@ -39,7 +39,7 @@ const ClassLearning: FC<Props> = ({}) => {
                   height={900}
                   className="w-6"
                 />
-                <p>Business Consulation</p>
+                <p>In-Person Consultation</p>
               </div>
             </div>
           </motion.div>
@@ -89,7 +89,7 @@ const ClassLearning: FC<Props> = ({}) => {
           <Header text={'In-Person and Online Consulting'} />
           <SubHeader
             text={
-              'Choose the service that best fits your needs – at Elevate Dreams, we offer personalized immigration, business, and intellectual property consulting both in-person and online. Our guidance is accessible globally, ensuring flexibility and tailored support for your journey.'
+              'Choose the service that best fits your needs. At Elevate Dreams, we offer personalized Immigration, Business, and Intellectual Property consulting both in-person and online. Our guidance is accessible globally, ensuring flexibility and tailored support for your journey.'
             }
           />
           <div className="mt-6 ">

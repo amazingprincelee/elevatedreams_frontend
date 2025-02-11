@@ -24,7 +24,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     id: 2,
-    name: 'Leslie Alexander',
+    name: 'Dango Allen',
     role: 'Co founder',
     image: '/images/team/member2.png', // Updated path
     socials: [

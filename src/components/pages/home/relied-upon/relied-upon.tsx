@@ -19,7 +19,7 @@ const ReliedUpon: FC<Props> = ({}) => {
     >
       <div className="flex flex-col justify-center items-center def-contain gap-10">
         <Header
-          text={'Trusted by a growing community of stakers and investors.'}
+          text={'Trusted by a growing community of Stakeholders and Investors.'}
         />
         <div className="grid md:grid-cols-4 gap-5 ">
           {dataInfo.map((el, index) => (

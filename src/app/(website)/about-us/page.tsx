@@ -24,9 +24,9 @@ const AboutUsPage: FC<Props> = ({}) => {
       <ClassLearning />
       <Card
         data={data1}
-        header={'Specialized Services'}
+        header={'Services We Offer'}
         subHeader={
-          'Welcome to Elevate Dreams, where possibilities know no bounds. As a trusted partner in immigration, business, and investment consulting, we bridge borders and provide world-class guidance to individuals and entrepreneurs worldwide..'
+          'Welcome to Elevate Dreams, where possibilities know no bounds. As a trusted partner in Immigration, Business, and Intellectual Property consulting, we bridge borders and provide world-class guidance to individuals and entrepreneurs worldwide..'
         }
         img={'/images/relied/img1.png'}
       />

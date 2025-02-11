@@ -23,7 +23,7 @@ const WelcomeSection: React.FC = () => {
         </h1>
 
         {/* Description */}
-        <p className="text-lg text-gray-700 mb-8">
+        <p className=" text-gray-700 mb-8">
           At Elevate Dreams, we empower individuals, entrepreneurs, and
           visionaries to reach their fullest potential. We simplify the path to
           U.S. immigration and business success, helping exceptional
@@ -68,7 +68,7 @@ const WelcomeSection: React.FC = () => {
           <p className="text-gray-700">
             Elevate Dreams exists to guide individuals and businesses in
             navigating complex immigration and business processes with clarity
-            and confidence. We specialize in employment-based visas,
+            and confidence. We offer stellar services in employment-based visas,
             international business formation, and intellectual property
             protection. Our team is committed to offering tailored solutions
             that cater to your unique circumstances, ensuring every step of your

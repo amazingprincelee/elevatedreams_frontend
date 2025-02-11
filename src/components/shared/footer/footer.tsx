@@ -90,9 +90,9 @@ export const Footer = () => {
               <p className="mt-8 max-w-xs lg:max-w-none w-full md:w-96 text-footerText font-medium text-medium ">
                 <h3 className="text-secondary">Dallas Office:</h3>
                 <p>
-                  Dallas Office: 910 S. Pearl Expy, Dallas, <br /> TX 75201, USA
+                  910 S. Pearl Expy, Dallas, <br /> TX 75201, USA
                 </p>{' '}
-                <p> Phone: +234 811 848 4516 </p>
+                <p> Phone: 214-432-3113 </p>
               </p>
 
               <p className="mt-8 max-w-xs lg:max-w-none w-full md:w-96 text-footerText font-medium text-medium ">
@@ -102,7 +102,11 @@ export const Footer = () => {
 
               <p className="mt-8 max-w-xs lg:max-w-none w-full md:w-96 text-footerText font-medium text-medium ">
                 <h3 className="text-secondary">Port Harcourt Office:</h3>
-                ExpertHub Tank, Rumukrusi, Port Harcourt, Rivers State, Nigeria
+                ExpertHub Tank, Rumukwurusi, Port Harcourt, Rivers State,
+                Nigeria
+              </p>
+              <p className=" text-footerText font-medium text-medium">
+                Phone: +234 811 848 4516{' '}
               </p>
             </div>
 
@@ -146,7 +150,7 @@ export const Footer = () => {
                       <FaClock color="#006965" size={16} className="text-2xl" />
                     </div>
                     <p className="text-footerText text-sm md:text-lg">
-                      Mon - Sat: 9:00 AM - 6:00 PM
+                      Mon - Fri: 8:00 AM - 5:00 PM
                     </p>
                   </div>
                 </div>

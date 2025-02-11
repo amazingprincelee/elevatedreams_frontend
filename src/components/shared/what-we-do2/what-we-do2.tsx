@@ -14,26 +14,26 @@ interface OfferingCard {
 const Internations = () => {
   const cardDetails: OfferingCard[] = [
     {
-      imageSrc: '/images/offering/img1.png',
+      imageSrc: '/images/offering/img5.png',
       title: 'International Business Formation',
       class: 'Business',
-      text: 'If you hold an advanced degree (like a Master’s or higher) or have exceptional talent in your field, the EB2 visa may be your gateway to the U.S.',
-      route: '/international-business-formation', // Define specific route
+      text: 'Launch and grow your business in the U.S. with confidence. We guide you through every step, from choosing the right business structure and legal registration to setting up a U.S. bank account and ensuring compliance.',
+      route: '/international-business-formation',
     },
     {
-      imageSrc: '/images/offering/img2.png',
+      imageSrc: '/images/offering/img4.png',
       title: 'Intellectual Property Protection',
       class: 'Business',
-      text: 'We protect your intellectual property, safeguard your brand identity by registering trade marks and protect your creative works including film, music, Art and literature. ',
-      route: '/international-investment', // Define specific route
+      text: 'We protect your intellectual property, safeguard your brand identity by registering trade marks and protect your creative works including film, music, art and literature. ',
+      route: '/intellectual-Property',
     },
-    {
-      imageSrc: '/images/offering/img3.png',
-      title: 'EB5 Visa (Employment-Based Fifth Preference)',
-      class: 'Blended',
-      text: 'This visa is ideal if you’re looking to invest in the U.S. economy. By investing a substantial amount in a U.S.',
-      route: '/immigration', // Define specific route
-    },
+    // {
+    //   imageSrc: '/images/offering/img3.png',
+    //   title: 'EB5 Visa (Employment-Based Fifth Preference)',
+    //   class: 'Blended',
+    //   text: 'This visa is ideal if you’re looking to invest in the U.S. economy. By investing a substantial amount in a U.S.',
+    //   route: '/immigration', // Define specific route
+    // },
   ]
 
   return (
