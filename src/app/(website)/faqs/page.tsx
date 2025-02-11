@@ -1,4 +1,4 @@
-import Faq from '@/components/pages/home/faq/faq'
+import FaqPage from '@/components/pages/home/faq-page/faq'
 import React from 'react'
 
 function page() {
@@ -12,7 +12,7 @@ function page() {
         </p>
       </div>
 
-      <Faq />
+      <FaqPage />
     </div>
   )
 }
