@@ -16,33 +16,21 @@ const teamMembers: TeamMember[] = [
     name: 'Lorraine Birabil',
     role: 'Co founder',
     image: '/images/team/member1.png', // Updated path
-    socials: [
-      { platform: 'Facebook', link: 'https://facebook.com' },
-      { platform: 'Twitter', link: 'https://twitter.com' },
-      { platform: 'LinkedIn', link: 'https://linkedin.com' },
-    ],
+    socials: [{ platform: 'Bio', link: '/lorraine-birabil' }],
   },
   {
     id: 2,
     name: 'Dango Allen',
     role: 'Co founder',
     image: '/images/team/member2.png', // Updated path
-    socials: [
-      { platform: 'Facebook', link: 'https://facebook.com' },
-      { platform: 'Twitter', link: 'https://twitter.com' },
-      { platform: 'LinkedIn', link: 'https://linkedin.com' },
-    ],
+    socials: [{ platform: 'Bio', link: '/dango-allen' }],
   },
   {
     id: 3,
     name: 'Evans Dule',
     role: 'Co founder',
     image: '/images/team/member3.png', // Updated path
-    socials: [
-      { platform: 'Facebook', link: 'https://facebook.com' },
-      { platform: 'Twitter', link: 'https://twitter.com' },
-      { platform: 'LinkedIn', link: 'https://linkedin.com' },
-    ],
+    socials: [{ platform: 'Bio', link: '/evans-dule' }],
   },
   // Add more team members as needed
 ]
