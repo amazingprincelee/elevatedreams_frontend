@@ -22,52 +22,37 @@ export default function TeamMemberBio2() {
               Evans Dule.
             </h1>
             <p className="text-gray-600 text-lg mb-4">
-              Dango Michael Allen is a licensed US attorney and Certified Public
-              Accountant (CPA) with extensive experience in tax law, audit,
-              compliance, and international business. An indigene of Rivers
-              State, Nigeria, Dango brings a unique global perspective to his
-              practice. Based in the North Texas region of the United States,
-              Dango combines legal expertise with a strong background in
-              accounting, serving clients with complex business and immigration
-              needs, including EB1, EB2, and EB5 visa applications. He has over
-              a decade of experience with the Texas Comptroller of Public
-              Accounts and additional legal experience in tax dispute
-              resolution, estate planning, business compliance, and cross-border
-              transactions.
+              Barr. Evans B. Giayetor is a seasoned legal professional with over
+              13 years of experience in corporate practice and compliance law.
+              Called to the Bar as a Barrister and Solicitor of the Supreme
+              Court of Nigeria in 2013, he has built a distinguished career
+              advising organizations on regulatory compliance, corporate
+              governance, and legal risk management. His expertise extends to IT
+              law, where he provides strategic legal solutions for businesses
+              navigating the evolving digital landscape.
             </p>
             <p className="text-gray-600 mb-4">
-              Dango holds a Juris Doctor from Texas A&M University School of Law
-              and a Master of Business Administration in Accounting from
-              Pittsburg State University. He also earned a Master’s Degree in
-              Tax at the University of Texas at Arlington. Dango has been
-              admitted to the Texas State Bar, and he is known for his detailed
-              approach to resolving tax controversies, including successful
-              negotiations on tax liens, levies, payment agreements, and
-              innocent spouse relief. He has also advised international clients
-              on tax com pliance and planning, leveraging his understanding of
-              global tax regulations.
+              A Nigerian national based in Rivers State, Barr. Evans has gained
+              valuable international exposure, having traveled to five different
+              countries and attended various conferences and seminars. These
+              experiences have enriched his ability to work with diverse
+              cultures and legal systems, enhancing his approach to global
+              corporate law.
             </p>
             <p className="text-gray-600 mb-4">
-              As the founder of the Law Office of Dango Allen PLLC in the United
-              States, he has represented clients in areas such as State and
-              Federal Tax Controversies, immigration, estate planning, contract
-              disputes, and international business. His practice extends to
-              assisting clients with EB1, EB2, and EB5 visa applications,
-              guiding them through the complex U.S. immigration system. He also
-              focuses on community education and outreach, providing legal
-              support to underserved communities, including immigrants and
-              international business owners.
+              Having served as a Principal Legal Officer with the Hydrocarbon
+              Pollution Remediation Project (HYPREP) under the Federal Ministry
+              of Environment, he has spent the past eight years playing a key
+              role in environmental and corporate legal compliance. His work
+              ensures that organizations operate within legal frameworks while
+              addressing critical regulatory and environmental concerns.
             </p>
             <p className="text-gray-600 mb-4">
-              Before launching Elevate Dreams, Dango served as an Auditor with
-              the Texas Comptroller of Public Accounts. He led audit engagements
-              for business entities, verified compliance with state statutes,
-              trained junior auditors, and defended audits in court where he
-              showcased his expertise in tax and accounting compliance. His
-              experience with international clients and cross-border financial
-              matters has positioned him as a valuable resource for those
-              navigating the complexities of global business and U.S.
-              immigration law.
+              Barr. Evans holds a Master of Laws (LLM) and a Bachelor of Laws
+              (LLB) from the University of the West of England, Bristol, United
+              Kingdom. His academic background, coupled with extensive practical
+              experience, positions him as a trusted advisor in corporate law,
+              compliance, and IT-related legal matters.
             </p>
           </div>
         </div>
