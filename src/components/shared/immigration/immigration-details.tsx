@@ -17,7 +17,7 @@ function ImmigrationDetails() {
               • EB1 Visa (Employment-Based First Preference):
             </h2>
             <p className="text-gray-700 mt-2">
-              Ideal for individuals with extraordinary abilities in the arts,
+              Ideal for individuals with extraordinary abilities in arts,
               sciences, business, or athletics. Also available for outstanding
               professors, researchers, and multinational executives or managers.
               This visa allows you to apply based on your accomplishments, with

@@ -31,11 +31,7 @@ const HeroSection: React.FC = () => {
         </p>
 
         <div className="font-bold px-6 inline-flex self-center">
-          <LinkButton
-            url={'/immigration'}
-            label={'Explore Our Services'}
-            isIcon
-          />
+          <LinkButton url={'/services'} label={'Explore Our Services'} isIcon />
         </div>
       </div>
 

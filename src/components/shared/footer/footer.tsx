@@ -22,7 +22,7 @@ const footerLinks = [
   { label: 'About Us', href: '/about-us' },
   { label: 'Services', href: '/immigration' },
   { label: 'Our Team', href: '/our-team' },
-  { label: 'Blogs', href: '/blogs' },
+  { label: 'Blogs', href: '/' },
   { label: 'Contact Us', href: '/contact-us' },
 ]
 

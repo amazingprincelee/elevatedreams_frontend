@@ -9,6 +9,7 @@ interface OfferingCard {
   title: string
   text: string
   class: string
+  url: string
 }
 
 const OfferingCourseCard = () => {
@@ -18,18 +19,21 @@ const OfferingCourseCard = () => {
       title: 'EB1 Visa (Employment-Based First Preference)',
       class: 'Classroom',
       text: 'If you’ve reached the top of your field—whether in the arts, sciences, business, or athletics—the EB1 visa is designed for you.',
+      url: '/eb1-visa',
     },
     {
       imageSrc: '/images/offering/img2.png',
       title: 'EB2 Visa (Employment-Based Second Preference)',
       class: 'Online',
       text: 'If you hold an advanced degree (like a Master’s or higher) or have exceptional talent in your field, the EB2 visa may be your gateway to the U.S.',
+      url: '/eb2-visa',
     },
     {
       imageSrc: '/images/offering/img3.png',
       title: 'EB5 Visa (Employment-Based Fifth Preference)',
       class: 'Blended',
       text: 'This visa is designed for entrepreneurs who create jobs for U.S. workers. By investing in an approved U.S. business, you can secure permanent residency for yourself and your family while contributing to economic growth.',
+      url: '/eb5-visa',
     },
   ]
 
@@ -73,10 +77,7 @@ const OfferingCourseCard = () => {
 
                 {/* action buttons */}
                 <LinkButton
-                  url={{
-                    pathname: '/immigration',
-                    query: { mode: `${card.class}` },
-                  }}
+                  url={card.url}
                   label={'Read more'}
                   isIcon={true}
                   className={`mt-5 w-full lg:w-fit ${

@@ -94,7 +94,7 @@ const Navbar = () => {
                           International Business Formation
                         </Link>
                         <Link
-                          href="/international-investment"
+                          href="/intellectual-Property"
                           className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-primary"
                         >
                           Intellectual Property Protection

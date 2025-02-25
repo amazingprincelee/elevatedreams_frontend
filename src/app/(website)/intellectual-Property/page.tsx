@@ -6,7 +6,7 @@ function InternationInvestment() {
   return (
     <div style={{ marginTop: '150px' }}>
       <h1 className="text-center text-5xl text-secondary">
-        Intellectual property Protection
+        Intellectual Property Protection
       </h1>
       <Video />
       <InternationIvestmentDetails />
