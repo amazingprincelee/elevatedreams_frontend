@@ -1,3 +1,5 @@
+'use client'
+
 import countries from '@/components/pages/contact-us/countries'
 import emailjs from '@emailjs/browser'
 import React, { useState } from 'react'
