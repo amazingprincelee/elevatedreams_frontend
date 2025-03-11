@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link' // Added Next.js Link import
 import { FC } from 'react'
 
 type TeamMember = {
@@ -15,24 +16,23 @@ const teamMembers: TeamMember[] = [
     id: 1,
     name: 'Lorraine Birabil',
     role: 'Co founder',
-    image: '/images/team/member1.png', // Updated path
+    image: '/images/team/member1.png',
     socials: [{ platform: 'Bio', link: '/lorraine-birabil' }],
   },
   {
     id: 2,
     name: 'Dango Allen',
     role: 'Co founder',
-    image: '/images/team/member2.png', // Updated path
+    image: '/images/team/member2.png',
     socials: [{ platform: 'Bio', link: '/dango-allen' }],
   },
   {
     id: 3,
     name: 'Evans Dule',
     role: 'Co founder',
-    image: '/images/team/member3.png', // Updated path
+    image: '/images/team/member3.png',
     socials: [{ platform: 'Bio', link: '/evans-dule' }],
   },
-  // Add more team members as needed
 ]
 
 const Team: FC = () => {
@@ -78,7 +78,7 @@ const Team: FC = () => {
               alt={member.name}
               width={400}
               height={320}
-              className="w-full h-80 object-cover object-top" // Adjusted to focus on the top of the image
+              className="w-full h-80 object-cover object-top"
             />
             <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
               <div className="text-center text-white">
@@ -86,15 +86,13 @@ const Team: FC = () => {
                 <p className="text-sm">{member.role}</p>
                 <div className="mt-4 flex gap-4 justify-center">
                   {member.socials.map((social, index) => (
-                    <a
+                    <Link
                       key={index}
                       href={social.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className="text-white hover:text-green-600 transition-colors"
                     >
                       {social.platform}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
