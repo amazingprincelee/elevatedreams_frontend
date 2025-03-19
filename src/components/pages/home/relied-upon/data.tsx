@@ -3,7 +3,7 @@ export const dataInfo = [
   {
     img: '/images/relied/img2.svg',
     count: '150+',
-    text: 'Number of Busineses Migrated',
+    text: 'Number of Businesses Migrated',
     rate: '',
   },
   { img: '/images/relied/img3.png' },
