@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import Link from 'next/link' // Added Next.js Link import
+import Link from 'next/link'
 import { FC } from 'react'
 
 type TeamMember = {
@@ -46,15 +46,15 @@ const Team: FC = () => {
         whileInView={{ translateY: [50, 0], opacity: [0, 1] }}
         className="text-center mb-12"
       >
-        <p className="text-sm text-green-600 font-medium">Popular Activities</p>
+        <p className="text-sm text-secondary font-medium">Popular Activities</p>
         <h2 className="text-3xl font-bold">
           Meet Our Experienced{' '}
-          <span className="text-green-600">Team Members</span>
+          <span className="text-secondary">Team Members</span>
         </h2>
         <div className="flex justify-center mb-5 mt-5">
           <p className="text-center w-[50rem] text-lg">
-            With years of experience across immigration, business formation, and
-            intellectual property, our consultants are here to help you navigate
+            With years of experience across Immigration, Business Formation, and
+            Intellectual Property, our consultants are here to help you navigate
             your journey with confidence and clarity.
           </p>
         </div>
