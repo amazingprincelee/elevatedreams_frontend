@@ -3,28 +3,14 @@ import ConsultationButton from '../consultation-button/book-consultation-button'
 
 function InvestmentDetails() {
   return (
-    <div className="flex justify-center items-center min-h-screen ">
-      <div className="w-full max-w-4xl p-6 bg-white rounded-2xl shadow-md">
+    <div className="mb-28 ">
+      <div className="text-center">
         <p className="text-lg text-gray-700 mb-6">
           Your ideas and creations are valuable. Protect them with our
           intellectual property services:
         </p>
 
         <div className="space-y-6">
-          {/* <div>
-            <h2 className="text-lg font-semibold text-gray-900">
-              • EB1 Visa (Employment-Based First Preference):
-            </h2>
-            <p className="text-gray-700 mt-2">
-              If you’ve reached the top of your field—whether in the arts,
-              sciences, business, or athletics—the EB1 visa is designed for you.
-              This visa is for those who have extraordinary achievements that
-              set them apart. It’s also available for outstanding professors,
-              researchers, or multinational executives and managers. What’s
-              unique about this visa is that it doesn’t require a job offer,
-              meaning you can apply based on your accomplishments.
-            </p>
-          </div> */}
           <div>
             <h2 className="text-lg font-semibold text-gray-900">
               • Trademark Registration:

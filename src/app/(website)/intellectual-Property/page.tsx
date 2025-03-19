@@ -4,7 +4,7 @@ import React from 'react'
 
 function InternationInvestment() {
   return (
-    <div style={{ marginTop: '150px' }}>
+    <div>
       <h1 className="text-center text-5xl text-secondary">
         Intellectual Property Protection
       </h1>
