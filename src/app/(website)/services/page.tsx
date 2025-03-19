@@ -10,7 +10,7 @@ const services = [
       "If you've reached the top of your field—whether in the arts, sciences, business, or athletics—the EB1 visa is designed for you.",
     image: '/images/offering/img1.png',
     buttonText: 'Read more',
-    buttonColor: 'bg-yellow-500',
+    buttonColor: 'bg-primary',
     link: '/eb1-visa',
   },
   {
@@ -19,7 +19,7 @@ const services = [
       'If you hold an advanced degree (like a Master’s or higher) or have exceptional talent in your field, the EB2 visa may be your gateway to the U.S.',
     image: '/images/offering/img2.png',
     buttonText: 'Read more',
-    buttonColor: 'bg-green-600',
+    buttonColor: 'bg-secondary',
     link: '/eb2-visa',
   },
   {
@@ -28,7 +28,7 @@ const services = [
       'This visa is designed for entrepreneurs who create jobs for U.S. workers. By investing in an approved U.S. business, you can secure permanent residency for yourself and your family.',
     image: '/images/offering/img3.png',
     buttonText: 'Read more',
-    buttonColor: 'bg-yellow-500',
+    buttonColor: 'bg-primary',
     link: '/eb5-visa',
   },
   {
@@ -37,7 +37,7 @@ const services = [
       'Launch and grow your business in the U.S. with confidence. We guide you through every step, from choosing the right business structure to legal registration and compliance.',
     image: '/images/offering/img5.png',
     buttonText: 'Read more',
-    buttonColor: 'bg-yellow-500',
+    buttonColor: 'bg-primary',
     link: '/international-business-formation',
   },
   {
@@ -46,7 +46,7 @@ const services = [
       'We protect your intellectual property, safeguard your brand identity by registering trademarks, and protect your creative works.',
     image: '/images/offering/img4.png',
     buttonText: 'Read more',
-    buttonColor: 'bg-green-600',
+    buttonColor: 'bg-secondary',
     link: '/intellectual-Property',
   },
 ]

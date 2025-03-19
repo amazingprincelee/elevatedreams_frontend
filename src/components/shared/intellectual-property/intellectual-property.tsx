@@ -30,19 +30,6 @@ function InvestmentDetails() {
               literature.
             </p>
           </div>
-
-          {/* <div>
-            <h2 className="text-lg font-semibold text-gray-900">
-              EB5 Visa (Employment-Based Fifth Preference):
-            </h2>
-            <p className="text-gray-700 mt-2">
-              This visa is ideal for those looking to invest in the U.S.
-              economy. By making a substantial investment in a U.S. business
-              (typically $1 million, or $500,000 in targeted employment areas),
-              you can secure permanent residency for yourself and your immediate
-              family while creating jobs for U.S. workers.
-            </p>
-          </div> */}
         </div>
 
         <div className="flex justify-center mt-6">
