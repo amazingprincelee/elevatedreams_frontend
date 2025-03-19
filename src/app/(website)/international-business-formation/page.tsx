@@ -5,7 +5,7 @@ import React from 'react'
 function InternationBusiness() {
   return (
     <div style={{ marginTop: '150px' }}>
-      <h1 className="text-center text-5xl text-secondary">
+      <h1 className="text-center font-bold text-5xl text-secondary">
         Internation Business Formation
       </h1>
       <Video />

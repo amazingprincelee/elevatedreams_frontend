@@ -5,7 +5,7 @@ import React from 'react'
 function InternationInvestment() {
   return (
     <div>
-      <h1 className="text-center text-5xl text-secondary">
+      <h1 className="text-center font-bold text-5xl text-secondary">
         Intellectual Property Protection
       </h1>
       <Video />

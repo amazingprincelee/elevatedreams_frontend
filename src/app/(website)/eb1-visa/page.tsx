@@ -6,7 +6,7 @@ import React from 'react'
 function page() {
   return (
     <div style={{ marginTop: '150px' }}>
-      <h1 className="text-center text-5xl text-secondary">
+      <h1 className="text-center font-bold text-5xl text-secondary">
         EB1 Visa (Employment-Based First Preference)
       </h1>
       <Video />
