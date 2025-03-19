@@ -11,7 +11,7 @@ const services = [
     image: '/images/offering/img1.png',
     buttonText: 'Read more',
     buttonColor: 'bg-yellow-500',
-    link: '/immigration',
+    link: '/eb1-visa',
   },
   {
     title: 'EB2 Visa (Employment-Based Second Preference)',
@@ -20,7 +20,7 @@ const services = [
     image: '/images/offering/img2.png',
     buttonText: 'Read more',
     buttonColor: 'bg-green-600',
-    link: '/immigration',
+    link: '/eb2-visa',
   },
   {
     title: 'EB5 Visa (Employment-Based Fifth Preference)',
@@ -29,7 +29,7 @@ const services = [
     image: '/images/offering/img3.png',
     buttonText: 'Read more',
     buttonColor: 'bg-yellow-500',
-    link: '/immigration',
+    link: '/eb5-visa',
   },
   {
     title: 'International Business Formation',
