@@ -31,12 +31,24 @@ const ContactForm = () => {
     setSuccessMessage('')
     setErrorMessage('')
 
-    const serviceId = 'your_service_id' // Replace with your EmailJS service ID
-    const templateId = 'your_template_id' // Replace with your EmailJS template ID
-    const userId = 'your_user_id' // Replace with your EmailJS user ID
+    // EmailJS credentials
+    const serviceId = 'service_58p9tmg' // Your Gmail service ID
+    const templateId = 'template_ktn1fwf' // Your template ID
+    const userId = 'Wo1ApL4O8WllAjl4h' // Correct User ID from EmailJS dashboard
 
+    // Initialize EmailJS with your User ID
+    emailjs.init(userId)
+
+    // Send the email using EmailJS
     emailjs
-      .send(serviceId, templateId, formData, userId)
+      .send(serviceId, templateId, {
+        fullName: formData.fullName,
+        email: formData.email,
+        phone: formData.phone,
+        country: formData.country,
+        service: formData.service,
+        message: formData.message,
+      })
       .then((response) => {
         setSuccessMessage('Your message has been sent successfully!')
         setIsSending(false)
@@ -52,6 +64,10 @@ const ContactForm = () => {
       .catch((error) => {
         setErrorMessage('Something went wrong. Please try again.')
         setIsSending(false)
+        console.error('EmailJS error:', error)
+        if (error.text) {
+          console.error('Error details:', error.text)
+        }
       })
   }
 
